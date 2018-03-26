@@ -1,12 +1,12 @@
-var questionAnswer = [
-    {
-        "qns": 'I am a Bark Yours Shopper',
-        "ans": 'Answer goes here.'
-    },
-    {
-        "qns": 'I am a Bark Yours Seller',
-        "ans": 'Answer goes here'
-    }];
+// var questionAnswer = [
+//     {
+//         "qns": 'I am a Bark Yours Shopper',
+//         "ans": 'Answer goes here.'
+//     },
+//     {
+//         "qns": 'I am a Bark Yours Seller',
+//         "ans": 'Answer goes here'
+//     }];
 
 $(document).ready(function(){
 
