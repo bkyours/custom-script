@@ -1,3 +1,12 @@
+var questionAnswer = [
+    {
+        "qns": 'I am a Bark Yours Shopper',
+        "ans": 'Answer goes here.'
+    },
+    {
+        "qns": 'I am a Bark Yours Seller',
+        "ans": 'Answer goes here'
+    }];
 
 $(document).ready(function(){
 
@@ -5,26 +14,52 @@ $(document).ready(function(){
 
     function customizeGrid(){
         $( ".home-fluid-thumbnail-grid-item" ).each(function( index ) {
-            if(!$(this).hasClass("customized"))
+            if(!$(this).hasClass("customized")){
                 $(".home-fluid-thumbnail-grid-author-avatar").remove();
-            var priceTag = $( this ).find(".fluid-thumbnail-grid-image-price-container");
-            // var priceTag = $( this ).find(".fluid-thumbnail-grid-image-price");
-            var title = $( this ).find(".fluid-thumbnail-grid-image-title");
-            var authorContainer = $(this).find(".home-fluid-thumbnail-grid-author");
+                var priceTag = $( this ).find(".fluid-thumbnail-grid-image-price-container");
+                // var priceTag = $( this ).find(".fluid-thumbnail-grid-image-price");
+                var title = $( this ).find(".fluid-thumbnail-grid-image-title");
+                var authorContainer = $(this).find(".home-fluid-thumbnail-grid-author");
 
-            var authorLink = $( this ).find(".home-fluid-thumbnail-grid-author-name");
+                var authorLink = $( this ).find(".home-fluid-thumbnail-grid-author-name");
 
 
-            authorContainer.prepend('<div class="price-container"></div>');
-            authorContainer.append('<div class="info-container"></div>');
-            authorContainer.find(".price-container").prepend(priceTag);
-            authorContainer.find(".info-container").prepend(authorLink);
-            authorContainer.find(".info-container").prepend(title);
-            var availableWidth = authorContainer.width() - $(this).find(".price-container").width();
-            $(this).find(".info-container").css("width", (availableWidth - 3) + "px");
-            $(this).addClass("customized");
+                authorContainer.prepend('<div class="price-container"></div>');
+                authorContainer.append('<div class="info-container"></div>');
+                authorContainer.find(".price-container").prepend(priceTag);
+                authorContainer.find(".info-container").prepend(authorLink);
+                authorContainer.find(".info-container").prepend(title);
+                var availableWidth = authorContainer.width() - $(this).find(".price-container").width();
+                $(this).find(".info-container").css("width", (availableWidth - 3) + "px");
+                $(this).addClass("customized");
+            }
+
         });
 
+    }
+
+    if($("#profile-listings-list").length){
+        setTimeout(customizePeopleGrid, 1000);
+    }
+
+    function customizePeopleGrid(){
+        $( ".people-fluid-thumbnail-grid-item" ).each(function( index ) {
+            if(!$(this).hasClass("customized")) {
+
+                var priceTag = $(this).find(".fluid-thumbnail-grid-image-price-container");
+                var title = $(this).find(".fluid-thumbnail-grid-image-title");
+
+                $(this).append('<div class="home-fluid-thumbnail-grid-author"><div class="price-container"></div><div class="info-container"></div></div>');
+
+                var authorContainer = $(this).find(".home-fluid-thumbnail-grid-author");
+
+                authorContainer.find(".price-container").prepend(priceTag);
+                authorContainer.find(".info-container").prepend(title);
+                var availableWidth = authorContainer.width() - $(this).find(".price-container").width();
+                $(this).find(".info-container").css("width", (availableWidth - 3) + "px");
+                $(this).addClass("customized");
+            }
+        });
     }
 
     $('body').append('<footer><div class=layout-centered-content><div class="row footer-links"><div class="col-xs-12 col-sm-4">' +
