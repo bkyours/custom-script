@@ -1,12 +1,3 @@
-// var questionAnswer = [
-//     {
-//         "qns": 'I am a Bark Yours Shopper',
-//         "ans": 'Answer goes here.'
-//     },
-//     {
-//         "qns": 'I am a Bark Yours Seller',
-//         "ans": 'Answer goes here'
-//     }];
 
 $(document).ready(function(){
 
@@ -17,7 +8,11 @@ $(document).ready(function(){
             if(!$(this).hasClass("customized")){
                 $(".home-fluid-thumbnail-grid-author-avatar").remove();
                 var priceTag = $( this ).find(".fluid-thumbnail-grid-image-price-container");
-                // var priceTag = $( this ).find(".fluid-thumbnail-grid-image-price");
+                var priceTagSpan = priceTag.find("span");
+                var price = priceTagSpan.text().replace(/(\r\n\t|\n|\r\t)/gm,"");
+                if(price.indexOf('.') == -1){
+                    priceTagSpan.text(price + ".00"); // add two decimal unit if not
+                }
                 var title = $( this ).find(".fluid-thumbnail-grid-image-title");
                 var authorContainer = $(this).find(".home-fluid-thumbnail-grid-author");
 
@@ -47,6 +42,11 @@ $(document).ready(function(){
             if(!$(this).hasClass("customized")) {
 
                 var priceTag = $(this).find(".fluid-thumbnail-grid-image-price-container");
+                var priceTagSpan = priceTag.find("span");
+                var price = priceTagSpan.text().replace(/(\r\n\t|\n|\r\t)/gm,"");
+                if(price.indexOf('.') == -1){
+                    priceTagSpan.text(price + ".00"); // add two decimal unit if not
+                }
                 var title = $(this).find(".fluid-thumbnail-grid-image-title");
 
                 $(this).append('<div class="home-fluid-thumbnail-grid-author"><div class="price-container"></div><div class="info-container"></div></div>');
@@ -76,7 +76,7 @@ $(document).ready(function(){
         '<div class=row><h3>Learn more</h3><div class="col-sm-12 col-xs-6">' +
         '<a href=/en/infos/about>About Bark Yours</a></div><div class="col-sm-12 col-xs-6">' +
         '<a class= "faq-popup-trigger" href=#faq-popup>FAQs</a></div><div class="col-sm-12 col-xs-6">' +
-        '<a href=/en/infos/how_to_use>Selling on Bark Yours</a></div><div class="col-sm-12 col-xs-6">' +
+        '<a href=/en/infos/how_to_use>How it Works</a></div><div class="col-sm-12 col-xs-6">' +
         '<a href=/user_feedbacks/new>Contact us</a></div><div class="col-sm-12 col-xs-6">' +
         '<a href=/invitations/new>Invite Others</a></div><div class="col-sm-12 col-xs-6">' +
         '<a href=/en/infos/privacy>Privacy Policy</a></div><div class="col-sm-12 col-xs-6">' +
@@ -191,6 +191,23 @@ $(document).ready(function(){
             "<h3>And, we're here to help if you need anything.</h3>" +
             "<p>Contact us anytime.  We are eager to hear from you and waiting to help.</p>"+
             '</div>');
+
+        if($(".flash-notifications").length){
+
+            $(".flash-notifications").prependTo($(".login-container"));
+        }
+    }
+
+    if($(".listing-details-container").length){
+        if($(".listing-price-amount").text().indexOf('.') == -1){
+            $(".listing-price-amount").text($(".listing-price-amount").text().replace(/(\r\n\t|\n|\r\t)/gm,"") + ".00"); // add two decimal unit if not
+        }
+        $(".listing-price").css("visibility", "visible");
+    }
+
+    if($(".flash-notifications").length){
+
+        $(".flash-notifications").css("visibility", "visible");
     }
 
 });

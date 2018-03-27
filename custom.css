@@ -13,10 +13,7 @@
     text-align: left;
     max-width: 85px;
 }
-/*.home-fluid-thumbnail-grid-author{*/
-/*background: transparent;*/
 
-/*}*/
 .home-fluid-thumbnail-grid-author-avatar-image{
     display: none;
 }
@@ -25,7 +22,6 @@
     position: relative;
     color: #3c3c3c;
     padding: 0;
-    /*background: yellow;*/
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -35,16 +31,12 @@
     top: -5px;
     left:0;
     line-height: 15px;
-    /*background: palevioletred;*/
 }
-/*.home-fluid-thumbnail-grid-author-name{*/
-/*top: 20px;*/
-/*left: 71px;*/
-/*}*/
+
 
 .home-fluid-thumbnail-grid-author{
     padding: 5px;
-    background: #f9f9f9;
+    background: #fff;
 }
 
 .price-container{
@@ -402,4 +394,17 @@ footer .icon-part{
 
 #profile-listings-list .home-fluid-thumbnail-grid-author{
     height: 40px;
+}
+body{
+    font-family: 'Palanquin', sans-serif !important;
+}
+.listing-price{
+    visibility: hidden;
+}
+.flash-notifications{visibility: hidden;}
+
+.login-info-container{
+    background: #e9e9e9;
+    padding: 10px !important;
+
 }
