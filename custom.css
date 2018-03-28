@@ -528,3 +528,27 @@ body{
 .view-all-listing .fluid-thumbnail-grid-image-image-container{
     background: #f1f1f1;
 }
+
+
+
+
+
+#topbar-container .Topbar{
+    background: #ff2883;
+}
+
+.SearchBar__focusContainer__2uI0-:before{
+    border: 1px solid rgba(255,255,255,0.8);
+}
+.SearchBar__searchButton__1Ck2b svg{
+    stroke: #fff;
+}
+
+.SearchBar__keywordInput__2HTav:focus, .SearchBar__locationInput__3g__8:focus{
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.8);
+}
+
+.customized .info-container{
+    width: 130px;
+}
