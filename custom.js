@@ -1,7 +1,11 @@
 
 $(document).ready(function(){
 
-    setTimeout(customizeGrid, 1000);
+    var shouldDisplayHomepage = true; //TODO condition goes here
+
+    if(!shouldDisplayHomepage){
+        setTimeout(customizeGrid, 1000);
+    }
 
     function customizeGrid(){
         $( ".home-fluid-thumbnail-grid-item" ).each(function( index ) {
@@ -89,14 +93,6 @@ $(document).ready(function(){
         '</div></div></div>' +
         '<div class="row footer-link text-center" style="font-size: 14px;color: #959494;">All rights reserved ©2018 Bark Yours</div></div></footer>');
 
-    setTimeout(function () {
-        // $('a[href="/invitations/new"]').text("FAQs").attr("href", "#faq-popup").addClass("faq-popup-trigger");
-        // $('a[href="/en/invitations/new"]').text("FAQs").attr("href", "#faq-popup").addClass("faq-popup-trigger");
-        // $(".faq-popup-trigger").click(function () {
-        //     $("body").addClass("faq-open");
-        // });
-    }, 1);
-
     //
 
 
@@ -173,7 +169,25 @@ $(document).ready(function(){
     });
     //
 
+    // if login page is loaded after clicking the Create new listing button on topbar,
+    // then only show the right side content
+    $(".AddNewListingButton").click(function(){
+        var timeStampInMs = window.performance && window.performance.now && window.performance.timing && window.performance.timing.navigationStart ? window.performance.now() + window.performance.timing.navigationStart : Date.now();
+        localStorage.setItem("postNewListingClicked", timeStampInMs);
+    });
+
     if($(".login-form").length){
+        var postNewListingClickedTimeSpan =  localStorage.getItem("postNewListingClicked");
+        if( postNewListingClickedTimeSpan && (Date.now() - parseInt(postNewListingClickedTimeSpan) <= 5 * 1000 )){
+            showLoginInfoForSeller();
+        }
+    }
+
+
+    function showLoginInfoForSeller(){
+
+        // Login form right side content
+        $(".centered-section-narrow").css("margin-left", 0);
         $(".wrapper").addClass("row");
         $(".wrapper").prepend('<div class="login-container col-xs-12 col-sm-6"></div>');
         $(".wrapper").append('<div class="login-info-container col-xs-12 col-sm-6"></div>');
@@ -192,12 +206,15 @@ $(document).ready(function(){
             "<p>Contact us anytime.  We are eager to hear from you and waiting to help.</p>"+
             '</div>');
 
+        // Insert flash notice inside the left side just above the login form
         if($(".flash-notifications").length){
 
             $(".flash-notifications").prependTo($(".login-container"));
         }
-    }
 
+    };
+
+    // Adding decimal in Listing page price
     if($(".listing-details-container").length){
         if($(".listing-price-amount").text().indexOf('.') == -1){
             $(".listing-price-amount").text($(".listing-price-amount").text().replace(/(\r\n\t|\n|\r\t)/gm,"") + ".00"); // add two decimal unit if not
@@ -205,9 +222,55 @@ $(document).ready(function(){
         $(".listing-price").css("visibility", "visible");
     }
 
-    if($(".flash-notifications").length){
 
+    // Display flash notice(it is hidden due to some design issue on the login page)
+    if($(".flash-notifications").length){
         $(".flash-notifications").css("visibility", "visible");
     }
+
+
+    // Display Category in the homepage
+
+    if(shouldDisplayHomepage){
+        displayHomepage();
+    }
+
+    function displayHomepage(){
+        $(".home-fluid-thumbnail-grid").empty();
+
+        $(".home-fluid-thumbnail-grid").append("<div class='row' style='border-bottom: 1px solid #c3c3c3; width: 97%'> <h3>Featured Categories</h3></div><hr>");
+        $.map(featuredCategories, function (value, index) {
+            $(".home-fluid-thumbnail-grid").append('<div class="home-fluid-thumbnail-grid-item featured-categories">' +
+                '<div>' +
+                '<a class=" fluid-thumbnail-grid-image-item-link" href="' + value.url + '">' +
+                '<div class="fluid-thumbnail-grid-image-image-container">' +
+                '<img alt="'+ value.title + '" class=" fluid-thumbnail-grid-image-image" src="' + value.image + '">' +
+                '<div class="home-fluid-thumbnail-grid-author">' +
+                '<div class="fluid-thumbnail-grid-image-title">'+ value.title + '</div>' +
+                '</div>' +
+                '</div></a>' +
+                '</div></div>')
+        });
+
+        $(".home-fluid-thumbnail-grid").append("<div class='row' style='border-bottom: 1px solid #c3c3c3; width: 97%'> <h3>Items of the Week</h3></div><hr>");
+        $.map(itemsOfWeek, function (listing, index) {
+            $(".home-fluid-thumbnail-grid").append('<div class="home-fluid-thumbnail-grid-item customized">' +
+                ' <div> <a class=" fluid-thumbnail-grid-image-item-link" href="'+ listing.url + '">' +
+                '<div class="fluid-thumbnail-grid-image-image-container">' +
+                ' <img alt="'+listing.title+'" class=" fluid-thumbnail-grid-image-image" src="'+listing.image+'">' +
+                '</div></a> ' +
+                '<div class="home-fluid-thumbnail-grid-author">' +
+                '<div class="price-container">' +
+                '<div class="fluid-thumbnail-grid-image-price-container">' +
+                ' <span class="fluid-thumbnail-grid-image-price">'+ listing.price +'</span>' +
+                ' </div></div>' +
+                '<div class="info-container" >' +
+                '<div class="fluid-thumbnail-grid-image-title">'+listing.title+'</div>' +
+                '<a class="home-fluid-thumbnail-grid-author-name" title="'+listing.seller_name+'" href="'+listing.seller_url+'">'+listing.seller_name+'</a></div></div></div></div>')
+        });
+    }
+
+
+
 
 });
