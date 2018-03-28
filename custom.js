@@ -265,7 +265,6 @@ $(document).ready(function(){
         }
     }
 
-
     function showHiddenNotification(){
         // Display flash notice(it is hidden due to some design issue on the login page)
         if($(".flash-notifications").length){
@@ -305,7 +304,7 @@ $(document).ready(function(){
                     '</div></div></div>');
 
             }else{
-                $(".home-fluid-thumbnail-grid").append('<div class="home-fluid-thumbnail-grid-item customized">' +
+                $(".home-fluid-thumbnail-grid").append('<div class="home-fluid-thumbnail-grid-item">' +
                     ' <div> <a class=" fluid-thumbnail-grid-image-item-link" href="'+ listing.url + '">' +
                     '<div class="fluid-thumbnail-grid-image-image-container">' +
                     ' <img alt="'+listing.title+'" class=" fluid-thumbnail-grid-image-image" src="'+listing.image+'">' +
@@ -319,6 +318,21 @@ $(document).ready(function(){
                     '<div class="fluid-thumbnail-grid-image-title">'+listing.title+'</div>' +
                     '<a class="home-fluid-thumbnail-grid-author-name" title="'+listing.seller_name+'" href="'+listing.seller_url+'">'+listing.seller_name+'</a></div></div></div></div>')
 
+                elem = $(".home-fluid-thumbnail-grid").children().last();
+                var priceTag = elem.find(".fluid-thumbnail-grid-image-price-container");
+                var priceTagSpan = priceTag.find("span");
+                var price = priceTagSpan.text().replace(/(\r\n\t|\n|\r\t)/gm,"");
+                if(price.indexOf('.') == -1){
+                    priceTagSpan.text(price + ".00"); // add two decimal unit if not
+                }
+                var title = elem.find(".fluid-thumbnail-grid-image-title");
+
+
+                var authorContainer = elem.find(".home-fluid-thumbnail-grid-author");
+
+                var availableWidth = authorContainer.width() - elem.find(".price-container").width();
+                elem.find(".info-container").css("width", (availableWidth - 3) + "px");
+                elem.addClass("customized");
             }
         });
     }
