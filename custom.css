@@ -1,3 +1,63 @@
+/*Default code Start*/
+
+
+@import url('https://fonts.googleapis.com/css?family=Palanquin|Palanquin+Dark');
+
+
+.marketplace-lander .marketplace-lander-content-title{
+    font-size: 3.5rem;
+    line-height: 4rem;
+    font-family: 'Palanquin Dark', sans-serif;
+}
+
+@media only screen and (max-width: 960px) {
+    .marketplace-lander .marketplace-lander-content-title{
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .marketplace-lander .marketplace-lander-content-title{
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+}
+
+.marketplace-lander .marketplace-lander-content {
+    padding: 3rem 1rem 12rem 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .marketplace-lander .marketplace-lander-content {
+        padding: 3rem 1rem 14rem 1rem;
+    }
+}
+
+.marketplace-lander p {
+    max-width: 32em;
+    font-family: 'Palanquin', sans-serif;
+    text-align: center;
+}
+
+@media only screen and (max-width: 960px) {
+    .marketplace-lander p {
+        font-size: 1.25rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .marketplace-lander p {
+        font-size: 1rem;
+    }
+}
+
+.marketplace-lander .marketplace-title-header h1 {
+    font-family: 'Palanquin Dark', sans-serif;
+}
+/*Default code End*/
+
+
 .fluid-thumbnail-grid-image-overlay{
     display: none;
 }
