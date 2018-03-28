@@ -34,9 +34,9 @@ var itemsOfWeek = [
         "seller_profile_url": "https://barkyours.sharetribe.com/en/tammis"
     },
     {
-        "title": "Tshirt",
-        "image": "https://static-blog.fabfitfun.com/magazine/wp-content/uploads/2017/08/25175621/Screen-Shot-2017-08-25-at-5.55.40-PM.jpg",
-        "url": "https://barkyours.sharetribe.com/?category=clothing-and-accessories",
+        "title": "View all Listings",
+        "image": "https://bytebucket.org/bipashant/barkyours/raw/1df09ff6604980ea81e51b59cb1f6c7650da35b7/view-all.jpg",
+        "url": "https://barkyours.sharetribe.com/?view=grid",
         "price": "$123.45",
         "seller_name": "Tammi Shapiro",
         "seller_profile_url": "https://barkyours.sharetribe.com/en/tammis"
