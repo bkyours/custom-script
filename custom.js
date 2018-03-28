@@ -270,7 +270,7 @@ $(document).ready(function(){
         });
     }
 
-
+f = "<i class="fas fa-angle-double-right"></i>"
 
 
 });

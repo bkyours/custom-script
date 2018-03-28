@@ -2,7 +2,7 @@
 var featuredCategories = [
     {
         "title": "Clothing Accessories",
-        "image": "https://static-blog.fabfitfun.com/magazine/wp-content/uploads/2017/08/25175621/Screen-Shot-2017-08-25-at-5.55.40-PM.jpg",
+        "image": "https://www.sportslocater.com/Images/grid_icon.png",
         "url": "https://barkyours.sharetribe.com/?category=clothing-and-accessories"
     },
     {
