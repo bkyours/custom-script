@@ -261,8 +261,10 @@ $(document).ready(function(){
                 $(".listing-price-amount").text($(".listing-price-amount").text().replace(/(\r\n\t|\n|\r\t)/gm,"") + ".00"); // add two decimal unit if not
             }
             $(".listing-price").css("visibility", "visible");
+            $(".listing-price-amount").css("visibility", "visible");
         }
     }
+
 
     function showHiddenNotification(){
         // Display flash notice(it is hidden due to some design issue on the login page)
