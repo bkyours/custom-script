@@ -313,7 +313,7 @@ $(document).ready(function(){
 
         $.map(itemsOfWeek, function (listing, index) {
             if(listing.title == "View all Listings"){
-                $(".home-fluid-thumbnail-grid").append('<div class="home-fluid-thumbnail-grid-item">' +
+                $(".home-fluid-thumbnail-grid").append('<div class="home-fluid-thumbnail-grid-item view-all-listing">' +
                     ' <div> <a class=" fluid-thumbnail-grid-image-item-link" href="'+ listing.url + '">' +
                     '<div class="fluid-thumbnail-grid-image-image-container">' +
                     ' <img alt="'+listing.title+'" class=" fluid-thumbnail-grid-image-image" src="'+listing.image+'">' +
@@ -323,7 +323,7 @@ $(document).ready(function(){
                     '<div class="fluid-thumbnail-grid-image-price-container" style="width:0;">' +
                     '</div></div>' +
                     '<div class="info-container" >' +
-                    '<div class="fluid-thumbnail-grid-image-title">'+listing.title+'</div>' +
+                    '<a href="'+listing.url+'" class="fluid-thumbnail-grid-image-title">'+listing.title+'</a>' +
                     '</div></div></div></div>');
 
 
