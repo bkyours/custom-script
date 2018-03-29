@@ -528,3 +528,8 @@ footer .icon-part{
     border-bottom: 2px solid #e1e1e1;
     line-height: 30px;
 }
+
+.view-all-listing img{
+    width: 100% !important;
+    height: 100% !important;
+}
