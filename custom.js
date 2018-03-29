@@ -313,13 +313,19 @@ $(document).ready(function(){
 
         $.map(itemsOfWeek, function (listing, index) {
             if(listing.title == "View all Listings"){
-                $(".home-fluid-thumbnail-grid").append('<div class="home-fluid-thumbnail-grid-item customized top-listing view-all-listing">' +
+                $(".home-fluid-thumbnail-grid").append('<div class="home-fluid-thumbnail-grid-item">' +
                     ' <div> <a class=" fluid-thumbnail-grid-image-item-link" href="'+ listing.url + '">' +
                     '<div class="fluid-thumbnail-grid-image-image-container">' +
-                    '<div class="center-text-view-all" style="min-height: 100%; min-width: 100%">' +
-                    '<div class="icon-with-text-container" href="/view=grid"><i class="fa fa-search icon-part"></i> <div class="text-part">View all Listings</div></div></div>' +
+                    ' <img alt="'+listing.title+'" class=" fluid-thumbnail-grid-image-image" src="'+listing.image+'">' +
                     '</div></a> ' +
-                    '</div></div></div>');
+                    '<div class="home-fluid-thumbnail-grid-author">' +
+                    '<div class="price-container">' +
+                    '<div class="fluid-thumbnail-grid-image-price-container" style="width:0;">' +
+                    '</div></div>' +
+                    '<div class="info-container" >' +
+                    '<div class="fluid-thumbnail-grid-image-title">'+listing.title+'</div>' +
+                    '</div></div></div></div>');
+
 
             }else{
                 $(".home-fluid-thumbnail-grid").append('<div class="home-fluid-thumbnail-grid-item">' +
