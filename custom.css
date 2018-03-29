@@ -529,22 +529,12 @@ body{
     background: #f1f1f1;
 }
 
-
-
-
-
-#topbar-container .Topbar{
-    background: #ff2883;
+.faq-category-title{
+    padding-bottom: 0;
 }
-
-.SearchBar__focusContainer__2uI0-:before{
-    border: 1px solid rgba(255,255,255,0.8);
-}
-.SearchBar__searchButton__1Ck2b svg{
-    stroke: #fff;
-}
-
-.SearchBar__keywordInput__2HTav:focus, .SearchBar__locationInput__3g__8:focus{
-    color: #fff;
-    border: 1px solid rgba(255,255,255,0.8);
+.faq-category-title span{
+    font-size: 18px;
+    font-weight: 600;
+    border-bottom: 2px solid #e1e1e1;
+    line-height: 30px;
 }

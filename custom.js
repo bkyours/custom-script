@@ -7,6 +7,7 @@ $(document).ready(function(){
     addDecimalToListingPagePrice();
     showHiddenNotification();
     initializeLoginInfo();
+    removeOptionalTextFromFilters();
 
     function displayLandingPageOrHomepage(){
         var currentURL = window.location.href;
@@ -135,28 +136,28 @@ $(document).ready(function(){
     }
 
     function initializeFAQPopUp(){
-        var popUpcontent = '<div id="faq-popup" class="faq-overlay"><div class="faq-popup"><div class="popup-header"><h2>Frequently Asked Questions</h2><a class="close faq-popup-close" href="#">&times;</a><div class="faq-searchbar-wrapper"><div class="faq-search-input-wrapper"><input type="search" class="faq-searchbar" placeholder="Search..."><button type="submit" class="SearchBar__searchButton__1Ck2b" style="background-color:transparent;" data-reactid="54"><svg width="17" height="17" viewBox="336 14 17 17" xmlns="http://www.w3.org/2000/svg"><g opacity=".7" fill="none" fill-rule="evenodd" transform="matrix(-1 0 0 1 352 15)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M11 11l3.494 3.494"></path><circle cx="6" cy="6" r="6"></circle></g></svg></button></div></div></div><div class="main-content"><div class="box"><ul class="question-list">';
-        var qnsList = $.map(questionAnswer, function (value, index) {
-            // debugger;
-            return ('<li id="link-for-question-' + index + '"><a href=#question-' + index + ' class="question-link">' + value.qns + '</a></li>');
-        });
-        var qnsListString = '';
-        $.each(qnsList, function () {
-            qnsListString += this || '';
+        var popUpcontent = '<div id="faq-popup" class="faq-overlay"><div class="faq-popup"><div class="popup-header"><h2>Frequently Asked Questions</h2><a class="close faq-popup-close" href="#">&times;</a><div class="faq-searchbar-wrapper"><div class="faq-search-input-wrapper"><input type="search" class="faq-searchbar" placeholder="Search..."><button type="submit" class="SearchBar__searchButton__1Ck2b" style="background-color:transparent;" data-reactid="54"><svg width="17" height="17" viewBox="336 14 17 17" xmlns="http://www.w3.org/2000/svg"><g opacity=".7" fill="none" fill-rule="evenodd" transform="matrix(-1 0 0 1 352 15)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M11 11l3.494 3.494"></path><circle cx="6" cy="6" r="6"></circle></g></svg></button></div></div></div><div class="main-content"><div class="content">';
+
+        var qnsAnsListForSeller = $.map(questionAnswerForSeller, function (value, index) {
+            return ('<div class="box" id="question-seller-' + index + '">' + '\n<div class="question">' + value.qns + '</div>\n<div class="answer">' + value.ans + '</div></div>');
         });
 
-        var popUpcontent1 = '</ul></div><div class="content">';
-
-        var qnsAnsList = $.map(questionAnswer, function (value, index) {
-            return ('<div class="box" id="question-' + index + '">' + '\n<div class="question">' + value.qns + '</div>\n<div class="answer">' + value.ans + '</div>\n<div class="top-link"><span class="fa fa-arrow-up navigate-top">TOP</span>\n</div>\n</div>');
+        var qnsAnsListForShopper = $.map(questionAnswerForShopper, function (value, index) {
+            return ('<div class="box" id="question-shopper-' + index + '">' + '\n<div class="question">' + value.qns + '</div>\n<div class="answer">' + value.ans + '</div></div>');
         });
-        var qnsAnsListString = '';
-        $.each(qnsAnsList, function () {
+        var qnsAnsListString = '<div class="box faq-category-title" id="faqTitleShopper"><span>See all questions for Bark Yours Shoppers</span></div>';
+        $.each(qnsAnsListForShopper, function () {
+            qnsAnsListString += this || '';
+        });
+
+        qnsAnsListString += '<div class="box faq-category-title" id="faqTitleSeller"><span>See all questions for Bark Yours Seller</span></div>';
+
+        $.each(qnsAnsListForSeller, function () {
             qnsAnsListString += this || '';
         });
 
         var popUpcontent2 = '</div></div></div></div>';
-        $('body').append(popUpcontent + qnsListString + popUpcontent1 + qnsAnsListString + popUpcontent2);
+        $('body').append(popUpcontent + qnsAnsListString + popUpcontent2);
 
         $(".faq-popup-close").click(function () {
             $("body").removeClass("faq-open");
@@ -191,17 +192,34 @@ $(document).ready(function(){
         // Search question and answer based on user input on faq search textbox
         $(".faq-searchbar").on('input propertychange paste', function () {
             var searchKey = $(this).val();
-            $.each(questionAnswer, function (index, value) {
-                if (value.qns.toLowerCase().includes(searchKey.toLowerCase()) || value.ans.toLowerCase().includes(searchKey.toLowerCase())) {
-                    $("#link-for-question-" + index).show();
-                    $("#question-" + index).show();
+            var matchedFaqForSeller = 0;
+            var matchedFaqForShopper = 0;
+            $.each(questionAnswerForSeller, function (index, value) {
+                // debugger;
+                if (value.qns.toLowerCase().includes(searchKey.toLowerCase()) ||
+                    value.ans.toLowerCase().includes(searchKey.toLowerCase())) {
+                    $("#question-seller-" + index).show();
+                    matchedFaqForSeller++;
                 }
                 else {
-                    $("#link-for-question-" + index).hide();
-                    $("#question-" + index).hide();
+                    $("#question-seller-" + index).hide();
                 }
 
             });
+            $.each(questionAnswerForShopper, function (index, value) {
+                if (value.qns.toLowerCase().includes(searchKey.toLowerCase()) ||
+                    value.ans.toLowerCase().includes(searchKey.toLowerCase())) {
+                    $("#question-shopper-" + index).show();
+                    matchedFaqForShopper++;
+                }
+                else {
+                    $("#question-shopper-" + index).hide();
+                }
+
+            });
+            matchedFaqForSeller == 0 ? $("#faqTitleSeller").hide() : $("#faqTitleSeller").show();
+            matchedFaqForShopper == 0 ? $("#faqTitleShopper").hide() : $("#faqTitleShopper").show();
+
             $('#faq-popup .main-content').animate({
                 scrollTop: 0
             }, 500);
@@ -334,6 +352,16 @@ $(document).ready(function(){
                 elem.find(".info-container").css("width", (availableWidth - 3) + "px");
                 elem.addClass("customized");
             }
+        });
+    }
+
+    function removeOptionalTextFromFilters(){
+        $( ".custom-filter-title" ).each(function(  ) {
+            $(this).text($(this).text().replace(/(\r\n\t|\n|\r\t)/gm,"").replace("(Optional)", ""));
+        });
+
+        $(".listing-details-container b").each(function(  ) {
+            $(this).text($(this).text().replace(/(\r\n\t|\n|\r\t)/gm,"").replace("(Optional)", ""));
         });
     }
 
