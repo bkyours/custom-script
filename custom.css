@@ -1,13 +1,10 @@
 /*Default code Start*/
 
 
-@import url('https://fonts.googleapis.com/css?family=Palanquin|Palanquin+Dark');
-
-
 .marketplace-lander .marketplace-lander-content-title{
     font-size: 3.5rem;
     line-height: 4rem;
-    font-family: 'Palanquin Dark', sans-serif;
+    /*font-family: 'Palanquin Dark', sans-serif;*/
 }
 
 @media only screen and (max-width: 960px) {
@@ -36,7 +33,7 @@
 
 .marketplace-lander p {
     max-width: 32em;
-    font-family: 'Palanquin', sans-serif;
+    /*font-family: 'Palanquin', sans-serif;*/
     text-align: center;
 }
 
@@ -53,7 +50,7 @@
 }
 
 .marketplace-lander .marketplace-title-header h1 {
-    font-family: 'Palanquin Dark', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 /*Default code End*/
 
@@ -348,7 +345,6 @@ footer .footer-store-links {
 .faq-popup h2 {
     margin: 0;
     color: #333;
-    font-family: Tahoma, Arial, sans-serif;
 }
 
 .faq-popup .close {
@@ -455,9 +451,7 @@ footer .icon-part{
 #profile-listings-list .home-fluid-thumbnail-grid-author{
     height: 40px;
 }
-body{
-    font-family: 'Palanquin', sans-serif !important;
-}
+
 .listing-price{
     visibility: hidden;
 }
@@ -491,10 +485,6 @@ body{
     z-index: 2;
 }
 
-.fluid-thumbnail-grid-image-price, .listing-price-amount, .home-list-item-price-value
-{
-    font-family: 'Source Sans Pro', helvetica, sans-serif;
-}
 .home-fluid-thumbnail-grid{
     visibility: hidden;
 }
