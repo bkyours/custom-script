@@ -106,17 +106,15 @@ $(document).ready(function(){
     }
 
     function addFooter(){
+
+        categoriesLink = '';
+        $.map(categories, function (value, index) {
+            categoriesLink += '<a href="'+ value.url +'">' + value.title + '</a></div><div class="col-sm-12 col-xs-6">';
+        });
         $('body').append('<footer><div class=layout-centered-content><div class="row footer-links"><div class="col-xs-12 col-sm-4">' +
             '<div class=row><h3>Shop</h3><div class="col-sm-12 col-xs-6">' +
-            '<a href="/?category=clothing-and-accessories">Clothing and Accessories</a></div><div class="col-sm-12 col-xs-6">' +
-            '<a href="/?category=jewelry">Jewelry</a></div><div class="col-sm-12 col-xs-6">' +
-            '<a href="/?category=around-the-house">Around the House</a></div><div class="col-sm-12 col-xs-6">' +
-            '<a href="/?category=paper-goods1">Paper Goods</a></div><div class="col-sm-12 col-xs-6">' +
-            '<a href="/?category=arts-and-collectibles">Art and Collectibles</a></div><div class="col-sm-12 col-xs-6">' +
-            '<a href="/?filter_option_271898=271898">Gifts for Her</a></div><div class="col-sm-12 col-xs-6">' +
-            '<a href="/?filter_option_271899=271899">Gifts for Him</a></div>' +
-            '</div></div><div class="col-xs-12 col-sm-4">' +
-
+            categoriesLink +
+            '</div></div></div><div class="col-xs-12 col-sm-4">' +
             '<div class=row><h3>Learn more</h3><div class="col-sm-12 col-xs-6">' +
             '<a href=/en/infos/about>About Bark Yours</a></div><div class="col-sm-12 col-xs-6">' +
             '<a class= "faq-popup-trigger" href=#faq-popup>FAQs</a></div><div class="col-sm-12 col-xs-6">' +
@@ -136,37 +134,63 @@ $(document).ready(function(){
     }
 
     function initializeFAQPopUp(){
-        var popUpcontent = '<div id="faq-popup" class="faq-overlay"><div class="faq-popup"><div class="popup-header"><h2>Frequently Asked Questions</h2><a class="close faq-popup-close" href="#">&times;</a><div class="faq-searchbar-wrapper"><div class="faq-search-input-wrapper"><input type="search" class="faq-searchbar" placeholder="Search..."><button type="submit" class="SearchBar__searchButton__1Ck2b" style="background-color:transparent;" data-reactid="54"><svg width="17" height="17" viewBox="336 14 17 17" xmlns="http://www.w3.org/2000/svg"><g opacity=".7" fill="none" fill-rule="evenodd" transform="matrix(-1 0 0 1 352 15)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M11 11l3.494 3.494"></path><circle cx="6" cy="6" r="6"></circle></g></svg></button></div></div></div><div class="main-content"><div class="content">';
+        var popUpcontent = '<div id="faq-popup" class="faq-overlay"><div class="faq-popup"><div class="popup-header"><h2>Frequently Asked Questions</h2><a class="close faq-popup-close" href="#">&times;</a><div class="faq-searchbar-wrapper"><div class="faq-search-input-wrapper"><input type="search" class="faq-searchbar" placeholder="Search..."><button type="submit" class="SearchBar__searchButton__1Ck2b" style="background-color:transparent;" data-reactid="54"><svg width="17" height="17" viewBox="336 14 17 17" xmlns="http://www.w3.org/2000/svg"><g opacity=".7" fill="none" fill-rule="evenodd" transform="matrix(-1 0 0 1 352 15)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M11 11l3.494 3.494"></path><circle cx="6" cy="6" r="6"></circle></g></svg></button></div></div></div><div class="main-content"><div class="box"><ul class="question-list">';
+
+        // popUpcontent += '<li id=""qnsHeadForShopper><a href="#qnsAnsHeadForShopper">I am a Bark Yours Shopper</a></li>';
+
+        var qnsListForShopper = $.map(questionAnswerForShopper, function (value, index) {
+            return ('<div class="qns-list"><li id="link-for-shopper-question-' + index + '"><a href=#question-shopper-' + index + ' class="question-link">' + value.qns + '</a></li></div>');
+        });
+
+        var qnsListForSeller = $.map(questionAnswerForSeller, function (value, index) {
+            return ('<div class="qns-list"> <li id="link-for-seller-question-' + index + '"><a href=#question-seller-' + index + ' class="question-link">' + value.qns + '</a></li></div>');
+        });
+
+        var qnsListString = '<li id="qnsHeadForShopper"><a href="#qnsAnsHeadForShopper">I am a Bark Yours Shopper</a></li>';
+        $.each(qnsListForShopper, function () {
+            qnsListString += this;
+        });
+
+        qnsListString +='<li id="qnsHeadForSeller"><a href="#qnsAnsHeadForSeller">I am a Bark Yours Seller</a></li>';
+
+        $.each(qnsListForSeller, function () {
+            qnsListString += this;
+        });
+
+        var popUpcontent1 = '</ul></div><div class="content padding-25">';
 
         var qnsAnsListForSeller = $.map(questionAnswerForSeller, function (value, index) {
             return ('<div class="box" id="question-seller-' + index + '">' + '\n<div class="question">' + value.qns + '</div>\n<div class="answer">' + value.ans + '</div></div>');
         });
 
         var qnsAnsListForShopper = $.map(questionAnswerForShopper, function (value, index) {
-            return ('<div class="box" id="question-shopper-' + index + '">' + '\n<div class="question">' + value.qns + '</div>\n<div class="answer">' + value.ans + '</div></div>');
+            return ('<div class="box" id="question-shopper-' + index + '">' + '\n<div class="question" id="">' + value.qns + '</div>\n<div class="answer">' + value.ans + '</div></div>');
         });
-        var qnsAnsListString = '<div class="box faq-category-title" id="faqTitleShopper"><span>See all questions for Bark Yours Shoppers</span></div>';
+        var qnsAnsListString = '<div class="box faq-category-title" id="qnsAnsHeadForShopper"><span>I am a Bark Yours Shopper</span></div>';
         $.each(qnsAnsListForShopper, function () {
             qnsAnsListString += this || '';
         });
 
-        qnsAnsListString += '<div class="box faq-category-title" id="faqTitleSeller"><span>See all questions for Bark Yours Seller</span></div>';
+        qnsAnsListString += '<div class="box faq-category-title" id="qnsAnsHeadForSeller"><span>I am a Bark Yours Seller</span></div>';
 
         $.each(qnsAnsListForSeller, function () {
             qnsAnsListString += this || '';
         });
 
         var popUpcontent2 = '</div></div></div></div>';
-        $('body').append(popUpcontent + qnsAnsListString + popUpcontent2);
+        $('body').append(popUpcontent + qnsListString + popUpcontent1 + qnsAnsListString + popUpcontent2);
 
         $(".faq-popup-close").click(function () {
             $("body").removeClass("faq-open");
         });
 
-        $(".question-link").click(function (e) {
+        $("#faq-popup ul li a").click(function (e) {
             e.preventDefault();
+            link = $(this);
+            position = $(link.attr("href")).offset();
+            topPosition = position.top;
             $('#faq-popup .main-content').animate({
-                scrollTop: $($(this).attr("href")).offset().top - 200
+                scrollTop: $(link.attr("href")).offset().top - 180
             }, 500);
         });
 

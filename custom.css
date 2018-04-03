@@ -313,6 +313,10 @@ footer .footer-store-links {
     padding: 10px;
     padding-left: 30px;
 }
+
+.question-list{
+    padding-left: 0;
+}
 .question-list li {
     padding-top: 10px;
 }
@@ -532,4 +536,19 @@ footer .icon-part{
 .view-all-listing img{
     width: 100% !important;
     height: 100% !important;
+}
+
+#qnsHeadForShopper, #qnsHeadForSeller{
+    list-style: none;
+}
+.qns-list{
+    padding-left: 40px;
+}
+
+.padding-25{
+    padding-left: 25px;
+}
+
+#qnsHeadForShopper, #qnsHeadForSeller{
+    font-size: 1.15em;
 }

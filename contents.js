@@ -46,30 +46,93 @@ var itemsOfWeek = [
 var questionAnswerForSeller = [
 
     {
-        "qns": 'I am a Bark Yours Seller',
-        "ans": 'Answer goes here'
+        "qns": 'First question goes here for Seller',
+        "ans": 'Answer goes here for Seller'
     },
     {
-        "qns": 'Next Question goes here 1',
-        "ans": 'Next Answer goes here 1'
+        "qns": 'Next Question goes here for Seller 1',
+        "ans": 'Next Answer goes here for Seller'
     },
     {
-        "qns": 'Next Question goes here 2',
-        "ans": 'Next Answer goes here 2'
+        "qns": 'Next Question goes here for Seller 2',
+        "ans": 'Next Answer goes here for Seller'
+    },
+    {
+        "qns": 'Next Question goes here for Seller 3',
+        "ans": 'Next Answer goes here for Seller'
+    },
+    {
+        "qns": 'Next Question goes here for Seller 4',
+        "ans": 'Next Answer goes here for Seller'
+    },
+    {
+        "qns": 'Next Question goes here for Seller 5',
+        "ans": 'Next Answer goes here for Seller'
+    },
+    {
+        "qns": 'Next Question goes here for Seller 6',
+        "ans": 'Next Answer goes here for Seller'
     }
 ];
 
 var questionAnswerForShopper = [
     {
-        "qns": 'I am a Bark Yours Shopper',
-        "ans": 'Answer goes here.'
+        "qns": 'First question goes here for Shopper',
+        "ans": 'Answer goes here for Shopper'
     },
     {
-        "qns": 'Next Question goes here 1',
-        "ans": 'Next Answer goes here 1'
+        "qns": 'Next Question goes here for Shopper 1',
+        "ans": 'Next Answer goes here for Shopper'
     },
     {
-        "qns": 'Next Question goes here 2',
-        "ans": 'Next Answer goes here 2'
+        "qns": 'Next Question goes here for Shopper 2',
+        "ans": 'Next Answer goes here for Shopper'
+    },
+    {
+        "qns": 'Next Question goes here for Shopper 3',
+        "ans": 'Next Answer goes here for Shopper'
+    },
+    {
+        "qns": 'Next Question goes here for Shopper 4',
+        "ans": 'Next Answer goes here for Shopper'
+    },
+    {
+        "qns": 'Next Question goes here for Shopper 5',
+        "ans": 'Next Answer goes here for Shopper'
+    },
+    {
+        "qns": 'Next Question goes here for Shopper 6',
+        "ans": 'Next Answer goes here for Shopper'
+    }
+];
+
+var categories = [
+    {
+        title: "Clothing and Accessories",
+        url: "/?category=clothing-and-accessories"
+    },
+    {
+        title: "Jewelry",
+        url: "/?category=jewelry"
+    },
+    {
+        title: "Around the House",
+        url: "/?category=around-the-house"
+    },
+    {
+        title: "Paper Goods",
+        url: "/?category=paper-goods1"
+    },
+    {
+        title: "Art and Collectibles",
+        url: "/?category=arts-and-collectibles"
+    },
+    {
+        title: "Gifts for Her",
+        url: "/?filter_option_271898=271898"
+    },
+    {
+        title: "Gifts for Him",
+        url: "/?filter_option_271899=271899"
     }
 ];
