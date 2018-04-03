@@ -218,31 +218,59 @@ $(document).ready(function(){
             var searchKey = $(this).val();
             var matchedFaqForSeller = 0;
             var matchedFaqForShopper = 0;
+
             $.each(questionAnswerForSeller, function (index, value) {
-                // debugger;
                 if (value.qns.toLowerCase().includes(searchKey.toLowerCase()) ||
                     value.ans.toLowerCase().includes(searchKey.toLowerCase())) {
                     $("#question-seller-" + index).show();
+                    $("#link-for-seller-question-" + index).show();
                     matchedFaqForSeller++;
                 }
                 else {
                     $("#question-seller-" + index).hide();
+                    $("#link-for-seller-question-" + index).hide()
                 }
 
             });
             $.each(questionAnswerForShopper, function (index, value) {
+
                 if (value.qns.toLowerCase().includes(searchKey.toLowerCase()) ||
                     value.ans.toLowerCase().includes(searchKey.toLowerCase())) {
                     $("#question-shopper-" + index).show();
+                    $("#link-for-shopper-question-" + index).show();
                     matchedFaqForShopper++;
                 }
                 else {
                     $("#question-shopper-" + index).hide();
+                    $("#link-for-shopper-question-" + index).hide();
                 }
 
             });
-            matchedFaqForSeller == 0 ? $("#faqTitleSeller").hide() : $("#faqTitleSeller").show();
-            matchedFaqForShopper == 0 ? $("#faqTitleShopper").hide() : $("#faqTitleShopper").show();
+
+
+            if(matchedFaqForSeller == 0){
+                $("#faqTitleSeller").hide();
+                $("#qnsAnsHeadForSeller").hide();
+                $("#qnsHeadForSeller").hide();
+            }
+            else{
+                $("#faqTitleSeller").show();
+                $("#qnsAnsHeadForSeller").show();
+                $("#qnsHeadForSeller").show();
+
+            }
+
+            if(matchedFaqForShopper == 0){
+                $("#faqTitleShopper").hide();
+                $("#qnsAnsHeadForShopper").hide();
+                $("#qnsHeadForShopper").hide();
+            }
+            else{
+                $("#faqTitleShopper").show();
+                $("#qnsAnsHeadForShopper").show();
+                $("#qnsHeadForShopper").show();
+
+            }
 
             $('#faq-popup .main-content').animate({
                 scrollTop: 0

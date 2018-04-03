@@ -46,63 +46,63 @@ var itemsOfWeek = [
 var questionAnswerForSeller = [
 
     {
-        "qns": 'First question goes here for Seller',
-        "ans": 'Answer goes here for Seller'
+        "qns": "First question goes here for Seller",
+        "ans": "Answer goes here for Seller"
     },
     {
-        "qns": 'Next Question goes here for Seller 1',
-        "ans": 'Next Answer goes here for Seller'
+        "qns": "Next Question goes here for Seller 1",
+        "ans": "Next Answer goes here for Seller"
     },
     {
-        "qns": 'Next Question goes here for Seller 2',
-        "ans": 'Next Answer goes here for Seller'
+        "qns": "Next Question goes here for Seller 2",
+        "ans": "Next Answer goes here for Seller"
     },
     {
-        "qns": 'Next Question goes here for Seller 3',
-        "ans": 'Next Answer goes here for Seller'
+        "qns": "Next Question goes here for Seller 3",
+        "ans": "Next Answer goes here for Seller"
     },
     {
-        "qns": 'Next Question goes here for Seller 4',
-        "ans": 'Next Answer goes here for Seller'
+        "qns": "Next Question goes here for Seller 4",
+        "ans": "Next Answer goes here for Seller"
     },
     {
-        "qns": 'Next Question goes here for Seller 5',
-        "ans": 'Next Answer goes here for Seller'
+        "qns": "Next Question goes here for Seller 5",
+        "ans": "Next Answer goes here for Seller"
     },
     {
-        "qns": 'Next Question goes here for Seller 6',
-        "ans": 'Next Answer goes here for Seller'
+        "qns": "Next Question goes here for Seller 6",
+        "ans": "Next Answer goes here for Seller"
     }
 ];
 
 var questionAnswerForShopper = [
     {
-        "qns": 'First question goes here for Shopper',
-        "ans": 'Answer goes here for Shopper'
+        "qns": "First question goes here for Shopper",
+        "ans": "Answer goes here for Shopper"
     },
     {
-        "qns": 'Next Question goes here for Shopper 1',
-        "ans": 'Next Answer goes here for Shopper'
+        "qns": "Next Question goes here for Shopper 1",
+        "ans": "Next Answer goes here for Shopper"
     },
     {
-        "qns": 'Next Question goes here for Shopper 2',
-        "ans": 'Next Answer goes here for Shopper'
+        "qns": "Next Question goes here for Shopper 2",
+        "ans": "Next Answer goes here for Shopper"
     },
     {
-        "qns": 'Next Question goes here for Shopper 3',
-        "ans": 'Next Answer goes here for Shopper'
+        "qns": "Next Question goes here for Shopper 3",
+        "ans": "Next Answer goes here for Shopper"
     },
     {
-        "qns": 'Next Question goes here for Shopper 4',
-        "ans": 'Next Answer goes here for Shopper'
+        "qns": "Next Question goes here for Shopper 4",
+        "ans": "Next Answer goes here for Shopper"
     },
     {
-        "qns": 'Next Question goes here for Shopper 5',
-        "ans": 'Next Answer goes here for Shopper'
+        "qns": "Next Question goes here for Shopper 5",
+        "ans": "Next Answer goes here for Shopper"
     },
     {
-        "qns": 'Next Question goes here for Shopper 6',
-        "ans": 'Next Answer goes here for Shopper'
+        "qns": "Next Question goes here for Shopper 6",
+        "ans": "Next Answer goes here for Shopper"
     }
 ];
 

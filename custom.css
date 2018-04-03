@@ -552,3 +552,6 @@ footer .icon-part{
 #qnsHeadForShopper, #qnsHeadForSeller{
     font-size: 1.15em;
 }
+#qnsHeadForSeller{
+    padding-top: 20px;
+}
