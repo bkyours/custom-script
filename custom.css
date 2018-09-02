@@ -475,14 +475,13 @@ footer .icon-part{
     visibility: visible;
 }
 .featured-categories .home-fluid-thumbnail-grid-author {
-    border: 2px solid #e1e1e1;
     overflow: hidden;
     height: 40px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
     position: absolute;
-    bottom: -39px;
+    bottom: -38px;
     width: 100%;
+    text-align: center;
+    font-weight: 600;
 }
 
 .featured-categories .fluid-thumbnail-grid-image-image{
@@ -500,7 +499,6 @@ footer .icon-part{
 .featured-categories .fluid-thumbnail-grid-image-image{
     max-height: 100%;
     max-width: 100%;
-    border: 2px solid #e1e1e1;
     border-bottom:0;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
