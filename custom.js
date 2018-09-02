@@ -16,12 +16,7 @@ $(document).ready(function () {
         if (shouldDisplayLandingpage) {
             addBannerForNotLoggedIn();
             addViewAllListingLink();
-
-            if(localStorage.getItem("devEnv") == "true"){
-                displayLandingPageNew();
-            }else{
-                displayLandingPage();
-            }
+            displayLandingPage();
 
         } else {
             setInterval(customizeGrid, 1000);
@@ -300,69 +295,8 @@ $(document).ready(function () {
         }
     }
 
-    function displayLandingPage() {
-        $(".home-fluid-thumbnail-grid").empty();
-        $(".home-fluid-thumbnail-grid").css("visibility", "visible");
-        $(".home-toolbar-button-group-button").removeClass("selected");
-        $(".home-fluid-thumbnail-grid").append("<div class='row' style='border-bottom: 1px solid #c3c3c3; width: 97%'> <h3>Featured Categories</h3></div><hr>");
-        $.map(featuredCategories, function (value, index) {
-            $(".home-fluid-thumbnail-grid").append('<div class="home-fluid-thumbnail-grid-item featured-categories">' +
-                '<div>' +
-                '<a class=" fluid-thumbnail-grid-image-item-link" href="' + value.url + '">' +
-                '<div class="fluid-thumbnail-grid-image-image-container">' +
-                '<img alt="' + value.title + '" class=" fluid-thumbnail-grid-image-image" src="' + value.image + '">' +
-                '<div class="home-fluid-thumbnail-grid-author">' +
-                '<div class="fluid-thumbnail-grid-image-title">' + value.title + '</div>' +
-                '</div>' +
-                '</div></a>' +
-                '</div></div>')
-        });
-        $(".home-fluid-thumbnail-grid").append("<div class='row' style='border-bottom: 1px solid #c3c3c3; width: 97%'> <h3>Items of the Week</h3></div><hr>");
-        $.map(itemsOfWeek, function (listing, index) {
-            if (listing.title == "View All Listings") {
-                $(".home-fluid-thumbnail-grid").append('<div class="home-fluid-thumbnail-grid-item view-all-listing">' +
-                    ' <div> <a class=" fluid-thumbnail-grid-image-item-link" href="' + listing.url + '">' +
-                    '<div class="fluid-thumbnail-grid-image-image-container">' +
-                    ' <img alt="' + listing.title + '" class=" fluid-thumbnail-grid-image-image" src="' + listing.image + '">' +
-                    '</div></a> ' +
-                    '<div class="home-fluid-thumbnail-grid-author">' +
-                    '<div class="price-container">' +
-                    '<div class="fluid-thumbnail-grid-image-price-container" style="width:0;">' +
-                    '</div></div>' +
-                    '<div class="info-container" >' +
-                    '<a href="' + listing.url + '" class="fluid-thumbnail-grid-image-title">' + listing.title + '</a>' +
-                    '</div></div></div></div>');
-            } else {
-                $(".home-fluid-thumbnail-grid").append('<div class="home-fluid-thumbnail-grid-item">' +
-                    ' <div> <a class=" fluid-thumbnail-grid-image-item-link" href="' + listing.url + '">' +
-                    '<div class="fluid-thumbnail-grid-image-image-container">' +
-                    ' <img alt="' + listing.title + '" class=" fluid-thumbnail-grid-image-image" src="' + listing.image + '">' +
-                    '</div></a> ' +
-                    '<div class="home-fluid-thumbnail-grid-author">' +
-                    '<div class="price-container">' +
-                    '<div class="fluid-thumbnail-grid-image-price-container">' +
-                    ' <span class="fluid-thumbnail-grid-image-price">' + listing.price + '</span>' +
-                    ' </div></div>' +
-                    '<div class="info-container" >' +
-                    '<div class="fluid-thumbnail-grid-image-title">' + listing.title + '</div>' +
-                    '<a class="home-fluid-thumbnail-grid-author-name" title="' + listing.seller_name + '" href="' + listing.seller_profile_url + '">' + listing.seller_name + '</a></div></div></div></div>')
-                elem = $(".home-fluid-thumbnail-grid").children().last();
-                var priceTag = elem.find(".fluid-thumbnail-grid-image-price-container");
-                var priceTagSpan = priceTag.find("span");
-                var price = priceTagSpan.text().replace(/(\r\n\t|\n|\r\t)/gm, "");
-                if (price.indexOf('.') == -1) {
-                    priceTagSpan.text(price + ".00");
-                }
-                var title = elem.find(".fluid-thumbnail-grid-image-title");
-                var authorContainer = elem.find(".home-fluid-thumbnail-grid-author");
-                var availableWidth = authorContainer.width() - elem.find(".price-container").width();
-                elem.find(".info-container").css("width", (availableWidth - 3) + "px");
-                elem.addClass("customized");
-            }
-        });
-    }
 
-    function displayLandingPageNew() {
+    function displayLandingPage() {
         $(".home-fluid-thumbnail-grid").empty();
         $(".home-fluid-thumbnail-grid").css("visibility", "visible");
         $(".home-toolbar-button-group-button").removeClass("selected");
