@@ -44,7 +44,7 @@ var spotLights = [
     {
         "type": "seller",
         "seller_name": "THATisMYpet",
-        "image": "https://user-assets.sharetribe.com/images/listing_images/images/1650417/medium/talk_to_the_paw_alstyle_women_navy.jpg?1533735039",
+        "image": "https://user-assets.sharetribe.com/images/people/images/Oq0Z7caINW0wWjK1YeK6QQ/medium/etsy_profile_DP_corgi_400x400.png",
         "seller_profile_url": "https://www.barkyours.com/en/thatismypet",
         "grid_label": "FEATURED SELLER "
     }
