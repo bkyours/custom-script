@@ -4,19 +4,34 @@ var marketplace_description = "Buy and sell the most unique and thoughtful dog-t
 var featuredCategoriesLabel = "SHOP BY CATEGORY";
 var featuredCategories = [
     {
-        "title": "Clothing and Accessories",
-        "image": "https://barkyours.files.wordpress.com/2018/05/clothing-v3.jpg",
+        "title": "Clothing",
+        "image": "https://raw.githubusercontent.com/bkyours/custom-script/master/images/clothing.png",
         "url": "https://barkyours.sharetribe.com/?category=clothing-and-accessories"
     },
     {
-        "title": "Jewelry",
-        "image": "https://barkyours.files.wordpress.com/2018/05/jewelry-v3.jpg",
+        "title": "Jewelry & Accessories",
+        "image": "https://raw.githubusercontent.com/bkyours/custom-script/master/images/jewelry-accesories.png",
         "url": "https://barkyours.sharetribe.com/?category=jewelry"
     },
     {
-        "title": "Around the House",
-        "image": "https://barkyours.files.wordpress.com/2018/05/mug.png",
+        "title": "Home & Living",
+        "image": "https://raw.githubusercontent.com/bkyours/custom-script/master/images/home-living.png",
         "url": "https://barkyours.sharetribe.com/?category=around-the-house"
+    },
+    {
+        "title": "Greeting cards & Stationary",
+        "image": "https://raw.githubusercontent.com/bkyours/custom-script/master/images/greeting-cards.png",
+        "url": "https://www.barkyours.com/?category=paper-goods1"
+    },
+    {
+        "title": "Wall Art",
+        "image": "https://raw.githubusercontent.com/bkyours/custom-script/master/images/wall-art.png",
+        "url": "https://www.barkyours.com/?category=drawing-slash-paintings"
+    },
+    {
+        "title": "Special Pet Items",
+        "image": "https://raw.githubusercontent.com/bkyours/custom-script/master/images/special-pet-items.png",
+        "url": "https://www.barkyours.com/?category=special-pet-items"
     },
 ];
 
@@ -44,7 +59,7 @@ var spotLights = [
     {
         "type": "seller",
         "seller_name": "THATisMYpet",
-        "image": "https://user-assets.sharetribe.com/images/listing_images/images/1650417/medium/talk_to_the_paw_alstyle_women_navy.jpg?1533735039",
+        "image": "https://user-assets.sharetribe.com/images/people/images/Oq0Z7caINW0wWjK1YeK6QQ/medium/etsy_profile_DP_corgi_400x400.png",
         "seller_profile_url": "https://www.barkyours.com/en/thatismypet",
         "grid_label": "FEATURED SELLER "
     }
