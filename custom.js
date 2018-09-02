@@ -318,8 +318,8 @@ $(document).ready(function () {
             if (item.type == "seller") {
                 $(".home-fluid-thumbnail-grid").append('<div class="home-fluid-thumbnail-grid-item spotlight-grid spotlight-seller">' +
                     ' <div> <a class=" fluid-thumbnail-grid-image-item-link" href="' + item.seller_profile_url + '">' +
-                    '<div class="fluid-thumbnail-grid-image-image-container">' +
-                    ' <img alt="' + item.title + '" class=" fluid-thumbnail-grid-image-image" src="' + item.image + '">' +
+                    '<div class="fluid-thumbnail-grid-image-image-container featured-seller-grid">' +
+                    ' <img alt="' + item.seller_name + '" class=" fluid-thumbnail-grid-image-image" src="' + item.image + '">' +
                     '</div></a> ' +
                     '<div class="home-fluid-thumbnail-grid-author">' +
                     '<div class="spotlight-type text-center">'+item.grid_label +'</div>' +
