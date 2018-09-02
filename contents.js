@@ -4,19 +4,34 @@ var marketplace_description = "Buy and sell the most unique and thoughtful dog-t
 var featuredCategoriesLabel = "SHOP BY CATEGORY";
 var featuredCategories = [
     {
-        "title": "Clothing and Accessories",
-        "image": "https://barkyours.files.wordpress.com/2018/05/clothing-v3.jpg",
+        "title": "Clothing",
+        "image": "https://raw.githubusercontent.com/bkyours/custom-script/master/images/clothing.png",
         "url": "https://barkyours.sharetribe.com/?category=clothing-and-accessories"
     },
     {
-        "title": "Jewelry",
-        "image": "https://barkyours.files.wordpress.com/2018/05/jewelry-v3.jpg",
+        "title": "Jewelry & Accessories",
+        "image": "https://raw.githubusercontent.com/bkyours/custom-script/master/images/jewelry-accesories.png",
         "url": "https://barkyours.sharetribe.com/?category=jewelry"
     },
     {
-        "title": "Around the House",
-        "image": "https://barkyours.files.wordpress.com/2018/05/mug.png",
+        "title": "Home & Living,
+        "image": "https://raw.githubusercontent.com/bkyours/custom-script/master/images/home-living.png",
         "url": "https://barkyours.sharetribe.com/?category=around-the-house"
+    },
+    {
+        "title": "Greeting cards & Stationary",
+        "image": "https://raw.githubusercontent.com/bkyours/custom-script/master/images/greeting-cards.png",
+        "url": "https://www.barkyours.com/?category=paper-goods1"
+    },
+    {
+        "title": "Wall Art",
+        "image": "https://raw.githubusercontent.com/bkyours/custom-script/master/images/wall-art.png",
+        "url": "https://www.barkyours.com/?category=drawing-slash-paintings"
+    },
+    {
+        "title": "Special Pet Items",
+        "image": "https://raw.githubusercontent.com/bkyours/custom-script/master/images/special-pet-items.png",
+        "url": "https://www.barkyours.com/?category=special-pet-items"
     },
 ];
 
