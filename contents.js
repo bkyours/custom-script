@@ -14,7 +14,7 @@ var featuredCategories = [
         "url": "https://barkyours.sharetribe.com/?category=jewelry"
     },
     {
-        "title": "Home & Living,
+        "title": "Home & Living",
         "image": "https://raw.githubusercontent.com/bkyours/custom-script/master/images/home-living.png",
         "url": "https://barkyours.sharetribe.com/?category=around-the-house"
     },
