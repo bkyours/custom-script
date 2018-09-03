@@ -6,27 +6,27 @@ var featuredCategories = [
     {
         "title": "Clothing",
         "image": "https://raw.githubusercontent.com/bkyours/custom-script/master/images/clothing.png",
-        "url": "https://barkyours.sharetribe.com/?category=clothing-and-accessories"
+        "url": "https://www.barkyours.com/?category=clothing"
     },
     {
         "title": "Jewelry & Accessories",
         "image": "https://raw.githubusercontent.com/bkyours/custom-script/master/images/jewelry-accesories.png",
-        "url": "https://barkyours.sharetribe.com/?category=jewelry"
+        "url": "https://www.barkyours.com/?category=jewelry-and-accessories"
     },
     {
         "title": "Home & Living",
         "image": "https://raw.githubusercontent.com/bkyours/custom-script/master/images/home-living.png",
-        "url": "https://barkyours.sharetribe.com/?category=around-the-house"
+        "url": "https://www.barkyours.com/?category=home-and-living"
     },
     {
         "title": "Greeting Cards & Stationary",
         "image": "https://raw.githubusercontent.com/bkyours/custom-script/master/images/greeting-cards.png",
-        "url": "https://www.barkyours.com/?category=paper-goods1"
+        "url": "https://www.barkyours.com/?category=greeting-cards-and-stationary"
     },
     {
-        "title": "Wall Art",
+        "title": "Arts & Collectibles",
         "image": "https://raw.githubusercontent.com/bkyours/custom-script/master/images/wall-art.png",
-        "url": "https://www.barkyours.com/?category=drawing-slash-paintings"
+        "url": "https://www.barkyours.com/?category=arts-and-collectibles"
     },
     {
         "title": "Special Pet Items",
