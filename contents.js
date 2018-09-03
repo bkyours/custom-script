@@ -190,7 +190,7 @@ var categories = [
         url: "/?category=greeting-cards-and-stationary"
     },
     {
-        title: "Art and Collectibles",
+        title: "Arts & Collectibles",
         url: "/?category=arts-and-collectibles"
     },
     {
