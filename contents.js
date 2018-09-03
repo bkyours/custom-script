@@ -48,12 +48,12 @@ var spotLights = [
         "grid_label": "FEATURED ITEM"
     },
     {   "type": "listing",
-        "title": "Talk to the PAW Womens T-Shirt",
-        "image": "https://user-assets.sharetribe.com/images/listing_images/images/1650417/medium/talk_to_the_paw_alstyle_women_navy.jpg?1533735039",
-        "url": "https://www.barkyours.com/en/listings/614798-talk-to-the-paw-womens-t-shirt-free-shipping",
-        "price": "$24.95",
-        "seller_name": "THATisMYpet",
-        "seller_profile_url": "https://www.barkyours.com/en/thatismypet",
+        "title": "Jack Russell Mens T-Shirt",
+        "image": "https://user-assets.sharetribe.com/images/listing_images/images/1659343/medium/jackrussell_67.jpg?1534162195",
+        "url": "https://www.barkyours.com/en/listings/617556-jack-russell-67-mens-t-shirt-hashtag-tee-dog-breed-print",
+        "price": "$12.90",
+        "seller_name": "TASDORB",
+        "seller_profile_url": "https://www.barkyours.com/en/tasdorb",
         "grid_label": "FEATURED ITEM"
     },
     {
