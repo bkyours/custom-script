@@ -40,9 +40,9 @@ var spotLightLabel = "BARKYOURS' SPOTLIGHT";
 var spotLights = [
     {   "type": "listing",
         "title": "Hand Painted Ceramic Dog Bowl",
-        "image": "https://user-assets.sharetribe.com/images/listing_images/images/1611277/medium/img_5402.jpg?1531510820",
-        "url": "https://www.barkyours.com/en/listings/603025-hand-painted-ceramic-dog-bowl-shih-tzu-for-food-or-water",
-        "price": "$70.00",
+        "image": "https://user-assets.sharetribe.com/images/listing_images/images/1611240/medium/img_4685_2.jpg?1531509116",
+        "url": "https://www.barkyours.com/en/listings/603015-hand-painted-boston-terrier-ceramic-cookie-jar",
+        "price": "$200.00",
         "seller_name": "Faux Paw Productions",
         "seller_profile_url": "https://www.barkyours.com/en/fauxpaw",
         "grid_label": "FEATURED ITEM"
