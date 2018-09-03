@@ -19,7 +19,7 @@ var featuredCategories = [
         "url": "https://barkyours.sharetribe.com/?category=around-the-house"
     },
     {
-        "title": "Greeting cards & Stationary",
+        "title": "Greeting Cards & Stationary",
         "image": "https://raw.githubusercontent.com/bkyours/custom-script/master/images/greeting-cards.png",
         "url": "https://www.barkyours.com/?category=paper-goods1"
     },
