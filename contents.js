@@ -174,23 +174,27 @@ var questionAnswerForShopper = [
 // For footer list
 var categories = [
     {
-        title: "Clothing and Accessories",
-        url: "/?category=clothing-and-accessories"
+        title: "Clothing",
+        url: "/?category=clothing"
     },
     {
-        title: "Jewelry",
-        url: "/?category=jewelry"
+        title: "Jewelry & Accessories",
+        url: "/?category=jewelry-and-accessories"
     },
     {
-        title: "Around the House",
-        url: "/?category=around-the-house"
+        title: "Home & Living",
+        url: "/?category=home-and-living"
     },
     {
-        title: "Paper Goods",
-        url: "/?category=paper-goods1"
+        title: "Greeting Cards & Stationary",
+        url: "/?category=greeting-cards-and-stationary"
     },
     {
         title: "Art and Collectibles",
         url: "/?category=arts-and-collectibles"
+    },
+    {
+        title: "Special Pet Items",
+        url: "/?category=special-pet-items"
     }
 ];
