@@ -11,7 +11,7 @@ $(document).ready(function () {
 
     function displayLandingPageOrHomepage() {
         var currentURL = window.location.href;
-        var shouldDisplayLandingpage = !currentURL.includes("category") && !currentURL.includes("filter_option") && !currentURL.includes("view=list") && !currentURL.includes("view=map") && !currentURL.includes("view=grid") && !currentURL.includes("price_min") && !currentURL.includes("?q=") && !currentURL.includes("price_max");
+        var shouldDisplayLandingpage = !currentURL.includes("category") && !currentURL.includes("filter_option") && !currentURL.includes("view=list") && !currentURL.includes("view=map") && !currentURL.includes("view=grid") && !currentURL.includes("price_min") && !currentURL.includes("?q=") && !currentURL.includes("?page=") && !currentURL.includes("price_max");
 
         if (shouldDisplayLandingpage) {
             addBannerForNotLoggedIn();
