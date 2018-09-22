@@ -726,7 +726,7 @@ $(document).ready(function () {
                 }
             });
             
-            $(".new_listing_form_field_container input").each(function(){
+            $(".new_listing_form_field_container input[type=text]").each(function(){
                 if ($(this).val().length) {
                     options.push($(this).val());
                 }
