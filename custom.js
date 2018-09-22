@@ -620,6 +620,8 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     hideTagsOnListingPage();
+    customFieldsToFilter();
+    
     function hideTagsOnListingPage(){
         var listingPageContainer = $(".listing-details-container");
 
