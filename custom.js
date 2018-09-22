@@ -615,3 +615,120 @@ $(document).ready(function () {
     }
 
 });
+
+// Listing Filters to Search
+
+$(document).ready(function () {
+    hideTagsOnListingPage();
+    function hideTagsOnListingPage(){
+        var listingPageContainer = $(".listing-details-container");
+
+        if(listingPageContainer.length){
+            listingPageContainer.find("p").each(function(){
+                if($(this).text().indexOf("Custom Tags:") != -1){
+                    $(this).hide();
+                }
+            })
+        }
+    }
+
+    function customFieldsToFilter(){
+
+        var isListingEditPage = $(".edit_listing").length > 0;
+
+        if(isListingEditPage){
+            initializeFilterToSearch();
+        }
+
+        var newListingForm = $(".new-listing-form");
+
+        // In case of New listing form is loaded after some time,
+        // need to check if the all form is loaded
+        if(newListingForm.length){
+
+            var timer = setInterval(function(){
+                    var formLoaded = $(".new_listing").length > 0;
+                    if(formLoaded){
+                        initializeFilterToSearch();
+                        clearInterval(timer);
+                    }
+                },
+                1000);
+        }
+
+        function initializeFilterToSearch(){
+            cloneDescriptionAndTagDom();
+            splitDescription();
+            setChangeEvent();
+            setTagsToTagField();
+        }
+
+        function cloneDescriptionAndTagDom(){
+            $("#listing_description").clone().attr("name", "listing_tags").attr("id", "listing_tags").insertAfter("#listing_description");
+            $("#listing_description").clone().attr("name", "listing_description_temp").attr("id", "listing_description_temp").insertAfter("#listing_description");
+
+            $("#listing_description_temp").on("change paste keyup", mergeDescriptionAndTags);
+            $("#listing_tags").on("change paste keyup", mergeDescriptionAndTags);
+
+        }
+
+        function splitDescription(){
+            var description = $("#listing_description").val();
+
+            if(description.indexOf("Custom Tags:") != -1){
+                descriptionAndTags = description.split("Custom Tags:");
+                $("#listing_description_temp").val(descriptionAndTags[0]);
+            }
+        }
+
+        function setTagsToTagField(){
+            var tagsField = $("#listing_tags");
+            var tags = fetchAllSelectedOption();
+            var tagsStr = "";
+            $.each(tags,function(){
+                tagsStr += this + ", ";
+            });
+            tagsField.val("Custom Tags: " + tagsStr);
+            mergeDescriptionAndTags();
+        }
+
+        function setChangeEvent(){
+            var customFieldsContainer = ".new_listing_form_field_container";
+            if($(customFieldsContainer).length){
+                $(".new_listing_form_field_container input[type=checkbox]").change(function(){
+                    setTagsToTagField();
+
+                });
+
+                $(".new_listing_form_field_container select").change(function(){
+                    setTagsToTagField();
+                });
+
+            }
+        }
+
+        function mergeDescriptionAndTags(){
+            actualDescription = $("#listing_description_temp").val();
+            tags = $("#listing_tags").val();
+            $("#listing_description").val(actualDescription + "\n" + tags);
+        }
+
+        function fetchAllSelectedOption(){
+            var options = [];
+            $(".new_listing_form_field_container input[type=checkbox]").each(function(){
+                if ($(this).is(':checked')) {
+                    options.push($("label[for='" + $(this).attr("id")+ "']").text());
+                }
+            });
+
+            $(".new_listing_form_field_container select").each(function(){
+                var selectedOption = $(this).find("option:selected");
+                if (selectedOption.val() != "") {
+                    options.push(selectedOption.text());
+                }
+            });
+
+            return options;
+        }
+    }
+});
