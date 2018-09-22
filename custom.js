@@ -616,12 +616,9 @@ $(document).ready(function () {
 
 });
 
-// Listing Filters to Search
-
 $(document).ready(function () {
     hideTagsOnListingPage();
     customFieldsToFilter();
-    
     function hideTagsOnListingPage(){
         var listingPageContainer = $(".listing-details-container");
 
@@ -722,6 +719,18 @@ $(document).ready(function () {
                     options.push($("label[for='" + $(this).attr("id")+ "']").text());
                 }
             });
+            
+            $(".new_listing_form_field_container input[type=radio]").each(function(){
+                if ($(this).is(':checked')) {
+                    options.push($("label[for='" + $(this).attr("id")+ "']").text());
+                }
+            });
+            
+            $(".new_listing_form_field_container input").each(function(){
+                if ($(this).val().length) {
+                    options.push($(this).val());
+                }
+            });
 
             $(".new_listing_form_field_container select").each(function(){
                 var selectedOption = $(this).find("option:selected");
@@ -734,3 +743,4 @@ $(document).ready(function () {
         }
     }
 });
+
