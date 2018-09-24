@@ -1,11 +1,5 @@
 infiniteScrollToPagination();
 
-
-function shouldDisplayLandingpage(){
-    var currentURL = window.location.href;
-    return !currentURL.includes("category") && !currentURL.includes("filter_option") && !currentURL.includes("view=list") && !currentURL.includes("view=map") && !currentURL.includes("view=grid") && !currentURL.includes("price_min") && !currentURL.includes("?q=") && !currentURL.includes("?page=") && !currentURL.includes("price_max");
-}
-
 $(document).ready(function () {
     addFooter();
     initializeFAQPopUp();
@@ -17,15 +11,9 @@ $(document).ready(function () {
     addAboutTheSellerLink();
     addSizeFilter();
 
-
-    function shouldDisplayLandingpage(){
-        var currentURL = window.location.href;
-        return !currentURL.includes("category") && !currentURL.includes("filter_option") && !currentURL.includes("view=list") && !currentURL.includes("view=map") && !currentURL.includes("view=grid") && !currentURL.includes("price_min") && !currentURL.includes("?q=") && !currentURL.includes("?page=") && !currentURL.includes("price_max");
-    }
-
-
     function displayLandingPageOrHomepage() {
-        var shouldDisplayLandingpage = shouldDisplayLandingpage();
+        var currentURL = window.location.href;
+        var shouldDisplayLandingpage = !currentURL.includes("category") && !currentURL.includes("filter_option") && !currentURL.includes("view=list") && !currentURL.includes("view=map") && !currentURL.includes("view=grid") && !currentURL.includes("price_min") && !currentURL.includes("?q=") && !currentURL.includes("?page=") && !currentURL.includes("price_max");
 
         if (shouldDisplayLandingpage) {
             addBannerForNotLoggedIn();
@@ -759,7 +747,11 @@ $(document).ready(function () {
 });
 
 function infiniteScrollToPagination(){
-    if(!shouldDisplayLandingpage()){
+    var currentURL = window.location.href;
+    var shouldDisplayLandingpage = !currentURL.includes("category") && !currentURL.includes("filter_option") && !currentURL.includes("view=list") && !currentURL.includes("view=map") && !currentURL.includes("view=grid") && !currentURL.includes("price_min") && !currentURL.includes("?q=") && !currentURL.includes("?page=") && !currentURL.includes("price_max");
+
+
+    if(!shouldDisplayLandingpage){
         paginationLink = [];
         $( document).bind("DOMNodeRemoved", function( objEvent ){
             removedClass = objEvent.target.getAttribute("class");
