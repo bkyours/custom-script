@@ -10,11 +10,14 @@ $(document).ready(function () {
     removeOptionalTextFromFilters();
     addAboutTheSellerLink();
     addSizeFilter();
-    
-    
-    function displayLandingPageOrHomepage() {
+
+
+    function shouldDisplayLandingpage(){
         var currentURL = window.location.href;
-        var shouldDisplayLandingpage = !currentURL.includes("category") && !currentURL.includes("filter_option") && !currentURL.includes("view=list") && !currentURL.includes("view=map") && !currentURL.includes("view=grid") && !currentURL.includes("price_min") && !currentURL.includes("?q=") && !currentURL.includes("?page=") && !currentURL.includes("price_max");
+        return !currentURL.includes("category") && !currentURL.includes("filter_option") && !currentURL.includes("view=list") && !currentURL.includes("view=map") && !currentURL.includes("view=grid") && !currentURL.includes("price_min") && !currentURL.includes("?q=") && !currentURL.includes("?page=") && !currentURL.includes("price_max");
+    }
+    function displayLandingPageOrHomepage() {
+        var shouldDisplayLandingpage = shouldDisplayLandingpage();
 
         if (shouldDisplayLandingpage) {
             addBannerForNotLoggedIn();
@@ -722,13 +725,13 @@ $(document).ready(function () {
                     options.push($("label[for='" + $(this).attr("id")+ "']").text());
                 }
             });
-            
+
             $(".new_listing_form_field_container input[type=radio]").each(function(){
                 if ($(this).is(':checked')) {
                     options.push($("label[for='" + $(this).attr("id")+ "']").text());
                 }
             });
-            
+
             $(".new_listing_form_field_container input[type=text]").each(function(){
                 if ($(this).val().length) {
                     options.push($(this).val());
@@ -767,5 +770,4 @@ function infiniteScrollToPagination(){
             }
 
         });
-   
-    }
+}
