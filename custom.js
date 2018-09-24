@@ -1,5 +1,6 @@
+infiniteScrollToPagination();
+
 $(document).ready(function () {
-    //infiniteScrollToPagination();
     addFooter();
     initializeFAQPopUp();
     displayLandingPageOrHomepage();
@@ -10,31 +11,7 @@ $(document).ready(function () {
     addAboutTheSellerLink();
     addSizeFilter();
     
-    function infiniteScrollToPagination(){
-       if ($("#homepage-filters").length > 0) {
-        paginationLink = [];
-        $( document).bind("DOMNodeRemoved", function( objEvent ){
-            removedClass = objEvent.target.getAttribute("class");
-            if(removedClass && removedClass.indexOf("pagination") > -1){
-                paginationLink = objEvent.target.childNodes;
-            }
-        });
-
-        $(document).ready(function(){
-            if(paginationLink.length){
-                $("#pageless-loader").remove();
-                $("<div class='pagination'></div>").appendTo(".home-loading-more");
-                $(paginationLink).appendTo($(".pagination"));
-                $(".pagination a").each(function (index, elem) {
-                    $(elem).attr("href", $(elem).attr("href").replace("/s?page", "?page"))
-                });
-            }
-
-        });
-     }
-    }
-
-
+    
     function displayLandingPageOrHomepage() {
         var currentURL = window.location.href;
         var shouldDisplayLandingpage = !currentURL.includes("category") && !currentURL.includes("filter_option") && !currentURL.includes("view=list") && !currentURL.includes("view=map") && !currentURL.includes("view=grid") && !currentURL.includes("price_min") && !currentURL.includes("?q=") && !currentURL.includes("?page=") && !currentURL.includes("price_max");
@@ -770,3 +747,26 @@ $(document).ready(function () {
     }
 });
 
+function infiniteScrollToPagination(){
+       if ($("#homepage-filters").length > 0) {
+        paginationLink = [];
+        $( document).bind("DOMNodeRemoved", function( objEvent ){
+            removedClass = objEvent.target.getAttribute("class");
+            if(removedClass && removedClass.indexOf("pagination") > -1){
+                paginationLink = objEvent.target.childNodes;
+            }
+        });
+
+        $(document).ready(function(){
+            if(paginationLink.length){
+                $("#pageless-loader").remove();
+                $("<div class='pagination'></div>").appendTo(".home-loading-more");
+                $(paginationLink).appendTo($(".pagination"));
+                $(".pagination a").each(function (index, elem) {
+                    $(elem).attr("href", $(elem).attr("href").replace("/s?page", "?page"))
+                });
+            }
+
+        });
+     }
+    }
