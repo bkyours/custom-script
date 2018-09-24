@@ -748,7 +748,6 @@ $(document).ready(function () {
 });
 
 function infiniteScrollToPagination(){
-       if ($("#homepage-filters").length > 0) {
         paginationLink = [];
         $( document).bind("DOMNodeRemoved", function( objEvent ){
             removedClass = objEvent.target.getAttribute("class");
@@ -768,5 +767,5 @@ function infiniteScrollToPagination(){
             }
 
         });
-     }
+   
     }
