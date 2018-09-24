@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    infiniteScrollToPagination();
     addFooter();
     initializeFAQPopUp();
     displayLandingPageOrHomepage();
@@ -8,6 +9,31 @@ $(document).ready(function () {
     removeOptionalTextFromFilters();
     addAboutTheSellerLink();
     addSizeFilter();
+    
+    function infiniteScrollToPagination(){
+       if ($("#homepage-filters").length > 0) {
+        paginationLink = [];
+        $( document).bind("DOMNodeRemoved", function( objEvent ){
+            removedClass = objEvent.target.getAttribute("class");
+            if(removedClass && removedClass.indexOf("pagination") > -1){
+                paginationLink = objEvent.target.childNodes;
+            }
+        });
+
+        $(document).ready(function(){
+            if(paginationLink.length){
+                $("#pageless-loader").remove();
+                $("<div class='pagination'></div>").appendTo(".home-loading-more");
+                $(paginationLink).appendTo($(".pagination"));
+                $(".pagination a").each(function (index, elem) {
+                    $(elem).attr("href", $(elem).attr("href").replace("/s?page", "?page"))
+                });
+            }
+
+        });
+     }
+    }
+
 
     function displayLandingPageOrHomepage() {
         var currentURL = window.location.href;
