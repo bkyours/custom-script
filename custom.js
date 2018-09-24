@@ -10,12 +10,7 @@ $(document).ready(function () {
     removeOptionalTextFromFilters();
     addAboutTheSellerLink();
     addSizeFilter();
-
-
-    function shouldDisplayLandingpage(){
-        var currentURL = window.location.href;
-        return !currentURL.includes("category") && !currentURL.includes("filter_option") && !currentURL.includes("view=list") && !currentURL.includes("view=map") && !currentURL.includes("view=grid") && !currentURL.includes("price_min") && !currentURL.includes("?q=") && !currentURL.includes("?page=") && !currentURL.includes("price_max");
-    }
+    
     function displayLandingPageOrHomepage() {
         var shouldDisplayLandingpage = shouldDisplayLandingpage();
 
@@ -751,6 +746,7 @@ $(document).ready(function () {
 });
 
 function infiniteScrollToPagination(){
+    if(!shouldDisplayLandingpage()){
         paginationLink = [];
         $( document).bind("DOMNodeRemoved", function( objEvent ){
             removedClass = objEvent.target.getAttribute("class");
@@ -769,5 +765,12 @@ function infiniteScrollToPagination(){
                 });
             }
 
-        });
+        }); 
+    }
+        
+}
+
+function shouldDisplayLandingpage(){
+    var currentURL = window.location.href;
+    return !currentURL.includes("category") && !currentURL.includes("filter_option") && !currentURL.includes("view=list") && !currentURL.includes("view=map") && !currentURL.includes("view=grid") && !currentURL.includes("price_min") && !currentURL.includes("?q=") && !currentURL.includes("?page=") && !currentURL.includes("price_max");
 }
