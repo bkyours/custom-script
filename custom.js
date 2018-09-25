@@ -757,6 +757,11 @@ function infiniteScrollToPagination(){
             removedClass = objEvent.target.getAttribute("class");
             if(removedClass && removedClass.indexOf("pagination") > -1){
                 paginationLink = objEvent.target.childNodes;
+                $(paginationLink).each(function (index, elem) {
+                    if($(elem).attr("href")){
+                        $(elem).attr("href", $(elem).attr("href").replace("/s?", "?"))
+                    }
+                });
             }
         });
 
@@ -765,10 +770,33 @@ function infiniteScrollToPagination(){
                 $("#pageless-loader").remove();
                 $("<div class='pagination'></div>").appendTo(".home-loading-more");
                 $(paginationLink).appendTo($(".pagination"));
-                $(".pagination a").each(function (index, elem) {
-                    $(elem).attr("href", $(elem).attr("href").replace("/s?page", "?page"))
+
+                currentPage = getUrlParameter("page");
+                $(".home-categories-main").each(function (index, elem) {
+                    $(elem).attr("href", $(elem).attr("href").replace("&page=" + currentPage, ""))
                 });
+
+                $(".home-categories-sub").each(function (index, elem) {
+                    $(elem).attr("href", $(elem).attr("href").replace("&page=" + currentPage, ""))
+                });
+
+
             }
+
+            function getUrlParameter(sParam) {
+                var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+                    sURLVariables = sPageURL.split('&'),
+                    sParameterName,
+                    i;
+
+                for (i = 0; i < sURLVariables.length; i++) {
+                    sParameterName = sURLVariables[i].split('=');
+
+                    if (sParameterName[0] === sParam) {
+                        return sParameterName[1] === undefined ? true : sParameterName[1];
+                    }
+                }
+            };
 
         });
     }
