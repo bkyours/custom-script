@@ -780,6 +780,10 @@ function infiniteScrollToPagination(){
                     $(elem).attr("href", $(elem).attr("href").replace("&page=" + currentPage, ""))
                 });
 
+                $("#home-toolbar-categories-menu a").each(function (index, elem) {
+                    $(elem).attr("href", $(elem).attr("href").replace("&page=" + currentPage, ""))
+                });
+
 
             }
 
