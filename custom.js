@@ -13,7 +13,7 @@ $(document).ready(function () {
 
     function displayLandingPageOrHomepage() {
         var currentURL = window.location.href;
-        var shouldDisplayLandingpage = currentURL.indexOf("category") >= 0 && currentURL.indexOf("filter_option") >= 0 && currentURL.indexOf("view=list") >= 0 && currentURL.indexOf("view=map") >= 0 && currentURL.indexOf("view=grid") >= 0 && currentURL.indexOf("price_min") >= 0 && currentURL.indexOf("?q=") >= 0 && currentURL.indexOf("?page=" >= 0) && currentURL.indexOf("price_max") >= 0;
+        var shouldDisplayLandingpage = !currentURL.indexOf("category") >= 0 && !currentURL.indexOf("filter_option") >= 0 && !currentURL.indexOf("view=list") >= 0 && !currentURL.indexOf("view=map") >= 0 && !currentURL.indexOf("view=grid") >= 0 && !currentURL.indexOf("price_min") >= 0 && !currentURL.indexOf("?q=") >= 0 && !currentURL.indexOf("?page=") >= 0 && !currentURL.indexOf("price_max") >= 0;
 
         if (shouldDisplayLandingpage) {
             addBannerForNotLoggedIn();
@@ -748,7 +748,7 @@ $(document).ready(function () {
 
 function infiniteScrollToPagination(){
     var currentURL = window.location.href;
-    var shouldDisplayLandingpage = currentURL.indexOf("category") >= 0 && currentURL.indexOf("filter_option") >= 0 && currentURL.indexOf("view=list") >= 0 && currentURL.indexOf("view=map") >= 0 && currentURL.indexOf("view=grid") >= 0 && currentURL.indexOf("price_min") >= 0 && currentURL.indexOf("?q=") >= 0 && currentURL.indexOf("?page=" >= 0) && currentURL.indexOf("price_max") >= 0;
+    var shouldDisplayLandingpage = !currentURL.indexOf("category") >= 0 && !currentURL.indexOf("filter_option") >= 0 && !currentURL.indexOf("view=list") >= 0 && !currentURL.indexOf("view=map") >= 0 && !currentURL.indexOf("view=grid") >= 0 && !currentURL.indexOf("price_min") >= 0 && !currentURL.indexOf("?q=") >= 0 && !currentURL.indexOf("?page=") >= 0 && !currentURL.indexOf("price_max") >= 0;
 
     if(!shouldDisplayLandingpage){
         paginationLink = [];
