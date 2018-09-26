@@ -1,4 +1,4 @@
-infiniteScrollToPagination();
+//infiniteScrollToPagination();
 
 $(document).ready(function () {
     addFooter();
