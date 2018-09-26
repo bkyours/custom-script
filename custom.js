@@ -1,4 +1,4 @@
-//infiniteScrollToPagination();
+infiniteScrollToPagination();
 
 $(document).ready(function () {
     addFooter();
@@ -747,17 +747,23 @@ $(document).ready(function () {
 });
 
 function infiniteScrollToPagination(){
+    debugger;
     var currentURL = window.location.href;
+        debugger;
     var shouldDisplayLandingpage = !currentURL.includes("category") && !currentURL.includes("filter_option") && !currentURL.includes("view=list") && !currentURL.includes("view=map") && !currentURL.includes("view=grid") && !currentURL.includes("price_min") && !currentURL.includes("?q=") && !currentURL.includes("?page=") && !currentURL.includes("price_max");
-
+    debugger;
 
     if(!shouldDisplayLandingpage){
+            debugger;
         paginationLink = [];
+            debugger;
         $( document).bind("DOMNodeRemoved", function( objEvent ){
             removedClass = objEvent.target.getAttribute("class");
             if(removedClass && removedClass.indexOf("pagination") > -1){
+                    debugger;
                 paginationLink = objEvent.target.childNodes;
                 $(paginationLink).each(function (index, elem) {
+                        debugger;
                     if($(elem).attr("href")){
                         $(elem).attr("href", $(elem).attr("href").replace("/s?", "?"))
                     }
@@ -767,6 +773,7 @@ function infiniteScrollToPagination(){
 
         $(document).ready(function(){
             if(paginationLink.length){
+                    debugger;
                 $("#pageless-loader").remove();
                 $("<div class='pagination'></div>").appendTo(".home-loading-more");
                 $(paginationLink).appendTo($(".pagination"));
@@ -788,11 +795,12 @@ function infiniteScrollToPagination(){
             }
 
             function getUrlParameter(sParam) {
+                    debugger;
                 var sPageURL = decodeURIComponent(window.location.search.substring(1)),
                     sURLVariables = sPageURL.split('&'),
                     sParameterName,
                     i;
-
+    debugger;
                 for (i = 0; i < sURLVariables.length; i++) {
                     sParameterName = sURLVariables[i].split('=');
 
