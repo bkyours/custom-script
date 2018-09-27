@@ -13,9 +13,9 @@ $(document).ready(function () {
 
     function displayLandingPageOrHomepage() {
         var currentURL = window.location.href;
-        var shouldDisplayLandingpage = currentURL.indexOf("category") >= 0 && currentURL.indexOf("filter_option") >= 0 && currentURL.indexOf("view=list") >= 0 && currentURL.indexOf("view=map") >= 0 && currentURL.indexOf("view=grid") >= 0 && currentURL.indexOf("price_min") >= 0 && currentURL.indexOf("?q=") >= 0 && currentURL.indexOf("?page=") >= 0 && currentURL.indexOf("price_max") >= 0;
+        var showListingList = currentURL.indexOf("category") >= 0 || currentURL.indexOf("filter_option") >= 0 || currentURL.indexOf("view=list") >= 0 || currentURL.indexOf("view=map") >= 0 || currentURL.indexOf("view=grid") >= 0 || currentURL.indexOf("price_min") >= 0 || currentURL.indexOf("?q=") >= 0 || currentURL.indexOf("?page=") >= 0 || currentURL.indexOf("price_max") >= 0;
 
-        if (!shouldDisplayLandingpage) {
+        if (!showListingList) {
             addBannerForNotLoggedIn();
             addViewAllListingLink();
             displayLandingPage();
@@ -748,9 +748,9 @@ $(document).ready(function () {
 
 function infiniteScrollToPagination(){
     var currentURL = window.location.href;
-    var shouldDisplayLandingpage = currentURL.indexOf("category") >= 0 && currentURL.indexOf("filter_option") >= 0 && currentURL.indexOf("view=list") >= 0 && currentURL.indexOf("view=map") >= 0 && currentURL.indexOf("view=grid") >= 0 && currentURL.indexOf("price_min") >= 0 && currentURL.indexOf("?q=") >= 0 && currentURL.indexOf("?page=") >= 0 && currentURL.indexOf("price_max") >= 0;
+    var showPagination = currentURL.indexOf("category") >= 0 || currentURL.indexOf("filter_option") >= 0 || currentURL.indexOf("view=list") >= 0 || currentURL.indexOf("view=map") >= 0 || currentURL.indexOf("view=grid") >= 0 || currentURL.indexOf("price_min") >= 0 || currentURL.indexOf("?q=") >= 0 || currentURL.indexOf("?page=") >= 0 || currentURL.indexOf("price_max") >= 0;
 
-    if(!shouldDisplayLandingpage){
+    if(showPagination){
         paginationLink = [];
         $( document).bind("DOMNodeRemoved", function( objEvent ){
             removedClass = objEvent.target.getAttribute("class");
