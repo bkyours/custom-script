@@ -59,7 +59,7 @@ var spotLights = [
     {
         "type": "seller",
         "seller_name": "Faux Paw Productions",
-        "image": "https://user-assets.sharetribe.com/images/listing_images/images/1616572/medium/img_3831.jpg?1531868378",
+        "image": "https://user-assets.sharetribe.com/images/listing_images/images/1611278/medium/shih_tzu_test.jpg?1531510826",
         "seller_profile_url": "https://www.barkyours.com/en/fauxpaw",
         "grid_label": "FEATURED SELLER "
     }
