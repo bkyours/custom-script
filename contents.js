@@ -39,28 +39,28 @@ var spotLightLabel = "BARKYOURS' SPOTLIGHT";
 
 var spotLights = [
     {   "type": "listing",
-        "title": "Hand Painted Ceramic Dog Bowl",
-        "image": "https://user-assets.sharetribe.com/images/listing_images/images/1611240/medium/img_4685_2.jpg?1531509116",
-        "url": "https://www.barkyours.com/en/listings/603015-hand-painted-boston-terrier-ceramic-cookie-jar",
-        "price": "$200.00",
-        "seller_name": "Faux Paw Productions",
-        "seller_profile_url": "https://www.barkyours.com/en/fauxpaw",
+        "title": "Stay Paw-Sitive T-Shirt",
+        "image": "https://user-assets.sharetribe.com/images/listing_images/images/1650450/medium/stay_pawsitive_alstyle_womens_red.jpg?1533735530",
+        "url": "https://www.barkyours.com/en/listings/614806-free-shipping-stay-paw-sitive-womens-t-shirt",
+        "price": "$24.95",
+        "seller_name": "THATisMYpet",
+        "seller_profile_url": "https://www.barkyours.com/en/thatismypet",
         "grid_label": "FEATURED ITEM"
     },
     {   "type": "listing",
-        "title": "Jack Russell Mens T-Shirt",
-        "image": "https://user-assets.sharetribe.com/images/listing_images/images/1659343/medium/jackrussell_67.jpg?1534162195",
-        "url": "https://www.barkyours.com/en/listings/617556-jack-russell-67-mens-t-shirt-hashtag-tee-dog-breed-print",
-        "price": "$12.90",
-        "seller_name": "TASDORB",
-        "seller_profile_url": "https://www.barkyours.com/en/tasdorb",
+        "title": "I Like Big Mutts Pillow",
+        "image": "https://user-assets.sharetribe.com/images/listing_images/images/1708891/medium/i_like_big_mutts_pillow.png?1536700298",
+        "url": "https://www.barkyours.com/en/listings/632337-i-like-big-mutts-and-i-cannot-lie-pillow-with-paw-print",
+        "price": "$29.00",
+        "seller_name": "ART4PETZ",
+        "seller_profile_url": "https://www.barkyours.com/en/slre1951",
         "grid_label": "FEATURED ITEM"
     },
     {
         "type": "seller",
-        "seller_name": "THATisMYpet",
-        "image": "https://user-assets.sharetribe.com/images/people/images/Oq0Z7caINW0wWjK1YeK6QQ/medium/etsy_profile_DP_corgi_400x400.png",
-        "seller_profile_url": "https://www.barkyours.com/en/thatismypet",
+        "seller_name": "Faux Paw Productions",
+        "image": "https://user-assets.sharetribe.com/images/listing_images/images/1616572/medium/img_3831.jpg?1531868378",
+        "seller_profile_url": "https://www.barkyours.com/en/fauxpaw",
         "grid_label": "FEATURED SELLER "
     }
 ];
