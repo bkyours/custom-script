@@ -39,28 +39,28 @@ var spotLightLabel = "BARKYOURS' SPOTLIGHT";
 
 var spotLights = [
     {   "type": "listing",
-        "title": "Stay Paw-Sitive T-Shirt",
-        "image": "https://user-assets.sharetribe.com/images/listing_images/images/1650450/medium/stay_pawsitive_alstyle_womens_red.jpg?1533735530",
-        "url": "https://www.barkyours.com/en/listings/614806-free-shipping-stay-paw-sitive-womens-t-shirt",
+        "title": "Rescue Love Sign",
+        "image": "https://user-assets.sharetribe.com/images/listing_images/images/1731333/medium/rescue_love_-_si.jpg?1537804562",
+        "url": "https://www.barkyours.com/en/listings/638679-24-rescue-love-sign-shiny-steel",
+        "price": "$59.99",
+        "seller_name": "Precision Metal Art",
+        "seller_profile_url": "https://www.barkyours.com/en/sierrapma",
+        "grid_label": "FEATURED ITEM"
+    },
+    {   "type": "listing",
+        "title": "Talk to the Paw T-Shirt",
+        "image": "https://user-assets.sharetribe.com/images/listing_images/images/1650417/medium/talk_to_the_paw_alstyle_women_navy.jpg?1533735039",
+        "url": "https://www.barkyours.com/en/listings/614798-free-shipping-talk-to-the-paw-womens-t-shirt",
         "price": "$24.95",
         "seller_name": "THATisMYpet",
         "seller_profile_url": "https://www.barkyours.com/en/thatismypet",
         "grid_label": "FEATURED ITEM"
     },
-    {   "type": "listing",
-        "title": "I Like Big Mutts Pillow",
-        "image": "https://user-assets.sharetribe.com/images/listing_images/images/1708891/medium/i_like_big_mutts_pillow.png?1536700298",
-        "url": "https://www.barkyours.com/en/listings/632337-i-like-big-mutts-and-i-cannot-lie-pillow-with-paw-print",
-        "price": "$29.00",
-        "seller_name": "ART4PETZ",
-        "seller_profile_url": "https://www.barkyours.com/en/slre1951",
-        "grid_label": "FEATURED ITEM"
-    },
     {
         "type": "seller",
-        "seller_name": "Faux Paw Productions",
-        "image": "https://user-assets.sharetribe.com/images/people/images/zJCFX_fkVmg8Q8Xo5VSKsg/medium/deborah.jpg?1531515853",
-        "seller_profile_url": "https://www.barkyours.com/en/fauxpaw",
+        "seller_name": "Like Mother Like Daughter Jewelry",
+        "image": "https://user-assets.sharetribe.com/images/people/images/50sFY1UJznGAAUcSh-4Ypw/medium/photo_of_me.jpg?1536843087",
+        "seller_profile_url": "https://www.barkyours.com/en/motherdaughterjewel",
         "grid_label": "FEATURED SELLER "
     }
 ];
