@@ -29,7 +29,7 @@ var featuredCategories = [
         "url": "https://www.barkyours.com/?category=arts-and-collectibles"
     },
     {
-        "title": "Special Pet Items",
+        "title": "Crafts for Dogs",
         "image": "https://raw.githubusercontent.com/bkyours/custom-script/master/images/special-pet-items.png",
         "url": "https://www.barkyours.com/?category=special-pet-items"
     },
