@@ -39,21 +39,21 @@ var spotLightLabel = "BARKYOURS' SPOTLIGHT";
 
 var spotLights = [
     {   "type": "listing",
-        "title": "Rescue Love Sign",
-        "image": "https://user-assets.sharetribe.com/images/listing_images/images/1731333/medium/rescue_love_-_si.jpg?1537804562",
-        "url": "https://www.barkyours.com/en/listings/638679-24-rescue-love-sign-shiny-steel",
-        "price": "$59.99",
-        "seller_name": "Precision Metal Art",
-        "seller_profile_url": "https://www.barkyours.com/en/sierrapma",
+        "title": "Dog Christmas Cards",
+        "image": "https://user-assets.sharetribe.com/images/listing_images/images/1780102/medium/4x4_canvas__5_.png?1538962055",
+        "url": "https://www.barkyours.com/en/listings/648767-set-of-8-dog-christmas-cards-w-slash-envelopes",
+        "price": "$20.00",
+        "seller_name": "Hound Made",
+        "seller_profile_url": "https://www.barkyours.com/en/abigailr",
         "grid_label": "FEATURED ITEM"
     },
     {   "type": "listing",
-        "title": "Talk to the Paw T-Shirt",
-        "image": "https://user-assets.sharetribe.com/images/listing_images/images/1650417/medium/talk_to_the_paw_alstyle_women_navy.jpg?1533735039",
-        "url": "https://www.barkyours.com/en/listings/614798-free-shipping-talk-to-the-paw-womens-t-shirt",
-        "price": "$24.95",
-        "seller_name": "THATisMYpet",
-        "seller_profile_url": "https://www.barkyours.com/en/thatismypet",
+        "title": "Custom Dog Ornament",
+        "image": "https://user-assets.sharetribe.com/images/listing_images/images/1753019/medium/70d7b77c-72bf-4d1d-9684-32ecf5fa7962.jpeg?1538269948",
+        "url": "https://www.barkyours.com/en/listings/642965-dog-ornament-personalised-custom-made-for-your-dog",
+        "price": "$24.99",
+        "seller_name": "Rich's Wood Shop",
+        "seller_profile_url": "https://www.barkyours.com/en/richswoodshop",
         "grid_label": "FEATURED ITEM"
     },
     {
