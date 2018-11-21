@@ -78,6 +78,13 @@ var spotLights = [
         "image": "https://user-assets.sharetribe.com/images/people/images/Oq0Z7caINW0wWjK1YeK6QQ/medium/etsy_profile_DP_corgi_400x400.png?1533216119",
         "seller_profile_url": "https://www.barkyours.com/en/thatismypet",
         "grid_label": "FEATURED SELLER "
+    },
+    {
+        "type": "seller",
+        "seller_name": "Bulldog",
+        "image": "https://user-assets.sharetribe.com/images/listing_images/images/1656387/medium/20180805_174224b.jpg?1534029633",
+        "seller_profile_url": "https://www.barkyours.com/?view=grid&price_min=0&price_max=1000&filter_option_268882=268882",
+        "grid_label": "FEATURED BREED "
     }
 ];
 
