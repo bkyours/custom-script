@@ -56,6 +56,15 @@ var spotLights = [
         "seller_profile_url": "https://www.barkyours.com/en/richswoodshop",
         "grid_label": "FEATURED ITEM"
     },
+    {   "type": "listing",
+        "title": "Custom Dog Ornament",
+        "image": "https://user-assets.sharetribe.com/images/listing_images/images/1753019/medium/70d7b77c-72bf-4d1d-9684-32ecf5fa7962.jpeg?1538269948",
+        "url": "https://www.barkyours.com/en/listings/642965-dog-ornament-personalised-custom-made-for-your-dog",
+        "price": "$24.99",
+        "seller_name": "Rich's Wood Shop",
+        "seller_profile_url": "https://www.barkyours.com/en/richswoodshop",
+        "grid_label": "FEATURED ITEM"
+    },
     {
         "type": "seller",
         "seller_name": "Like Mother Like Daughter Jewelry",
