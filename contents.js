@@ -75,7 +75,7 @@ var spotLights = [
     {
         "type": "seller",
         "seller_name": "Dandy Randall Wear",
-        "image": "https://user-assets.sharetribe.com/images/people/images/D2LgCUbSLEheqVo7b1jPFQ/medium/Dandy_Randall_HIM.jpg?1532613351",
+        "image": "https://user-assets.sharetribe.com/images/people/images/D2LgCUbSLEheqVo7b1jPFQ/thumb/Dandy_Randall_HIM.jpg?1532613351",
         "seller_profile_url": "https://www.barkyours.com/en/dandyrandall",
         "grid_label": "FEATURED SELLER "
     }
