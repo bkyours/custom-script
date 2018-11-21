@@ -82,7 +82,7 @@ var spotLights = [
     {
         "type": "seller",
         "seller_name": "Bulldog",
-        "image": "https://user-assets.sharetribe.com/images/listing_images/images/1656387/medium/20180805_174224b.jpg?1534029633",
+        "image": "https://user-assets.sharetribe.com/images/listing_images/images/1564281/medium/dog_magnet_french_bulldog.jpg?1529006296",
         "seller_profile_url": "https://www.barkyours.com/?view=grid&price_min=0&price_max=1000&filter_option_268882=268882",
         "grid_label": "FEATURED BREED "
     }
