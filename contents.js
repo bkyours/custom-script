@@ -81,10 +81,10 @@ var spotLights = [
     },
     {
         "type": "seller",
-        "seller_name": "Bulldog",
-        "image": "https://user-assets.sharetribe.com/images/listing_images/images/1564281/large/dog_magnet_french_bulldog.jpg?1529006296",
-        "seller_profile_url": "https://www.barkyours.com/?view=grid&price_min=0&price_max=1000&filter_option_268882=268882",
-        "grid_label": "FEATURED BREED "
+        "seller_name": "Faux Paw Productions",
+        "image": "https://user-assets.sharetribe.com/images/people/images/zJCFX_fkVmg8Q8Xo5VSKsg/medium/deborah.jpg?1531515853",
+        "seller_profile_url": "https://www.barkyours.com/en/fauxpaw",
+        "grid_label": "FEATURED SELLER "
     }
 ];
 
