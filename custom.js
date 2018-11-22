@@ -10,6 +10,96 @@ $(document).ready(function () {
     removeOptionalTextFromFilters();
     addAboutTheSellerLink();
     addSizeFilter();
+    
+    
+        var loggedIn = $(".AvatarDropdown").length > 0;
+
+        if(!loggedIn) {
+            $(".enabled-book-button").click(function(e){
+                e.preventDefault();
+                var listingTitle = $("#listing-title").text().replace(/(\r\n\t|\n|\r\t)/gm, "");
+                var listingPrice = $(".listing-price-amount").text().replace(/(\r\n\t|\n|\r\t)/gm, "");
+                var listingUrl = window.location.href;
+                var listingThumb = null;
+
+                if($("#listing-image-link img").length){
+                    listingThumb = $("#listing-image-link img")[0].src.replace("/big/", "/thumb/");
+                }
+                var shippingLbl = "";
+                if($(".shipping-options-label").length){
+                    shippingLbl = $(".shipping-options-label").text().replace(/(\r\n\t|\n|\r\t)/gm, "");
+                }
+
+                localStorage.setItem("lastUpdate", new Date().getTime());
+                localStorage.setItem("listingTitle", listingTitle);
+                localStorage.setItem("listingURL", listingUrl);
+                localStorage.setItem("listingThumb", listingThumb);
+                localStorage.setItem("listingPrice", listingPrice);
+                localStorage.setItem("shippingLbl", shippingLbl);
+
+                window.location.href = "https://www.barkyours.com/en/login?checkout=true";
+            });
+
+            if($(".login-form").length){
+                checkout = getUrlParameter("checkout");
+                if(checkout == "true"){
+                    customizeLoginPage();
+                }
+
+
+            }
+
+
+
+        }
+
+        function customizeLoginPage(){
+            //////////////////////// HOTFIX
+            $("footer").hide();
+            //////////////////////// HOTFIX
+
+            var checkoutParams = fetchLocalStorageItem();
+            $(".wrapper").addClass("customize-login-page");
+           $(".wrapper").append("<div class='row col-12'>" +
+               "<div class='col-4 login-form-section'><div class='section-wrapper'></div></div>" +
+               "<div class='col-4 signup-link-section'><div class='section-wrapper'><h1>New Users</h1>" +
+               "<p>Create your account.</p>" +
+               "<p>Registration is quick and easy.</p>" +
+               "<a href='https://www.barkyours.com/en/signup?checkout=true' class='create-account-link'>Create your account</a></div></div>" +
+               "<div class='col-4 cart-item-list'><div class='section-wrapper'><h1>In Your Cart</h1>" +
+               "<a href='"+ checkoutParams.listingURL+"'>"+ checkoutParams.listingTitle +
+               "<table>" +
+               "<thead><tr><th colspan='2'></th></tr></thead>" +
+               "<tbody><tr style='background: white;'>" +
+               "<td><img src='"+ checkoutParams.listingThumb+"'></td>" +
+               "<td><table>" +
+               "<tr style='background: white;'><td style='padding: 5px 0;'>Price: " + checkoutParams.listingPrice + "</td></tr>" +
+               "<tr style='background: white;'><td style='padding: 5px 0;'>" + checkoutParams.shippingLbl + "</td></tr>" +
+               "</table></td>" +
+               "</tr></tbody>" +
+               "</table>" +
+               "</a>" +
+               "</div></div>" +
+               "</div>");
+
+            // Login section customization
+           $(".login-form").appendTo(".login-form-section .section-wrapper");
+           $("#password_forgotten").appendTo(".login-form-section .section-wrapper");
+           $(".login-form").prepend("<h1>Existing Users</h1>");
+        }
+
+        function fetchLocalStorageItem(){
+            return {
+                "lastUpdate": localStorage.getItem("lastUpdate"),
+                "listingTitle": localStorage.getItem("listingTitle"),
+                "listingURL": localStorage.getItem("listingURL"),
+                "listingThumb": localStorage.getItem("listingThumb"),
+                "listingPrice": localStorage.getItem("listingPrice"),
+                "shippingLbl": localStorage.getItem("shippingLbl")
+            }
+
+        }
+
 
     function displayLandingPageOrHomepage() {
         var currentURL = window.location.href;
