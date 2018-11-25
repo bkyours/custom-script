@@ -198,6 +198,10 @@ $(document).ready(function () {
                 $(".faq-popup-trigger")[0].click();
             }, 500);
         }
+
+        $(".faq-popup-trigger").click(function(){
+            $("body").addClass("faq-open");
+        });
         $(".faq-searchbar").on('input propertychange paste', function () {
             var searchKey = $(this).val();
             var matchedFaqForSeller = 0;
