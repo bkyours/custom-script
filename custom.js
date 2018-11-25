@@ -379,11 +379,15 @@ $(document).ready(function () {
     function addAboutTheSellerLink() {
         if ($(".col-8.listing-details-container").length) {
             // debugger;
-            var contactLink = $("#listing-contact");
-            var profileLink = $("#listing-author-link");
+            var loggedIn = $(".AvatarDropdown").length > 0;
+
+
+            var contactLink = loggedIn ? $("#listing-contact").attr('href') : "https://www.barkyours.com/en/login?checkout=true";
+            var profileLink = loggedIn ? $("#listing-author-link").attr('href') : "https://www.barkyours.com/en/login?checkout=true";
+            
             var mainWrapper = $("<div class='row listing-additional_link'>" +
-                "<div class='col-5'><div class='listing-author-contact'><a class='listing-author-contact-button' style = 'background-color: #0765a8; color: #fff;' href='" + contactLink.attr('href') + "'> <div class='content'>Special Request </div></a></div></div>" +
-                "<div class='col-5'><div class='listing-author-contact'><a class='listing-author-contact-button' style = 'background-color: #0765a8; color: #fff;' href='" + profileLink.attr('href') + "'> <div class='content'>About the Seller </div></a></div></div>" +
+                "<div class='col-5'><div class='listing-author-contact'><a class='listing-author-contact-button' style = 'background-color: #0765a8; color: #fff;' href='" + contactLink + "'> <div class='content'>Special Request </div></a></div></div>" +
+                "<div class='col-5'><div class='listing-author-contact'><a class='listing-author-contact-button' style = 'background-color: #0765a8; color: #fff;' href='" + profileLink + "'> <div class='content'>About the Seller </div></a></div></div>" +
                 "</div>");
 
             mainWrapper.prependTo($(".listing-social").parent().parent());
