@@ -447,7 +447,7 @@ $(document).ready(function () {
 
                 }
 
-                $(".filter-dropdowns").append("<a class='listing-author-contact-button' id='listingBuyButton' style = 'background-color: #0765a8; color: #fff;' href='#'> <div class='content'>Buy</div></a>")
+                $(".filter-dropdowns").append("<a class='listing-author-contact-button' id='listingBuyButton' style = 'background-color: #0765a8; color: #fff;' href='#'> <div class='content'>Proceed to Checkout</div></a>")
 
                 $(".enabled-book-button").hide();
 
