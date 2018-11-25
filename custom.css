@@ -580,3 +580,51 @@ footer .icon-part{
     position: absolute;
     top: -45px;
 }
+
+
+.hide{display: none;}
+
+#listing_description, #listing_tags{display: none;}
+
+.pagination{font-size: 13px;}
+
+.home-fluid-thumbnail-grid-author-name{top: 3px;}
+.section-wrapper{padding: 5px;
+    border: 1px solid #ddd;}
+.create-account-link{padding: 10px 25px;
+    border: 2px #0765a8 solid;
+    border-radius: 5px;
+    font-weight: 600;
+    display: block;
+    min-width: 200px;
+    text-align: center;
+}
+@media only screen and (min-width: 1025px) {
+    .customize-login-page .row {
+        display: flex;
+    }
+    .customize-login-page .col-4 {
+        display: grid;
+    }
+
+}
+.padding-5-15{ padding: 5px 15px;}
+label[for="person_family_name"],
+#person_family_name,
+.signup-form #person_username1,
+.signup-form label[for="person_username"],
+.preauthorize-section .row:last-of-type,
+.home-toolbar-button-group a:last-of-type
+  {
+    display: none !important;
+  }
+
+.home-toolbar-button-group a:nth-of-type(2){
+    -moz-border-radius-topright: 0.375em;
+    -webkit-border-top-right-radius: 0.375em;
+    border-top-right-radius: 0.375em;
+    -moz-border-radius-bottomright: 0.375em;
+    -webkit-border-bottom-right-radius: 0.375em;
+    border-bottom-right-radius: 0.375em;
+}
+.border-radius-5{border-radius: 5px;}
