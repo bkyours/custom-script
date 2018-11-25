@@ -869,6 +869,13 @@ function addCheckoutItemInLoginPage(){
                 }
             }
 
+            if($(".signup-form").length){
+                checkout = getUrlParameter("checkout");
+                if(checkout == "true"){
+                    customizeSignUpPage();
+                }
+            }
+
         }
 
         function customizeLoginPage(){
@@ -879,12 +886,12 @@ function addCheckoutItemInLoginPage(){
             var checkoutParams = fetchLocalStorageItem();
             $(".wrapper").addClass("customize-login-page");
             $(".wrapper").append("<div class='row col-12'>" +
-                "<div class='col-4 login-form-section'><div class='section-wrapper'></div></div>" +
-                "<div class='col-4 signup-link-section'><div class='section-wrapper'><h1>New Users</h1>" +
+                "<div class='col-4 login-form-section border-radius-5 padding-5-15'><div class='section-wrapper'></div></div>" +
+                "<div class='col-4 signup-link-section border-radius-5 padding-5-15'><div class='section-wrapper'><h1>New Users</h1>" +
                 "<p>Create your account.</p>" +
                 "<p>Registration is quick and easy.</p>" +
                 "<a href='https://www.barkyours.com/en/signup?checkout=true' class='create-account-link'>Create your account</a></div></div>" +
-                "<div class='col-4 cart-item-list'><div class='section-wrapper'><h1>In Your Cart</h1>" +
+                "<div class='col-4 cart-item-list border-radius-5'><div class='section-wrapper'><h1>In Your Cart</h1>" +
                 "<a href='"+ checkoutParams.listingURL+"'>"+ checkoutParams.listingTitle +
                 "<table>" +
                 "<thead><tr><th colspan='2'></th></tr></thead>" +
@@ -904,6 +911,47 @@ function addCheckoutItemInLoginPage(){
             $(".login-form").appendTo(".login-form-section .section-wrapper");
             $("#password_forgotten").appendTo(".login-form-section .section-wrapper");
             $(".login-form").prepend("<h1>Existing Users</h1>");
+        }
+
+
+        function customizeSignUpPage(){
+            //////////////////////// HOTFIX
+            $("footer").hide();
+            //////////////////////// HOTFIX
+
+            var checkoutParams = fetchLocalStorageItem();
+            $(".wrapper").addClass("customize-signup-page");
+            $(".wrapper").append("<div class='row col-12'>" +
+                "<div class='col-6 signup-form-section border-radius-5'><div class='section-wrapper'></div></div>" +
+                "<div class='col-6 cart-item-list padding-5-15 border-radius-5'><div class='section-wrapper'><h1>In Your Cart</h1>" +
+                "<a href='"+ checkoutParams.listingURL+"'>"+ checkoutParams.listingTitle +
+                "<table>" +
+                "<thead><tr><th colspan='2'></th></tr></thead>" +
+                "<tbody><tr style='background: white;'>" +
+                "<td><img src='"+ checkoutParams.listingThumb+"'></td>" +
+                "<td><table>" +
+                "<tr style='background: white;'><td style='padding: 5px 0;'>Price: " + checkoutParams.listingPrice + "</td></tr>" +
+                "<tr style='background: white;'><td style='padding: 5px 0;'>" + checkoutParams.shippingLbl + "</td></tr>" +
+                "</table></td>" +
+                "</tr></tbody>" +
+                "</table>" +
+                "</a>" +
+                "</div></div>" +
+                "</div>");
+
+            // Login section customization
+            $(".signup-form").appendTo(".signup-form-section .section-wrapper");
+
+            // Removing Unnessary field on signup
+            $("#person_family_name").remove();
+            //Last Name and username is being hidden by css
+            $("label[for='person_given_name']").text("Name");
+            $("#person_given_name").on( "change paste keyup",function(){
+                var name = $("#person_given_name").val();
+                var username = name.replace(" ", "_").toLowerCase() + "_"+Math.floor(Math.random() * 10000) + 1;
+                console.log(username);
+                $("#person_username1").val(username);
+            });
         }
 
         function fetchLocalStorageItem(){
