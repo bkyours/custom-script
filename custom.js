@@ -879,10 +879,7 @@ function addCheckoutItemInLoginPage(){
 
             if($(".signup-form").length){
                 customizeSignUpPage();
-                // checkout = getUrlParameter("checkout");
-                // if(checkout == "true"){
-                //     customizeSignUpPage();
-                // }
+                
             }
 
         }
@@ -928,28 +925,33 @@ function addCheckoutItemInLoginPage(){
             $("footer").hide();
             //////////////////////// HOTFIX
 
-            var checkoutParams = fetchLocalStorageItem();
-            $(".wrapper").addClass("customize-signup-page");
-            $(".wrapper").append("<div class='row col-12'>" +
-                "<div class='col-6 signup-form-section border-radius-5'><div class='section-wrapper'></div></div>" +
-                "<div class='col-6 cart-item-list padding-5-15 border-radius-5'><div class='section-wrapper'><h1>In Your Cart</h1>" +
-                "<a href='"+ checkoutParams.listingURL+"'>"+ checkoutParams.listingTitle +
-                "<table>" +
-                "<thead><tr><th colspan='2'></th></tr></thead>" +
-                "<tbody><tr style='background: white;'>" +
-                "<td><img src='"+ checkoutParams.listingThumb+"'></td>" +
-                "<td><table>" +
-                "<tr style='background: white;'><td style='padding: 5px 0;'>Price: " + checkoutParams.listingPrice + "</td></tr>" +
-                "<tr style='background: white;'><td style='padding: 5px 0;'>" + checkoutParams.shippingLbl + "</td></tr>" +
-                "</table></td>" +
-                "</tr></tbody>" +
-                "</table>" +
-                "</a>" +
-                "</div></div>" +
-                "</div>");
+            
 
-            // Login section customization
-            $(".signup-form").appendTo(".signup-form-section .section-wrapper");
+            checkout = getUrlParameter("checkout");
+            if(checkout == "true"){
+                var checkoutParams = fetchLocalStorageItem();
+                $(".wrapper").addClass("customize-signup-page");
+                $(".wrapper").append("<div class='row col-12'>" +
+                    "<div class='col-6 signup-form-section border-radius-5'><div class='section-wrapper'></div></div>" +
+                    "<div class='col-6 cart-item-list padding-5-15 border-radius-5'><div class='section-wrapper'><h1>In Your Cart</h1>" +
+                    "<a href='"+ checkoutParams.listingURL+"'>"+ checkoutParams.listingTitle +
+                    "<table>" +
+                    "<thead><tr><th colspan='2'></th></tr></thead>" +
+                    "<tbody><tr style='background: white;'>" +
+                    "<td><img src='"+ checkoutParams.listingThumb+"'></td>" +
+                    "<td><table>" +
+                    "<tr style='background: white;'><td style='padding: 5px 0;'>Price: " + checkoutParams.listingPrice + "</td></tr>" +
+                    "<tr style='background: white;'><td style='padding: 5px 0;'>" + checkoutParams.shippingLbl + "</td></tr>" +
+                    "</table></td>" +
+                    "</tr></tbody>" +
+                    "</table>" +
+                    "</a>" +
+                    "</div></div>" +
+                    "</div>");
+
+                // Login section customization
+                $(".signup-form").appendTo(".signup-form-section .section-wrapper");
+            }
 
             // Removing Unnessary field on signup
             $("#person_family_name").remove();
