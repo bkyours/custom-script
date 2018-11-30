@@ -384,7 +384,7 @@ $(document).ready(function () {
 
             var contactLink = loggedIn ? $("#listing-contact").attr('href') : "https://www.barkyours.com/en/login?checkout=true";
             var profileLink = loggedIn ? $("#listing-author-link").attr('href') : "https://www.barkyours.com/en/login?checkout=true";
-            
+
             var mainWrapper = $("<div class='row listing-additional_link'>" +
                 "<div class='col-5'><div class='listing-author-contact'><a class='listing-author-contact-button' style = 'background-color: #0765a8; color: #fff;' href='" + contactLink + "'> <div class='content'>Special Request </div></a></div></div>" +
                 "<div class='col-5'><div class='listing-author-contact'><a class='listing-author-contact-button' style = 'background-color: #0765a8; color: #fff;' href='" + profileLink + "'> <div class='content'>About the Seller </div></a></div></div>" +
@@ -878,10 +878,11 @@ function addCheckoutItemInLoginPage(){
             }
 
             if($(".signup-form").length){
-                checkout = getUrlParameter("checkout");
-                if(checkout == "true"){
-                    customizeSignUpPage();
-                }
+                customizeSignUpPage();
+                // checkout = getUrlParameter("checkout");
+                // if(checkout == "true"){
+                //     customizeSignUpPage();
+                // }
             }
 
         }
