@@ -1,6 +1,7 @@
 infiniteScrollToPagination();
 
 $(document).ready(function () {
+
     addFooter();
     initializeFAQPopUp();
     displayLandingPageOrHomepage();
@@ -780,6 +781,7 @@ $(document).ready(function () {
             return options;
         }
     }
+        $(".title-container").removeAttr("style");
 });
 
 function infiniteScrollToPagination(){
