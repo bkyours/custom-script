@@ -81,10 +81,10 @@ var spotLights = [
     },
     {
         "type": "seller",
-        "seller_name": "Faux Paw Productions",
-        "image": "https://user-assets.sharetribe.com/images/people/images/zJCFX_fkVmg8Q8Xo5VSKsg/medium/deborah.jpg?1531515853",
-        "seller_profile_url": "https://www.barkyours.com/en/fauxpaw",
-        "grid_label": "FEATURED SELLER "
+        "seller_name": "BarkYours Spotlight",
+        "image": "https://blog.barkyours.com/wp-content/uploads/2018/12/by-spotlight.png",
+        "seller_profile_url": "https://blog.barkyours.com/",
+        "grid_label": "FEATURED BLOG "
     }
 ];
 
