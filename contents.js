@@ -82,7 +82,7 @@ var spotLights = [
     {
         "type": "seller",
         "seller_name": "BarkYours Spotlight",
-        "image": "https://blog.barkyours.com/wp-content/uploads/2018/12/by-spotlight.png",
+        "image": "https://blog.barkyours.com/wp-content/uploads/2018/12/by-spotlight2.png",
         "seller_profile_url": "https://blog.barkyours.com/",
         "grid_label": "FEATURED BLOG "
     }
