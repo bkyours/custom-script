@@ -74,10 +74,10 @@ var spotLights = [
     },
     {
         "type": "seller",
-        "seller_name": "THATisMYpet",
-        "image": "https://user-assets.sharetribe.com/images/people/images/Oq0Z7caINW0wWjK1YeK6QQ/medium/etsy_profile_DP_corgi_400x400.png?1533216119",
-        "seller_profile_url": "https://www.barkyours.com/en/thatismypet",
-        "grid_label": "FEATURED SELLER "
+        "seller_name": "Project Freedom Ride",
+        "image": "https://blog.barkyours.com/wp-content/uploads/2018/12/charity-spotlight.jpg",
+        "seller_profile_url": "https://blog.barkyours.com/featured-charity/charity-spotlight-six-year-old-saves-over-1000-dogs/",
+        "grid_label": "FEATURED CHARITY "
     },
     {
         "type": "seller",
