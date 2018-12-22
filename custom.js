@@ -894,16 +894,18 @@ function addCheckoutItemInLoginPage(){
             var checkoutParams = fetchLocalStorageItem();
             $(".wrapper").addClass("customize-login-page");
             $(".wrapper").append("<div class='row col-12'>" +
-                "<div class='col-4 login-form-section border-radius-5 padding-5-15'><div class='section-wrapper'></div></div>" +
-                "<div class='col-4 signup-link-section border-radius-5 padding-5-15'><div class='section-wrapper'><h1>New Users</h1>" +
+                "<div class='col-4 login-form-section border-radius-5'><div class='section-wrapper'></div></div>" +
+                "<div class='col-4 signup-link-section border-radius-5'>" +
+                "<div class='section-wrapper padding-5-15'><h1>New Users</h1>" +
                 "<p>Create your account.</p>" +
                 "<p>Registration is quick and easy.</p>" +
                 "<a href='https://www.barkyours.com/en/signup?checkout=true' class='create-account-link'>Create your account</a></div></div>" +
-                "<div class='col-4 cart-item-list border-radius-5'><div class='section-wrapper'><h1>In Your Cart</h1>" +
-                "<a href='"+ checkoutParams.listingURL+"'>"+ checkoutParams.listingTitle +
+
+                "<div class='col-4 cart-item-list border-radius-5'><div class='section-wrapper padding-5-15'><h1>In Your Cart</h1>" +
+                "<div class='row'><a href='"+ checkoutParams.listingURL+"'>"+ checkoutParams.listingTitle + "</div>" +
                 "<div class='col-12'>" +
-                "<div class='col-6'><img src='"+ checkoutParams.listingThumb+"'></div>" +
-                "<div class='col-6'>" +
+                "<div class='col-6 no-padding'><img src='"+ checkoutParams.listingThumb+"'></div>" +
+                "<div class='col-6 no-padding'>" +
                 "<div class='col-12'>" +
                 "<div class='row'>Price: " + checkoutParams.listingPrice +"</div>" +
                 "<div class='row'>" + checkoutParams.shippingLbl +"</div>" +
@@ -935,7 +937,7 @@ function addCheckoutItemInLoginPage(){
                 $(".wrapper").addClass("customize-signup-page");
                 $(".wrapper").append("<div class='row col-12'>" +
                     "<div class='col-6 signup-form-section border-radius-5'><div class='section-wrapper'></div></div>" +
-                    "<div class='col-4 cart-item-list padding-5-15 border-light'>" +
+                    "<div class='col-4 cart-item-list no-padding'><div class='border-light section-wrapper padding-5-15'>" +
                         "<h1>In Your Cart</h1>" +
                         "<div class='row'> <a href='"+ checkoutParams.listingURL+"'>"+ checkoutParams.listingTitle + "</div>" +
                         "<div class='row-with-divider'>" +
@@ -952,7 +954,6 @@ function addCheckoutItemInLoginPage(){
                         "</div>" +
                     "</div>" +
                 "</div>");
-
                 // Login section customization
                 $(".signup-form").appendTo(".signup-form-section .section-wrapper");
             }
