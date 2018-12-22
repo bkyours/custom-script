@@ -781,7 +781,7 @@ $(document).ready(function () {
             return options;
         }
     }
-        $(".title-container").removeAttr("style");
+    $(".title-container").removeAttr("style");
 });
 
 function infiniteScrollToPagination(){
@@ -881,7 +881,7 @@ function addCheckoutItemInLoginPage(){
 
             if($(".signup-form").length){
                 customizeSignUpPage();
-                
+
             }
 
         }
@@ -901,16 +901,16 @@ function addCheckoutItemInLoginPage(){
                 "<a href='https://www.barkyours.com/en/signup?checkout=true' class='create-account-link'>Create your account</a></div></div>" +
                 "<div class='col-4 cart-item-list border-radius-5'><div class='section-wrapper'><h1>In Your Cart</h1>" +
                 "<a href='"+ checkoutParams.listingURL+"'>"+ checkoutParams.listingTitle +
-                "<table>" +
-                "<thead><tr><th colspan='2'></th></tr></thead>" +
-                "<tbody><tr style='background: white;'>" +
-                "<td><img src='"+ checkoutParams.listingThumb+"'></td>" +
-                "<td><table>" +
-                "<tr style='background: white;'><td style='padding: 5px 0;'>Price: " + checkoutParams.listingPrice + "</td></tr>" +
-                "<tr style='background: white;'><td style='padding: 5px 0;'>" + checkoutParams.shippingLbl + "</td></tr>" +
-                "</table></td>" +
-                "</tr></tbody>" +
-                "</table>" +
+                "<div class='col-12'>" +
+                "<div class='col-6'><img src='"+ checkoutParams.listingThumb+"'></div>" +
+                "<div class='col-6'>" +
+                "<div class='col-12'>" +
+                "<div class='row'>Price: " + checkoutParams.listingPrice +"</div>" +
+                "<div class='row'>" + checkoutParams.shippingLbl +"</div>" +
+                "<div class='row'></div>" +
+                "</div>" +
+                "</div>" +
+                "</div>" +
                 "</a>" +
                 "</div></div>" +
                 "</div>");
@@ -927,7 +927,7 @@ function addCheckoutItemInLoginPage(){
             $("footer").hide();
             //////////////////////// HOTFIX
 
-            
+
 
             checkout = getUrlParameter("checkout");
             if(checkout == "true"){
@@ -935,21 +935,23 @@ function addCheckoutItemInLoginPage(){
                 $(".wrapper").addClass("customize-signup-page");
                 $(".wrapper").append("<div class='row col-12'>" +
                     "<div class='col-6 signup-form-section border-radius-5'><div class='section-wrapper'></div></div>" +
-                    "<div class='col-6 cart-item-list padding-5-15 border-radius-5'><div class='section-wrapper'><h1>In Your Cart</h1>" +
-                    "<a href='"+ checkoutParams.listingURL+"'>"+ checkoutParams.listingTitle +
-                    "<table>" +
-                    "<thead><tr><th colspan='2'></th></tr></thead>" +
-                    "<tbody><tr style='background: white;'>" +
-                    "<td><img src='"+ checkoutParams.listingThumb+"'></td>" +
-                    "<td><table>" +
-                    "<tr style='background: white;'><td style='padding: 5px 0;'>Price: " + checkoutParams.listingPrice + "</td></tr>" +
-                    "<tr style='background: white;'><td style='padding: 5px 0;'>" + checkoutParams.shippingLbl + "</td></tr>" +
-                    "</table></td>" +
-                    "</tr></tbody>" +
-                    "</table>" +
-                    "</a>" +
-                    "</div></div>" +
-                    "</div>");
+                    "<div class='col-4 cart-item-list padding-5-15 border-light'>" +
+                        "<h1>In Your Cart</h1>" +
+                        "<div class='row'> <a href='"+ checkoutParams.listingURL+"'>"+ checkoutParams.listingTitle + "</div>" +
+                        "<div class='row-with-divider'>" +
+                        "<div class='col-6'><img src='"+ checkoutParams.listingThumb+"'></div>" +
+                        "<div class='col-6'>" +
+                        "<div class='col-12'>" +
+                        "<div class='row'>Price: " + checkoutParams.listingPrice +"</div>" +
+                        "<div class='row'>" + checkoutParams.shippingLbl +"</div>" +
+                        "<div class='row'></div>" +
+                        "</div>" +
+                        "</div>" +
+                        "</div>" +
+                        "</a>" +
+                        "</div>" +
+                    "</div>" +
+                "</div>");
 
                 // Login section customization
                 $(".signup-form").appendTo(".signup-form-section .section-wrapper");
