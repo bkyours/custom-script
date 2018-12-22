@@ -639,11 +639,13 @@ border-radius: 4px;}
     padding: 0 10px;
 }
 
+.no-padding{
+    padding: 0;
+}
 
-@media (max-width: 768px) {
-    .customize-login-page .padding-5-15{
-        padding: 0;
-    }
+.create-account-link:hover{
+    color: #fff;
+    background-color: #065690;
 }
 
 .border-light{
