@@ -628,3 +628,24 @@ label[for="person_family_name"],
     border-bottom-right-radius: 0.375em;
 }
 .border-radius-5{border-radius: 5px;}
+
+
+.create-account-link{background: #0765a8;
+color: #fff;
+padding: 10px;
+border-radius: 4px;}
+
+.padding-0-10{
+    padding: 0 10px;
+}
+
+
+@media (max-width: 768px) {
+    .customize-login-page .padding-5-15{
+        padding: 0;
+    }
+}
+
+.border-light{
+    border: 1px solid #eee;
+}
