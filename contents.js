@@ -67,9 +67,9 @@ var spotLights = [
     },
     {
         "type": "seller",
-        "seller_name": "Like Mother Like Daughter Jewelry",
-        "image": "https://user-assets.sharetribe.com/images/people/images/50sFY1UJznGAAUcSh-4Ypw/medium/photo_of_me.jpg?1536843087",
-        "seller_profile_url": "https://www.barkyours.com/en/motherdaughterjewel",
+        "seller_name": "G3Designs",
+        "image": "https://user-assets.sharetribe.com/images/people/images/c_MBYekxRll3WlWDsoqO3A/medium/profile_1.jpg?1541430674",
+        "seller_profile_url": "https://www.barkyours.com/en/g3designs",
         "grid_label": "FEATURED SELLER "
     },
     {
