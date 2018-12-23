@@ -852,12 +852,12 @@ function addCheckoutItemInLoginPage(){
                 fetchAndStoreListingInfo();
             });
 
-            $(". special-request-link").click(function(e){
+            $(".special-request-link").click(function(e){
                 e.preventDefault();
                 fetchAndStoreListingInfo();
             });
 
-            $(".special-request-link").click(function(e){
+            $(".about-seller-link").click(function(e){
                 e.preventDefault();
                 fetchAndStoreListingInfo();
             });
