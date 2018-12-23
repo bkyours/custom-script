@@ -39,12 +39,12 @@ var spotLightLabel = "BARKYOURS' SPOTLIGHT";
 
 var spotLights = [
     {   "type": "listing",
-        "title": "Dog Christmas Cards",
-        "image": "https://user-assets.sharetribe.com/images/listing_images/images/1780102/medium/4x4_canvas__5_.png?1538962055",
-        "url": "https://www.barkyours.com/en/listings/648767-set-of-8-dog-christmas-cards-w-slash-envelopes",
-        "price": "$20.00",
-        "seller_name": "Hound Made",
-        "seller_profile_url": "https://www.barkyours.com/en/abigailr",
+        "title": "T-Shirt: The More People I Meet",
+        "image": "https://user-assets.sharetribe.com/images/listing_images/images/1648772/medium/the_more_people_i_meet_the_more_i_like_my_dog_womens_alstyle_navy.jpeg?1533656811",
+        "url": "https://www.barkyours.com/en/listings/614304-the-more-people-i-meet-the-more-i-like-my-dog-womens-tee",
+        "price": "$24.95",
+        "seller_name": "THATisMYpet",
+        "seller_profile_url": "https://www.barkyours.com/en/thatismypet",
         "grid_label": "FEATURED ITEM"
     },
     {   "type": "listing",
