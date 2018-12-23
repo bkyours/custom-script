@@ -163,7 +163,7 @@ $(document).ready(function () {
         $.each(qnsListForSeller, function () {
             qnsListString += this;
         });
-        var popUpcontent1 = '</ul></div><div class="content padding-25">';
+        var popUpcontent1 = '</ul></div><div class="content1 padding-25">';
         var qnsAnsListForSeller = $.map(questionAnswerForSeller, function (value, index) {
             return ('<div class="box" id="question-seller-' + index + '">' + '\n<div class="question">' + value.qns + '</div>\n<div class="answer">' + value.ans + '</div>\n<div class="top-link"><span class="fa fa-arrow-up navigate-top">TOP</span>\n</div></div>');
         });
