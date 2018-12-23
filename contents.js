@@ -75,7 +75,7 @@ var spotLights = [
     {
         "type": "seller",
         "seller_name": "Project Freedom Ride",
-        "image": "https://blog.barkyours.com/wp-content/uploads/2018/12/Charity-Spotlight-Kelsey-e1545449821149.jpg",
+        "image": "https://blog.barkyours.com/wp-content/uploads/2018/12/charity-spotlight-newS.jpg",
         "seller_profile_url": "https://blog.barkyours.com/featured-charity/charity-spotlight-six-year-old-saves-over-1000-dogs/",
         "grid_label": "FEATURED CHARITY "
     },
