@@ -387,8 +387,8 @@ $(document).ready(function () {
             var profileLink = loggedIn ? $("#listing-author-link").attr('href') : "https://www.barkyours.com/en/login?checkout=true";
 
             var mainWrapper = $("<div class='row listing-additional_link'>" +
-                "<div class='col-5'><div class='listing-author-contact'><a class='listing-author-contact-button' style = 'background-color: #0765a8; color: #fff;' href='" + contactLink + "'> <div class='content'>Special Request </div></a></div></div>" +
-                "<div class='col-5'><div class='listing-author-contact'><a class='listing-author-contact-button' style = 'background-color: #0765a8; color: #fff;' href='" + profileLink + "'> <div class='content'>About the Seller </div></a></div></div>" +
+                "<div class='col-5'><div class='listing-author-contact'><a class='listing-author-contact-button special-request-link' style = 'background-color: #0765a8; color: #fff;' href='" + contactLink + "'> <div class='content'>Special Request </div></a></div></div>" +
+                "<div class='col-5'><div class='listing-author-contact'><a class='listing-author-contact-button about-seller-link' style = 'background-color: #0765a8; color: #fff;' href='" + profileLink + "'> <div class='content'>About the Seller </div></a></div></div>" +
                 "</div>");
 
             mainWrapper.prependTo($(".listing-social").parent().parent());
@@ -849,28 +849,19 @@ function addCheckoutItemInLoginPage(){
         if(!loggedIn) {
             $(".enabled-book-button").click(function(e){
                 e.preventDefault();
-                var listingTitle = $("#listing-title").text().replace(/(\r\n\t|\n|\r\t)/gm, "");
-                var listingPrice = $(".listing-price-amount").text().replace(/(\r\n\t|\n|\r\t)/gm, "");
-                var listingUrl = window.location.href;
-                var listingThumb = null;
-
-                if($("#listing-image-link img").length){
-                    listingThumb = $("#listing-image-link img")[0].src.replace("/big/", "/thumb/");
-                }
-                var shippingLbl = "";
-                if($(".shipping-options-label").length){
-                    shippingLbl = $(".shipping-options-label").text().replace(/(\r\n\t|\n|\r\t)/gm, "");
-                }
-
-                localStorage.setItem("lastUpdate", new Date().getTime());
-                localStorage.setItem("listingTitle", listingTitle);
-                localStorage.setItem("listingURL", listingUrl);
-                localStorage.setItem("listingThumb", listingThumb);
-                localStorage.setItem("listingPrice", listingPrice);
-                localStorage.setItem("shippingLbl", shippingLbl);
-
-                window.location.href = "https://www.barkyours.com/en/login?checkout=true";
+                fetchAndStoreListingInfo();
             });
+
+            $(". special-request-link").click(function(e){
+                e.preventDefault();
+                fetchAndStoreListingInfo();
+            });
+
+            $(".special-request-link").click(function(e){
+                e.preventDefault();
+                fetchAndStoreListingInfo();
+            });
+
 
             if($(".login-form").length){
                 checkout = getUrlParameter("checkout");
@@ -884,6 +875,30 @@ function addCheckoutItemInLoginPage(){
 
             }
 
+        }
+
+        function fetchAndStoreListingInfo(){
+            var listingTitle = $("#listing-title").text().replace(/(\r\n\t|\n|\r\t)/gm, "");
+            var listingPrice = $(".listing-price-amount").text().replace(/(\r\n\t|\n|\r\t)/gm, "");
+            var listingUrl = window.location.href;
+            var listingThumb = null;
+
+            if($("#listing-image-link img").length){
+                listingThumb = $("#listing-image-link img")[0].src.replace("/big/", "/thumb/");
+            }
+            var shippingLbl = "";
+            if($(".shipping-options-label").length){
+                shippingLbl = $(".shipping-options-label").text().replace(/(\r\n\t|\n|\r\t)/gm, "");
+            }
+
+            localStorage.setItem("lastUpdate", new Date().getTime());
+            localStorage.setItem("listingTitle", listingTitle);
+            localStorage.setItem("listingURL", listingUrl);
+            localStorage.setItem("listingThumb", listingThumb);
+            localStorage.setItem("listingPrice", listingPrice);
+            localStorage.setItem("shippingLbl", shippingLbl);
+
+            window.location.href = "https://www.barkyours.com/en/login?checkout=true";
         }
 
         function customizeLoginPage(){
