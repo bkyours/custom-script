@@ -974,12 +974,13 @@ function addCheckoutItemInLoginPage(){
             }
 
             // Removing Unnessary field on signup
-            $("#person_family_name").remove();
+            //$("#person_family_name").remove();
             //Last Name and username is being hidden by css
-            $("label[for='person_given_name']").text("Name");
+            //$("label[for='person_given_name']").text("Name");
             $("#person_given_name").on( "change paste keyup",function(){
                 var name = $("#person_given_name").val();
-                var username = name.replace(" ", "_").toLowerCase() + "_"+Math.floor(Math.random() * 10000) + 1;
+                var lastName = $("#person_family_name").val();
+                var username = name.replace(" ", "_").toLowerCase() + "_" + lastName.replace(" ", "_").toLowerCase() +  "_" + Math.floor(Math.random() * 10000) + 1;
                 console.log(username);
                 $("#person_username1").val(username);
             });
