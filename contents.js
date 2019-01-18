@@ -67,9 +67,9 @@ var spotLights = [
     },
     {
         "type": "seller",
-        "seller_name": "G3Designs",
-        "image": "https://user-assets.sharetribe.com/images/people/images/c_MBYekxRll3WlWDsoqO3A/medium/profile_1.jpg?1541430674",
-        "seller_profile_url": "https://www.barkyours.com/en/g3designs",
+        "seller_name": "Pawies",
+        "image": "https://user-assets.sharetribe.com/images/people/images/qbzdxwrTY7YFgSYdQitxJw/medium/56CAA2BD-D4CA-47A2-BFDB-34F793063C82.jpeg?1529724433",
+        "seller_profile_url": "https://www.barkyours.com/en/pawiesanimallovers",
         "grid_label": "FEATURED SELLER "
     },
     {
