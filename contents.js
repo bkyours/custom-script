@@ -67,9 +67,9 @@ var spotLights = [
     },
     {
         "type": "seller",
-        "seller_name": "Pawies",
-        "image": "https://user-assets.sharetribe.com/images/people/images/qbzdxwrTY7YFgSYdQitxJw/medium/56CAA2BD-D4CA-47A2-BFDB-34F793063C82.jpeg?1529724433",
-        "seller_profile_url": "https://www.barkyours.com/en/pawiesanimallovers",
+        "seller_name": "PrancingHound",
+        "image": "https://user-assets.sharetribe.com/images/people/images/1WNEpiQJwBMfGw6ltuBHrA/medium/profilepicjune18.jpg?1531560003",
+        "seller_profile_url": "https://www.barkyours.com/en/prancinghound",
         "grid_label": "FEATURED SELLER "
     },
     {
