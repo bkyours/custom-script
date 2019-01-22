@@ -565,11 +565,12 @@ footer .icon-part{
     text-align: center;
 }
 
-.view-all-listing-link-btn{
+.view-all-listing-link-btn {
     padding: 10px 25px;
-    border: 2px #0765a8 solid;
+    background: #0765a8;
     border-radius: 5px;
     font-weight: 600;
+    color: #fff;
 }
 
 .featured-seller-grid{
