@@ -5,7 +5,7 @@ var featuredCategoriesLabel = "SHOP BY CATEGORY";
 var featuredCategories = [
     {
         "title": "Clothing",
-        "image": "https://blog.barkyours.com/clothing-2/",
+        "image": "https://blog.barkyours.com/wp-content/uploads/2019/01/clothing.jpg",
         "url": "https://www.barkyours.com/?category=clothing"
     },
     {
