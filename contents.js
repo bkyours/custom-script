@@ -10,27 +10,27 @@ var featuredCategories = [
     },
     {
         "title": "Jewelry & Accessories",
-        "image": "https://raw.githubusercontent.com/bkyours/custom-script/master/images/jewelry-accesories.png",
+        "image": "https://blog.barkyours.com/wp-content/uploads/2019/01/jewelry.jpg",
         "url": "https://www.barkyours.com/?category=jewelry-and-accessories"
     },
     {
         "title": "Home & Living",
-        "image": "https://raw.githubusercontent.com/bkyours/custom-script/master/images/home-living.png",
+        "image": "https://blog.barkyours.com/wp-content/uploads/2019/01/home.jpg",
         "url": "https://www.barkyours.com/?category=home-and-living"
     },
     {
         "title": "Greeting Cards & Stationary",
-        "image": "https://raw.githubusercontent.com/bkyours/custom-script/master/images/greeting-cards.png",
+        "image": "https://blog.barkyours.com/wp-content/uploads/2019/01/stationary.jpg",
         "url": "https://www.barkyours.com/?category=greeting-cards-and-stationary"
     },
     {
         "title": "Arts & Collectibles",
-        "image": "https://raw.githubusercontent.com/bkyours/custom-script/master/images/wall-art.png",
+        "image": "https://blog.barkyours.com/wp-content/uploads/2019/01/art.jpg",
         "url": "https://www.barkyours.com/?category=arts-and-collectibles"
     },
     {
         "title": "Crafts for Dogs",
-        "image": "https://raw.githubusercontent.com/bkyours/custom-script/master/images/special-pet-items.png",
+        "image": "https://blog.barkyours.com/wp-content/uploads/2019/01/crafts-for-dogs.jpg",
         "url": "https://www.barkyours.com/?category=crafts-for-dogs"
     },
 ];
