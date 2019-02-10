@@ -227,7 +227,7 @@ $(document).ready(function(){
             '<h3 style="font-size: 1em; padding-bottom: 1em;" class="home-list-title">' +
             item.listing_name + '</h3> ' +
             '<p><b>Price: </b>'+ item.price + '</p>' +
-            '<p><b>Added On: </b>'+ new Date(item.added_on).toDateString("yyyy-MM-dd") + '</p>' +
+            '<p><b>Added On: </b>'+ item.added_on ? new Date(item.added_on).toDateString("yyyy-MM-dd") : new Date().toDateString("yyyy-MM-dd")+ '</p>' +
             '<div class="row">' +
             '<a class="icon-with-text-container wishlist-checkout-btn" href="'+ item.listing_url+'">' +
             '<i class="ss-cart icon-part"></i>' +
