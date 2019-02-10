@@ -185,8 +185,7 @@ $(document).ready(function(){
 
                     var list = JSON.parse(response).data.wishes;
 
-                    var popUpcontent = '<div id="wishlistPopUp" class="faq-overlay wishlist-popup"><div class="faq-popup"><div class="popup-header"><h2 style="color: #1f69c1">Wish Lists</h2><a class="close faq-popup-close" href="#">&times;</a></div><div class="main-content"><div class="box"><ul class="question-list">';
-                    // var popUpcontent = '<div id="wishlistPopUp" style="opacity: 1; visibility: visible;" class="faq-overlay wishlist-popup"><div class="faq-popup"><div class="popup-header"><h2 style="color: #1f69c1">Wish Lists</h2><a class="close faq-popup-close" href="#">&times;</a></div><div class="main-content"><div class="box"><ul class="question-list">';
+                    var popUpcontent = '<div id="wishlistPopUp" class="faq-overlay wishlist-popup"><div class="faq-popup"><div class="popup-header"><h2>Wishlists</h2><a class="close faq-popup-close" href="#">&times;</a></div><div class="main-content"><div class="box"><ul class="question-list">';
 
                     var itemsString = '<div class="home-listings">';
                     if(list.length){
