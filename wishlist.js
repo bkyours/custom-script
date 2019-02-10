@@ -178,10 +178,9 @@ $(document).ready(function(){
         function initializeWishListPopUp() {
 
              u_s = usernameSession();
-            var data = {
-                    action: 'user_wishlist',
-                    username: u[0],
-                    session_key: u[1]
+            var data = { action: 'user_wishlist',
+                    username: u_s[0],
+                    session_key: u_s[1]
             };
             debugger;
             $.ajax({ url: apiEndPoint,
