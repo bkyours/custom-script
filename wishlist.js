@@ -186,6 +186,7 @@ $(document).ready(function(){
                 data: data,
                 type: 'GET',
                 success: function (response) {
+                    debugger;
                     var list = JSON.parse(response).data.wishes;
 
                     var popUpcontent = '<div id="wishlistPopUp" class="faq-overlay wishlist-popup"><div class="faq-popup"><div class="popup-header"><h2>Wishlists</h2><a class="close faq-popup-close" href="#">&times;</a></div><div class="main-content"><div class="box"><ul class="question-list">';
