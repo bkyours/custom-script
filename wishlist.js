@@ -5,9 +5,7 @@ $(document).ready(function(){
     var bkyoursListingURL = 'https://www.barkyours.com/en/listings/'
 
         initializeWishListPopUp();
-        if(username()){
-                initializeWishListBtn();
-       }
+        initializeWishListBtn();
 
 
         function initializeWishListBtn(){
@@ -184,12 +182,10 @@ $(document).ready(function(){
                     username: u_s[0],
                     session_key: u_s[1]
             };
-            debugger;
             $.ajax({ url: apiEndPoint,
                 data: data,
                 type: 'GET',
                 success: function (response) {
-                    debugger;
                     var list = JSON.parse(response).data.wishes;
 
                     var popUpcontent = '<div id="wishlistPopUp" class="faq-overlay wishlist-popup"><div class="faq-popup"><div class="popup-header"><h2>Wishlists</h2><a class="close faq-popup-close" href="#">&times;</a></div><div class="main-content"><div class="box"><ul class="question-list">';
@@ -283,12 +279,7 @@ $(document).ready(function(){
         }
 
         setInterval(function () {
-            if(username()){
-                $('a[href="https://www.barkyours.com/#wishlistPopUp"]').attr("href", "#wishlistPopUp").addClass("wishlist-link-header");
-            }else{
-                $('a[href="https://www.barkyours.com/#wishlistPopUp"]').attr("href", "#wishlistPopUp").addClass("wishlist-link-header hide");
-            }
-            
+            $('a[href="https://www.barkyours.com/#wishlistPopUp"]').attr("href", "#wishlistPopUp").addClass("wishlist-link-header");
         }, 500);
 
 
