@@ -19,6 +19,7 @@ $(document).ready(function(){
                 data: data,
                 type: 'POST',
                 success: function (response) {
+                    debugger;
                     var data = JSON.parse(response);
                     if(data.success && data.data.wished){
                         removeFromWishList();
