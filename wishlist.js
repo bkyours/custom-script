@@ -177,8 +177,12 @@ $(document).ready(function(){
 
         function initializeWishListPopUp() {
 
-            data = { 'action': 'user_wishlist', 'username': username() };
-
+             u_s = usernameSession();
+            var data = {
+                    action: 'user_wishlist',
+                    username: u[0],
+                    session_key: u[1]
+            }
             $.ajax({ url: apiEndPoint,
                 data: data,
                 type: 'GET',
@@ -257,7 +261,7 @@ $(document).ready(function(){
         }
 
         function username(){
-            var username = "";
+            var username = null;
 
             var loggedIn = $(".AvatarDropdown").length > 0;
 
