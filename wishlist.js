@@ -49,6 +49,7 @@ $(document).ready(function(){
                         if(response.success && response.data.added){
                             $(".wishlistbtntext").text("In wishlist");
                             $(btn).attr("id", "removeWishListBtn");
+                            $(".no-wishlisted").hide();
                             $("#wishlistPopUp .home-listings").append(wishlistDiv(data));
                             toastr.success("Item has been added to wishlist.")
                         }else{
@@ -104,6 +105,10 @@ $(document).ready(function(){
                     dataType: 'json',
                     success: function (response) {
                         $(elem).remove();
+                        if( $("#wishlistPopUp .home-listings .col-6").length == 0){
+                            $("#wishlistPopUp .home-listings").append("<div class='no-wishlisted'><h3>You haven't added any item on your list.</h3></div>");
+                        }
+
                     }
                 });
 
@@ -279,5 +284,5 @@ $(document).ready(function(){
             $('a[href="https://www.barkyours.com/#wishlistPopUp"]').attr("href", "#wishlistPopUp");
         }, 500);
 
-    
+
 });
