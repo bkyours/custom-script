@@ -5,7 +5,7 @@ $(document).ready(function(){
     var bkyoursListingURL = 'https://www.barkyours.com/en/listings/'
 
         initializeWishListPopUp();
-        if(username(){
+        if(username()){
                 initializeWishListBtn();
        }
 
