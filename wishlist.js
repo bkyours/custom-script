@@ -271,16 +271,12 @@ $(document).ready(function(){
         var url = window.location.href;
         if (url.search('#wishlistPopUp') > 0) {
             setTimeout(function () {
-                $(".faq-popup-trigger")[0].click();
+                $(".wishlist-link-header")[0].click();
             }, 500);
         }
 
-        $(".faq-popup-trigger").click(function(){
-            $("body").addClass("faq-open");
-        });
-
         setInterval(function () {
-            $('a[href="https://www.barkyours.com/#wishlistPopUp"]').attr("href", "#wishlistPopUp");
+            $('a[href="https://www.barkyours.com/#wishlistPopUp"]').attr("href", "#wishlistPopUp").addClass("wishlist-link-header");
         }, 500);
 
 
