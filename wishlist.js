@@ -5,8 +5,10 @@ $(document).ready(function(){
     var bkyoursListingURL = 'https://www.barkyours.com/en/listings/'
 
         initializeWishListPopUp();
+        if(username(){
+                initializeWishListBtn();
+       }
 
-        initializeWishListBtn();
 
         function initializeWishListBtn(){
            var data = {
@@ -281,7 +283,12 @@ $(document).ready(function(){
         }
 
         setInterval(function () {
-            $('a[href="https://www.barkyours.com/#wishlistPopUp"]').attr("href", "#wishlistPopUp").addClass("wishlist-link-header");
+            if(username()){
+                $('a[href="https://www.barkyours.com/#wishlistPopUp"]').attr("href", "#wishlistPopUp").addClass("wishlist-link-header");
+            }else{
+                $('a[href="https://www.barkyours.com/#wishlistPopUp"]').attr("href", "#wishlistPopUp").addClass("wishlist-link-header hide");
+            }
+            
         }, 500);
 
 
