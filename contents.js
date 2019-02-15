@@ -74,9 +74,9 @@ var spotLights = [
     },
     {
         "type": "seller",
-        "seller_name": "Project Freedom Ride",
+        "seller_name": "Poh the Dog",
         "image": "https://blog.barkyours.com/wp-content/uploads/2018/12/charity-spotlight-newS-e1545573522454.jpg",
-        "seller_profile_url": "https://blog.barkyours.com/featured-charity/charity-spotlight-six-year-old-saves-over-1000-dogs/",
+        "seller_profile_url": "https://blog.barkyours.com/barkyours/charity-spotligh…ring-poh-the-dog/",
         "grid_label": "FEATURED CHARITY "
     },
     {
