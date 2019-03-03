@@ -1,15 +1,16 @@
-$(document).ready(function(){
-    $(".title-container").removeAttr("style");
 
-    var apiEndPoint = 'https://blog.barkyours.com/wp-admin/admin-ajax.php';
-    var bkyoursListingURL = 'https://www.barkyours.com/en/listings/'
+    $(document).ready(function(){
+        $(".title-container").removeAttr("style");
+
+        var apiEndPoint = 'https://blog.barkyours.com/wp-admin/admin-ajax.php';
+        var bkyoursListingURL = 'https://www.barkyours.com/en/listings/';
 
         initializeWishListPopUp();
         initializeWishListBtn();
 
 
         function initializeWishListBtn(){
-           var data = {
+            var data = {
                 'action': 'is_wished',
                 'username': username(),
                 'listing_url': listingURL()
@@ -19,7 +20,6 @@ $(document).ready(function(){
                 data: data,
                 type: 'POST',
                 success: function (response) {
-                    debugger;
                     var data = JSON.parse(response);
                     if(data.success && data.data.wished){
                         removeFromWishList();
@@ -48,11 +48,12 @@ $(document).ready(function(){
                     dataType: 'json',
                     success: function(response) {
                         if(response.success && response.data.added){
-                            $(".wishlistbtntext").text("In wishlist");
+                            $(".wishlistbtntext").text("Added to Wish List");
+                            $(".wishlist-icon").removeClass("ss-heart").addClass("ss-check");
                             $(btn).attr("id", "removeWishListBtn");
                             $(".no-wishlisted").hide();
                             $("#wishlistPopUp .home-listings").append(wishlistDiv(data));
-                            toastr.success("Item has been added to wishlist.")
+                            toastr.success("Item has been added to Wish List.")
                         }else{
                             toastr.error("Sorry, something went wrong. Please refresh the page and try again.")
                         }
@@ -72,10 +73,11 @@ $(document).ready(function(){
                     dataType: 'json',
                     success: function (response) {
                         if(response.success && response.data.removed){
-                            $(".wishlistbtntext").text("Add to wishlist");
+                            $(".wishlistbtntext").text("Add to Wish List");
+                            $(".wishlist-icon").removeClass("ss-check").addClass("ss-heart");
                             $(btn).attr("id", "wishListBtn");
                             $("#wishlistPopUp .home-listings a[href='"+ listingURL()+"']").click();
-                            toastr.error("Item has been removed from wishlist.")
+                            toastr.error("Item has been removed from Wish List.")
                         }
                         else{
                             toastr.error("Something went wrong.")
@@ -125,8 +127,8 @@ $(document).ready(function(){
                     ' style="background-color: #0765a8; color: #fff;"' +
                     ' href="#">' +
                     '<div class="content">' +
-                    '<span class="ss-heart icon-inline"></span>' +
-                    '<span class="wishlistbtntext" style="margin-left: 5px;">Add to wishlist</span>' +
+                    '<span class="ss-heart icon-inline wishlist-icon"></span>' +
+                    '<span class="wishlistbtntext" style="margin-left: 5px;">Add to Wish List</span>' +
                     '</div></a>')
                     .insertBefore($(".submit-payment-form-link"));
             }
@@ -139,8 +141,8 @@ $(document).ready(function(){
                     'style="background-color: #0765a8; color: #fff;"' +
                     ' href="#">' +
                     '<div class="content"> ' +
-                    '<span class="ss-heart icon-inline"></span>' +
-                    '<span class="wishlistbtntext" style="margin-left: 5px;">In wishlist</span>' +
+                    '<span class="ss-check icon-inline wishlist-icon"></span>' +
+                    '<span class="wishlistbtntext" style="margin-left: 5px;">Added to Wish List</span>' +
                     '</div></a>')
                     .insertBefore($(".submit-payment-form-link"));
             }
@@ -150,15 +152,15 @@ $(document).ready(function(){
             usernameSessiokey = usernameSession();
 
             return {
-                    username: usernameSessiokey[0],
-                    session_key: usernameSessiokey[1],
-                    listing_name: $("#listing-title").text(),
-                    price: $(".listing-price-amount").text(),
-                    listing_url: listingURL(),
-                    listing_image_url: $(".listing-image").first().attr("src").replace("/big/", "/thumb/"),
-                    listing_description: "N/A",
-                    name: usernameSessiokey[0],
-                    added_on: new Date()
+                username: usernameSessiokey[0],
+                session_key: usernameSessiokey[1],
+                listing_name: $("#listing-title").text(),
+                price: $(".listing-price-amount").text(),
+                listing_url: listingURL(),
+                listing_image_url: $(".listing-image").first().attr("src").replace("/big/", "/thumb/"),
+                listing_description: "N/A",
+                name: usernameSessiokey[0],
+                added_on: new Date()
             }
         }
 
@@ -177,20 +179,18 @@ $(document).ready(function(){
         }
 
         function initializeWishListPopUp() {
-
-             u_s = usernameSession();
+            u_s = usernameSession();
             var data = { action: 'user_wishlist',
-                    username: u_s[0],
-                    session_key: u_s[1]
+                username: u_s[0],
+                session_key: u_s[1]
             };
             $.ajax({ url: apiEndPoint,
                 data: data,
                 type: 'GET',
                 success: function (response) {
-                    debugger;
                     var list = JSON.parse(response).data.wishes;
 
-                    var popUpcontent = '<div id="wishlistPopUp" class="faq-overlay wishlist-popup"><div class="faq-popup"><div class="popup-header"><h2>Wishlists</h2><a class="close faq-popup-close" href="#">&times;</a></div><div class="main-content"><div class="box"><ul class="question-list">';
+                    var popUpcontent = '<div id="wishlistPopUp" class="faq-overlay wishlist-popup"><div class="faq-popup"><div class="popup-header"><h2>Wish List</h2><a class="close faq-popup-close" href="#">&times;</a></div><div class="main-content"><div class="box"><ul class="question-list">';
 
                     var itemsString = '<div class="home-listings">';
                     if(list.length){
@@ -217,38 +217,38 @@ $(document).ready(function(){
 
         function wishlistDiv(item){
             return '<div class="col-6"><div class="home-list-item" data-id='+ item.id +'>' +
-            '<a class="home-list-image-container-desktop"' +
-            'href="'+ item.listing_url +'">' +
-            '<img alt="'+ item.listing_name + '"' +
-            'class="home-list-image"' +
-            'src="'+ item.listing_image_url + '">' +
+                '<a class="home-list-image-container-desktop"' +
+                'href="'+ item.listing_url +'">' +
+                '<img alt="'+ item.listing_name + '"' +
+                'class="home-list-image"' +
+                'src="'+ item.listing_image_url + '">' +
 
-            '<a class="home-list-image-container-mobile"' +
-            'href="'+ item.listing_url +'">' +
-            '<img alt="'+ item.listing_name + '"' +
-            'class="home-list-image"' +
-            'src="'+ item.listing_image_url + '"> </a>' +
-            '<div class="home-list-details-with-image">' +
-            '<h3 style="font-size: 1em; padding-bottom: 1em;" class="home-list-title">' +
-            item.listing_name + '</h3> ' +
-            '<p><b>Price: </b>'+ item.price + '</p>' +
-            '<p><b>Added On: </b>'+ new Date(item.added_on).toDateString("yyyy-MM-dd") + '</p>' +
-            '<div class="row">' +
-            '<a class="icon-with-text-container wishlist-checkout-btn" href="'+ item.listing_url+'">' +
-            '<i class="ss-cart icon-part"></i>' +
-            '<div class="text-part">Checkout</div>' +
-            '</a>' +
+                '<a class="home-list-image-container-mobile"' +
+                'href="'+ item.listing_url +'">' +
+                '<img alt="'+ item.listing_name + '"' +
+                'class="home-list-image"' +
+                'src="'+ item.listing_image_url + '"> </a>' +
+                '<div class="home-list-details-with-image">' +
+                '<h3 style="font-size: 1em; padding-bottom: 1em;" class="home-list-title">' +
+                item.listing_name + '</h3> ' +
+                '<p><b>Price: </b>'+ item.price + '</p>' +
+                '<p><b>Added On: </b>'+ new Date(item.added_on).toDateString("yyyy-MM-dd") + '</p>' +
+                '<div class="row">' +
+                '<a class="icon-with-text-container wishlist-checkout-btn" href="'+ item.listing_url+'">' +
+                '<i class="ss-cart icon-part"></i>' +
+                '<div class="text-part">Checkout</div>' +
+                '</a>' +
 
-            '<a class="icon-with-text-container wishlist-remove-btn" href="'+ item.listing_url+'">' +
-            '<i class="ss-trash icon-part"></i>' +
-            '<div class="text-part">Remove</div>' +
-            '</a>' +
+                '<a class="icon-with-text-container wishlist-remove-btn" href="'+ item.listing_url+'">' +
+                '<i class="ss-trash icon-part"></i>' +
+                '<div class="text-part">Remove</div>' +
+                '</a>' +
 
-            '</div>' +
-            '</div></a>' +
+                '</div>' +
+                '</div></a>' +
 
-            '</div>' +
-            '</div>'
+                '</div>' +
+                '</div>'
         }
 
         function listingURL(){
@@ -272,17 +272,19 @@ $(document).ready(function(){
             return username;
         }
 
-
-        var url = window.location.href;
-        if (url.search('#wishlistPopUp') > 0) {
-            setTimeout(function () {
-                $(".wishlist-link-header")[0].click();
-            }, 500);
-        }
-
         setInterval(function () {
-            $('a[href="https://www.barkyours.com/#wishlistPopUp"]').attr("href", "#wishlistPopUp").addClass("wishlist-link-header");
+            if($('a[href="https://www.barkyours.com/#wishlistPopUp"]').length > 0){
+                $('a[href="https://www.barkyours.com/#wishlistPopUp"]').attr("href", "#wishlistPopUp").addClass("wishlist-link-header");
+            }
         }, 500);
 
 
-});
+        var url = window.location.href;
+        // if (url.search('#wishlistPopUp') > 0) {
+        //     setTimeout(function () {
+        //         if($(".wishlist-link-header").length){
+        //             $(".wishlist-link-header")[0].click();
+        //         }
+        //     }, 500);
+        // }
+    });
