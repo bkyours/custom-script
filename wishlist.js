@@ -234,7 +234,7 @@
                 '<p><b>Price: </b>'+ item.price + '</p>' +
                 '<p><b>Added On: </b>'+ new Date(item.added_on).toDateString("yyyy-MM-dd") + '</p>' +
                 '<div class="row">' +
-                '<a class="icon-with-text-container wishlist-checkout-btn" href="'+ item.listing_url+'">' +
+                '<a class="icon-with-text-container wishlist-checkout-btn" href="'+ item.listing_url+'/initiate">' +
                 '<i class="ss-cart icon-part"></i>' +
                 '<div class="text-part">Checkout</div>' +
                 '</a>' +
