@@ -279,7 +279,7 @@
 
         setInterval(function () {
             if($('a[href="https://www.barkyours.com/#wishlistPopUp"]').length > 0){
-                $('a[href="https://www.barkyours.com/#wishlistPopUp"]').addClass("wishlist-link-header");
+                $('a[href="https://www.barkyours.com/#wishlistPopUp"]').attr('attr', '#wishlistPopUp').addClass("wishlist-link-header");
                 $('.wishlist-link-header').html('<a class="icon-with-text-container" href="#wishlistPopUp"> <i class="ss-heart icon-part"></i> <div class="text-part">Wish List(<span class="wish-list-header-count">'+ wishedItemCount +'</span>)</div> </a>');
             }
         }, 500);
