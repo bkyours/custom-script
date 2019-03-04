@@ -5,6 +5,8 @@
         var apiEndPoint = 'https://blog.barkyours.com/wp-admin/admin-ajax.php';
         var bkyoursListingURL = 'https://www.barkyours.com/en/listings/';
 
+        var wishedItemCount = 0;
+
         initializeWishListPopUp();
         initializeWishListBtn();
 
@@ -53,6 +55,7 @@
                             $(btn).attr("id", "removeWishListBtn");
                             $(".no-wishlisted").hide();
                             $("#wishlistPopUp .home-listings").append(wishlistDiv(data));
+                            updateWishListCount();
                             toastr.success("Item has been added to Wish List.")
                         }else{
                             toastr.error("Sorry, something went wrong. Please refresh the page and try again.")
@@ -77,6 +80,7 @@
                             $(".wishlist-icon").removeClass("ss-check").addClass("ss-heart");
                             $(btn).attr("id", "wishListBtn");
                             $("#wishlistPopUp .home-listings a[href='"+ listingURL()+"']").click();
+                            updateWishListCount();
                             toastr.error("Item has been removed from Wish List.")
                         }
                         else{
@@ -213,6 +217,7 @@
                     });
                 }
             });
+            updateWishListCount();
         }
 
         function wishlistDiv(item){
@@ -234,7 +239,7 @@
                 '<p><b>Price: </b>'+ item.price + '</p>' +
                 '<p><b>Added On: </b>'+ new Date(item.added_on).toDateString("yyyy-MM-dd") + '</p>' +
                 '<div class="row">' +
-                '<a class="icon-with-text-container wishlist-checkout-btn" href="'+ item.listing_url+'/initiate">' +
+                '<a class="icon-with-text-container wishlist-checkout-btn" href="'+ item.listing_url+'">' +
                 '<i class="ss-cart icon-part"></i>' +
                 '<div class="text-part">Checkout</div>' +
                 '</a>' +
@@ -275,8 +280,7 @@
         setInterval(function () {
             if($('a[href="https://www.barkyours.com/#wishlistPopUp"]').length > 0){
                 $('a[href="https://www.barkyours.com/#wishlistPopUp"]').addClass("wishlist-link-header");
-                $('.wishlist-link-header').html('<a class="icon-with-text-container" href="#wishlistPopUp"> <i class="ss-heart icon-part"></i> <div class="text-part">Wish List</div> </a>')
-
+                $('.wishlist-link-header').html('<a class="icon-with-text-container" href="#wishlistPopUp"> <i class="ss-heart icon-part"></i> <div class="text-part">Wish List(<span class="wish-list-header-count">'+ wishedItemCount +'</span>)</div> </a>');
             }
         }, 500);
 
@@ -290,6 +294,10 @@
         //     }, 500);
         // }
 
+        function updateWishListCount(){
+            var count = $("#wishlistPopUp .home-list-item").length;
+            $("wish-list-header-count").text(count);
+        }
 
 
 
