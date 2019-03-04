@@ -55,6 +55,7 @@
                             $(btn).attr("id", "removeWishListBtn");
                             $(".no-wishlisted").hide();
                             $("#wishlistPopUp .home-listings").append(wishlistDiv(data));
+                            console.log("add to wishlist")
                             updateWishListCount();
                             toastr.success("Item has been added to Wish List.")
                         }else{
@@ -80,6 +81,7 @@
                             $(".wishlist-icon").removeClass("ss-check").addClass("ss-heart");
                             $(btn).attr("id", "wishListBtn");
                             $("#wishlistPopUp .home-listings a[href='"+ listingURL()+"']").click();
+                            console.log("remove wishlist");
                             updateWishListCount();
                             toastr.error("Item has been removed from Wish List.")
                         }
@@ -126,29 +128,49 @@
 
         function addToWishList() {
             if ($(".listing-details-container").length) {
-                $('<a id="wishListBtn"' +
+                $('<div class="visible-tablet"><a id="wishListBtn"' +
                     ' class="listing-author-contact-button"' +
                     ' style="background-color: #0765a8; color: #fff;"' +
                     ' href="#">' +
                     '<div class="content">' +
                     '<span class="ss-heart icon-inline wishlist-icon"></span>' +
                     '<span class="wishlistbtntext" style="margin-left: 5px;">Add to Wish List</span>' +
-                    '</div></a>')
+                    '</div></a></div>')
                     .insertBefore($(".submit-payment-form-link"));
+
+                $('<div class="hidden-tablet"><a id="wishListBtn"' +
+                    ' class="listing-author-contact-button"' +
+                    ' style="background-color: #0765a8; color: #fff;"' +
+                    ' href="#">' +
+                    '<div class="content">' +
+                    '<span class="ss-heart icon-inline wishlist-icon"></span>' +
+                    '<span class="wishlistbtntext" style="margin-left: 5px;">Add to Wish List</span>' +
+                    '</div></a></div>')
+                    .insertBefore($(".about-seller-link"));
             }
         }
 
         function removeFromWishList() {
             if ($(".listing-details-container").length) {
-                $('<a id="removeWishListBtn"' +
+                $('<div class="visible-tablet"><a id="removeWishListBtn"' +
                     'class="listing-author-contact-button"' +
                     'style="background-color: #0765a8; color: #fff;"' +
                     ' href="#">' +
                     '<div class="content"> ' +
                     '<span class="ss-check icon-inline wishlist-icon"></span>' +
                     '<span class="wishlistbtntext" style="margin-left: 5px;">Added to Wish List</span>' +
-                    '</div></a>')
+                    '</div></a></div>')
                     .insertBefore($(".submit-payment-form-link"));
+
+                $('<div class="hidden-tablet"><a id="removeWishListBtn"' +
+                    'class="listing-author-contact-button"' +
+                    'style="background-color: #0765a8; color: #fff;"' +
+                    ' href="#">' +
+                    '<div class="content"> ' +
+                    '<span class="ss-check icon-inline wishlist-icon"></span>' +
+                    '<span class="wishlistbtntext" style="margin-left: 5px;">Added to Wish List</span>' +
+                    '</div></a></div>')
+                    .insertBefore($(".about-seller-link"));
             }
         }
 
@@ -215,9 +237,10 @@
                     $(".faq-popup-trigger").click(function(){
                         $("body").addClass("faq-open");
                     });
+                    console.log("initialize wishlist")
+                    updateWishListCount();
                 }
             });
-            updateWishListCount();
         }
 
         function wishlistDiv(item){
@@ -234,12 +257,12 @@
                 'class="home-list-image"' +
                 'src="'+ item.listing_image_url + '"> </a>' +
                 '<div class="home-list-details-with-image">' +
-                '<h3 style="font-size: 1em; padding-bottom: 1em;" class="home-list-title">' +
-                item.listing_name + '</h3> ' +
+                '<a href="'+ item.listing_url +'"><h3 style="font-size: 1em; padding-bottom: 1em;" class="home-list-title">' +
+                item.listing_name + '</h3></a>'+
                 '<p><b>Price: </b>'+ item.price + '</p>' +
                 '<p><b>Added On: </b>'+ new Date(item.added_on).toDateString("yyyy-MM-dd") + '</p>' +
                 '<div class="row">' +
-                '<a class="icon-with-text-container wishlist-checkout-btn" href="'+ item.listing_url+'">' +
+                '<a class="icon-with-text-container wishlist-checkout-btn" href="'+ item.listing_url+'/initiate">' +
                 '<i class="ss-cart icon-part"></i>' +
                 '<div class="text-part">Checkout</div>' +
                 '</a>' +
@@ -279,24 +302,15 @@
 
         setInterval(function () {
             if($('a[href="https://www.barkyours.com/#wishlistPopUp"]').length > 0){
+                wishedItemCount = $("#wishlistPopUp .home-list-item").length;
                 $('a[href="https://www.barkyours.com/#wishlistPopUp"]').attr('attr', '#wishlistPopUp').addClass("wishlist-link-header");
                 $('.wishlist-link-header').html('<a class="icon-with-text-container" href="#wishlistPopUp"> <i class="ss-heart icon-part"></i> <div class="text-part">Wish List(<span class="wish-list-header-count">'+ wishedItemCount +'</span>)</div> </a>');
             }
         }, 500);
 
-
-        var url = window.location.href;
-        // if (url.search('#wishlistPopUp') > 0) {
-        //     setTimeout(function () {
-        //         if($(".wishlist-link-header").length){
-        //             $(".wishlist-link-header")[0].click();
-        //         }
-        //     }, 500);
-        // }
-
         function updateWishListCount(){
             var count = $("#wishlistPopUp .home-list-item").length;
-            $("wish-list-header-count").text(count);
+            $(".wish-list-header-count").text(count);
         }
 
 
