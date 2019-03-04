@@ -224,7 +224,7 @@
                             itemsString +=  wishlistDiv(item);
                         });
                     }else{
-                        itemsString += "<div class='no-wishlisted'><h3>You haven't added any item on your list.</h3></div>"
+                        itemsString += "<div class='no-wishlisted'><h3>You haven't added any items on your wish list.</h3></div>"
                     }
 
                     var endpopUpcontent = "</div></ul></div></div></div></div>";
@@ -244,23 +244,24 @@
         }
 
         function wishlistDiv(item){
+            var options = { year: 'numeric', month: 'long', day: 'numeric' };
             return '<div class="col-6"><div class="home-list-item" data-id='+ item.id +'>' +
                 '<a class="home-list-image-container-desktop"' +
                 'href="'+ item.listing_url +'">' +
-                '<img alt="'+ item.listing_name + '"' +
+                '<img alt="'+ item.listing_name.replace(/\\"/g, '"') + '"' +
                 'class="home-list-image"' +
                 'src="'+ item.listing_image_url + '">' +
 
                 '<a class="home-list-image-container-mobile"' +
                 'href="'+ item.listing_url +'">' +
-                '<img alt="'+ item.listing_name + '"' +
+                '<img alt="'+ item.listing_name.replace(/\\"/g, '"') + '"' +
                 'class="home-list-image"' +
                 'src="'+ item.listing_image_url + '"> </a>' +
                 '<div class="home-list-details-with-image">' +
                 '<a href="'+ item.listing_url +'"><h3 style="font-size: 1em; padding-bottom: 1em;" class="home-list-title">' +
-                item.listing_name + '</h3></a>'+
+                item.listing_name.replace(/\\"/g, '"').replace(/\\'/g, '"') + '</h3></a>'+
                 '<p><b>Price: </b>'+ item.price + '</p>' +
-                '<p><b>Added On: </b>'+ new Date(item.added_on).toDateString("yyyy-MM-dd") + '</p>' +
+                '<p><b>Added On: </b>'+ new Date(item.added_on).toLocaleDateString('en-US', options) + '</p>' +
                 '<div class="row">' +
                 '<a class="icon-with-text-container wishlist-checkout-btn" href="'+ item.listing_url+'/initiate">' +
                 '<i class="ss-cart icon-part"></i>' +
@@ -304,7 +305,7 @@
             if($('a[href="https://www.barkyours.com/#wishlistPopUp"]').length > 0){
                 wishedItemCount = $("#wishlistPopUp .home-list-item").length;
                 $('a[href="https://www.barkyours.com/#wishlistPopUp"]').attr('attr', '#wishlistPopUp').addClass("wishlist-link-header");
-                $('.wishlist-link-header').html('<a class="icon-with-text-container" href="#wishlistPopUp"> <i class="ss-heart icon-part"></i> <div class="text-part">Wish List(<span class="wish-list-header-count">'+ wishedItemCount +'</span>)</div> </a>');
+                $('.wishlist-link-header').html('<a class="icon-with-text-container" href="#wishlistPopUp"> <i class="ss-heart icon-part"></i> <div class="text-part">Wish List (<span class="wish-list-header-count">'+ wishedItemCount +'</span>) </div> </a>');
             }
         }, 500);
 
