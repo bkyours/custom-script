@@ -26,12 +26,16 @@ $(document).ready(function () {
             setInterval(customizeGrid, 1000);
         }
     }
+    
+    if($("title").text() == "Bark yours"){
+      $("title").text("BarkYours - Gifts for People Who Love Their Dogs");
+    }
 
     function addBannerForNotLoggedIn() {
 
         if ($("#homepage-filters").length > 0) {
             console.log("homepage detected");
-            $("title").text("BarkYours - Gifts for People Who Love Their Dogs");
+           
             if ($(".marketplace-lander-content-title").length > 0) {
             }
             else {
