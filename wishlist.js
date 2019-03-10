@@ -115,7 +115,7 @@
                     success: function (response) {
                         $(elem).remove();
                         if( $("#wishlistPopUp .home-listings .col-6").length == 0){
-                            $("#wishlistPopUp .home-listings").append("<div class='no-wishlisted'><h3>You haven't added any item on your list.</h3></div>");
+                            $("#wishlistPopUp .home-listings").append("<div class='no-wishlisted'><h3>You haven't added any items on your wish list.</h3></div>");
                         }
 
                     }
