@@ -274,11 +274,11 @@ $(document).ready(function(){
         var options = { year: 'numeric', month: 'long', day: 'numeric' };
         checkoutLink = item.listing_url+'/initiate?';
 
-        if(item.listing_size.length){
+        if(item.listing_size){
             checkoutLink += "size=" + item.listing_size;
         }
 
-        if(item.listing_size.length){
+        if(item.listing_size){
             checkoutLink += "&color=" + item.listing_color;
         }
 
@@ -350,7 +350,5 @@ $(document).ready(function(){
         var count = $("#wishlistPopUp .home-list-item").length;
         $(".wish-list-header-count").text(count);
     }
-
-
 
 });
