@@ -132,14 +132,14 @@ $(document).ready(function(){
     function validateSizeAndColor(){
         isReady = true;
         if($("#sizeFilter").length > 0){
-            if($("#sizeFilter").val() != "Size"){
+            if($("#sizeFilter").val() == "Size"){
                 toastr.error("You missed the Size :)");
                 isReady = false;
             }
         }
 
         if($("#colorFilter").length > 0){
-            if($("#colorFilter").val() != "Color"){
+            if($("#colorFilter").val() == "Color"){
                 toastr.error("You missed the Color :)");
                 isReady = false;
             }
