@@ -263,14 +263,25 @@ $(document).ready(function(){
                 $(".faq-popup-trigger").click(function(){
                     $("body").addClass("faq-open");
                 });
-                console.log("initialize wishlist")
+                console.log("initialize wishlist");
                 updateWishListCount();
             }
         });
     }
 
     function wishlistDiv(item){
+
         var options = { year: 'numeric', month: 'long', day: 'numeric' };
+        checkoutLink = item.listing_url+'/initiate?';
+
+        if(item.listing_size.length){
+            checkoutLink += "size=" + item.listing_size;
+        }
+
+        if(item.listing_size.length){
+            checkoutLink += "&color=" + item.listing_color;
+        }
+
         return '<div class="col-6"><div class="home-list-item" data-id='+ item.id +'>' +
             '<a class="home-list-image-container-desktop"' +
             'href="'+ item.listing_url +'">' +
@@ -282,14 +293,14 @@ $(document).ready(function(){
             'href="'+ item.listing_url +'">' +
             '<img alt="'+ item.listing_name.replace(/\\"/g, '"') + '"' +
             'class="home-list-image"' +
-            'src="'+ item.listing_image_url + '"> </a>' + 
+            'src="'+ item.listing_image_url + '"> </a>' +
             '<div class="home-list-details-with-image">' +
             '<a href="'+ item.listing_url +'"><h3 style="font-size: 1em; padding-bottom: 1em;" class="home-list-title">' +
             item.listing_name.replace(/\\"/g, '"').replace(/\\'/g, '"') + '</h3></a>'+
             '<p><b>Price: </b>'+ item.price + '</p>' +
             '<p><b>Added On: </b>'+ new Date(item.added_on).toLocaleDateString('en-US', options) + '</p>' +
             '<div class="row">' +
-            '<a class="icon-with-text-container wishlist-checkout-btn" href="'+ item.listing_url+'/initiate?size=' + item.listing_size + '&color='+ item.listing_color +'">' +
+            '<a class="icon-with-text-container wishlist-checkout-btn" href="'+ checkoutLink+'">' +
             '<i class="ss-cart icon-part"></i>' +
             '<div class="text-part">Checkout</div>' +
             '</a>' +
