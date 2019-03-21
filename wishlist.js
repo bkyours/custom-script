@@ -275,12 +275,12 @@ $(document).ready(function(){
         var options = { year: 'numeric', month: 'long', day: 'numeric' };
         checkoutLink = item.listing_url+'/initiate?';
 
-        if(item.listing_size){
-            checkoutLink += "size=" + item.listing_size;
+        if(item.size){
+            checkoutLink += "size=" + item.size;
         }
 
-        if(item.listing_color){
-            checkoutLink += "&color=" + item.listing_color;
+        if(item.color){
+            checkoutLink += "&color=" + item.color;
         }
 
         return '<div class="col-6"><div class="home-list-item" data-id='+ item.id +'>' +
