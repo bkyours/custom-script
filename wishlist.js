@@ -270,7 +270,6 @@ $(document).ready(function(){
     }
 
     function wishlistDiv(item){
-        debugger;
 
         var options = { year: 'numeric', month: 'long', day: 'numeric' };
         checkoutLink = item.listing_url+'/initiate?';
