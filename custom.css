@@ -126,9 +126,7 @@
 
 footer {
     background: #F0F0F0;
-    background-size: contain;
     height: auto;
-    position: relative;
     padding-top: 60px;
     padding-bottom: 20px;
 }
