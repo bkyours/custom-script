@@ -208,11 +208,21 @@ $(document).ready(function(){
             price: $(".listing-price-amount").text(),
             listing_url: listingURL(),
             listing_image_url: $(".listing-image").first().attr("src").replace("/big/", "/thumb/"),
-            listing_description: "N/A",
+            listing_description: shippingOption(),
             listing_color: $("#colorFilter").val(),
             listing_size: $("#sizeFilter").val(),
             name: usernameSessiokey[0],
             added_on: new Date()
+        }
+    }
+    
+    function shippingOption(){
+        if($("#delivery_shipping").prop('checked')){
+            return "&delivery=shipping";
+        }else if($("#delivery_pickup").prop('checked')){
+            return "&delivery=pickup";
+        } else{
+            return '';
         }
     }
 
@@ -280,6 +290,10 @@ $(document).ready(function(){
 
         if(item.color){
             checkoutLink += "&color=" + item.color;
+        }
+        
+        if(item.listing_description.length && item.includes("shipping")){
+            checkoutLink += item.listing_description;
         }
 
         return '<div class="col-6"><div class="home-list-item" data-id='+ item.id +'>' +
