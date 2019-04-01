@@ -293,7 +293,7 @@ $(document).ready(function(){
         }
         debugger;
 
-        if(item.Delivery && item.Delivery.includes("shipping")){
+        if(item.Delivery && item.Delivery.includes("delivery")){
             checkoutLink += item.Delivery;
         }
 
