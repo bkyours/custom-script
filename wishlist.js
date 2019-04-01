@@ -291,7 +291,6 @@ $(document).ready(function(){
         if(item.color){
             checkoutLink += "&color=" + item.color;
         }
-        debugger;
 
         if(item.Delivery && item.Delivery.includes("delivery")){
             checkoutLink += item.Delivery;
