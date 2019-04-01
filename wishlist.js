@@ -292,7 +292,7 @@ $(document).ready(function(){
             checkoutLink += "&color=" + item.color;
         }
 
-        if(item.delivery.length && item.delivery.includes("shipping")){
+        if(item.delivery && item.delivery.includes("shipping")){
             checkoutLink += item.delivery;
         }
 
