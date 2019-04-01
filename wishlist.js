@@ -218,9 +218,9 @@ $(document).ready(function(){
             price: $(".listing-price-amount").text(),
             listing_url: listingURL(),
             listing_image_url: $(".listing-image").first().attr("src").replace("/big/", "/thumb/"),
-            listing_delivery: shippingOption(),
-            listing_color: $("#colorFilter").val(),
-            listing_size: $("#sizeFilter").val(),
+            Delivery: shippingOption(),
+            color: $("#colorFilter").val(),
+            size: $("#sizeFilter").val(),
             name: usernameSessiokey[0],
             added_on: new Date()
         }
