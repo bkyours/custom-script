@@ -292,8 +292,8 @@ $(document).ready(function(){
             checkoutLink += "&color=" + item.color;
         }
 
-        if(item.delivery && item.delivery.includes("shipping")){
-            checkoutLink += item.delivery;
+        if(item.Delivery && item.Delivery.includes("shipping")){
+            checkoutLink += item.Delivery;
         }
 
         return '<div class="col-6"><div class="home-list-item" data-id='+ item.id +'>' +
@@ -364,5 +364,7 @@ $(document).ready(function(){
         var count = $("#wishlistPopUp .home-list-item").length;
         $(".wish-list-header-count").text(count);
     }
+
+
 
 });
