@@ -76,7 +76,7 @@ var spotLights = [
         "type": "seller",
         "seller_name": "Charity Spotlight",
         "image": "https://blog.barkyours.com/wp-content/uploads/2018/12/charity-spotlight-newS-e1545573522454.jpg",
-        "seller_profile_url": "https://blog.barkyours.com/barkyours/charity-spotlight-remembering-poh-the-dog/",
+        "seller_profile_url": "https://blog.barkyours.com/barkyours/biting-back-art-for-a-good-paws/",
         "grid_label": "FEATURED CHARITY "
     },
     {
