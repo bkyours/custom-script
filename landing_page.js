@@ -11,13 +11,13 @@ $(document).ready(function(){
           "</div>" +
 
          "<div class='col-4'><div class='row'><img style='width: 32px;' src='https://blog.barkyours.com/wp-content/uploads/2019/03/Picture1.png'/></div>" +
-              "<b style='font-size: 18px;'> Find Unique, Dog-Inspired Items</b>" +
-              "<div><p style='color: #000; font-size: 16px; font-weight: 400; padding: 0 30px;'>Items on BarkYours are all dog-themed and many can be customized in your favorite breeds<span><a href='#whatIsBarkYoursAllAbout' <i class='fa fa-play' style='margin-left: 10px; color: #0765a8; font-size: 22px;'></i></a></span></p></div>" +
+              "<b style='font-size: 18px;'> Buy from Independent Sellers </b>" +
+              "<div><p style='color: #000; font-size: 16px; font-weight: 400; padding: 0 30px;'>Buy directly from dog-inspired sellers and artists from all over the world <span><a href='#whatIsBarkYoursAllAbout' <i class='fa fa-play' style='margin-left: 10px; color: #0765a8; font-size: 22px;'></i></a></span></p></div>" +
           "</div>" +
 
          "<div class='col-4'><div class='row'><img style='width: 32px;' src='https://blog.barkyours.com/wp-content/uploads/2019/03/Picture1.png'/></div>" +
-              "<b style='font-size: 18px;'> Find Unique, Dog-Inspired Items</b>" +
-              "<div><p style='color: #000; font-size: 16px; font-weight: 400; padding: 0 30px;'>Items on BarkYours are all dog-themed and many can be customized in your favorite breeds<span><a href='#whatIsBarkYoursAllAbout' <i class='fa fa-play' style='margin-left: 10px; color: #0765a8; font-size: 22px;'></i></a></span></p></div>" +
+              "<b style='font-size: 18px;'> Shop with Confidence </b>" +
+              "<div><p style='color: #000; font-size: 16px; font-weight: 400; padding: 0 30px;'>Your privacy and security are always our top priority, and we’re here when you need us<span><a href='#whatIsBarkYoursAllAbout' <i class='fa fa-play' style='margin-left: 10px; color: #0765a8; font-size: 22px;'></i></a></span></p></div>" +
           "</div>" +
 
           "</div>";
