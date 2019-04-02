@@ -221,3 +221,28 @@ var categories = [
         url: "/?category=crafts-for-dogs"
     }
 ];
+
+
+
+    var topSectionTitle1 = "Find Unique, Dog-Inspired Items";
+    var topSectionContent1 = "Items on BarkYours are all dog-themed and many can be customized in your favorite breeds";
+
+    var topSectionTitle2 = "Buy from Independent Sellers ";
+    var topSectionContent2 = "Buy directly from dog-inspired sellers and artists from all over the world";
+
+    var topSectionTitle3 = "Shop with Confidence ";
+    var topSectionContent3 = "Your privacy and security are always our top priority, and we’re here when you need us";
+
+    var whatIsBarkYourSectionTitle1 = "What is BarkYours All About?";
+    var whatIsBarkYourSectionContent1 = "From dog lovers, to dog lovers. We are committed to bringing together talented creators of dog-inspired items with the dog loving community.";
+
+    var whatIsBarkYourSectionTitle2 = "Thousands of Dog-Themed Items";
+    var whatIsBarkYourSectionContent2 = "On BarkYours you can find the best assortment of dog-inspired items and gifts. Check back often as our sellers are always adding new listings.";
+
+    var whatIsBarkYourSectionTitle3 = "Support Creative Entrepreneurs";
+    var whatIsBarkYourSectionContent3 = "Buy directly from hundreds of independent sellers. BarkYours.com makes it easy and safe to buy from sellers, but your artists come directly from the artists themselves.";
+
+    var whatIsBarkYourSectionTitle4 = "It’s Easy and Secure";
+    var whatIsBarkYourSectionContent4 = "At BarkYours, we’re committed to making it easy to buy (and sell) items. We use industry leading technology and payment processors to make it happen.";
+
+    
