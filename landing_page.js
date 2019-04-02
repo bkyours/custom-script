@@ -47,9 +47,11 @@ $(document).ready(function(){
           "</div>" +
 
           "</div></div>";
-      if(!showListingList){
-          $(".page-content").css("padding-bottom", 0);
-          $(".marketplace-lander").append(barkyoursDetails);
-          $('.page-content').append(whatIsBarkYourSection);
-      }
+       if ($("#homepage-filters").length > 0) {
+            if(!showListingList){
+                $(".page-content").css("padding-bottom", 0);
+                $(".marketplace-lander").append(barkyoursDetails);
+                $('.page-content').append(whatIsBarkYourSection);
+            }
+       }
 });
