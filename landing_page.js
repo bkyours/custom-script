@@ -1,5 +1,10 @@
 $(document).ready(function(){
-var barkyoursDetails = "<div class='col-12 text-center' style='padding: 30px;'>" +
+    var currentURL = window.location.href;  
+    var showListingList = currentURL.indexOf("category") >= 0 || currentURL.indexOf("filter_option") >= 0 || currentURL.indexOf("view=list") >= 0 || currentURL.indexOf("view=map") >= 0 || currentURL.indexOf("view=grid") >= 0 || currentURL.indexOf("price_min") >= 0 || currentURL.indexOf("?q=") >= 0 || currentURL.indexOf("?page=") >= 0 || currentURL.indexOf("price_max") >= 0;
+
+    if ($("#homepage-filters").length > 0) {
+        if(!showListingList){
+          var barkyoursDetails = "<div class='col-12 text-center' style='padding: 30px;'>" +
 
           "<div class='col-4'><div class='row'><img style='width: 32px;' src='https://blog.barkyours.com/wp-content/uploads/2019/04/paw.png'/></div>" +
               "<b style='font-size: 18px;'> " + topSectionTitle1 + "</b>" +
@@ -42,13 +47,9 @@ var barkyoursDetails = "<div class='col-12 text-center' style='padding: 30px;'>"
           "</div></div>";
 
 
-    var currentURL = window.location.href;
-    var showListingList = currentURL.indexOf("category") >= 0 || currentURL.indexOf("filter_option") >= 0 || currentURL.indexOf("view=list") >= 0 || currentURL.indexOf("view=map") >= 0 || currentURL.indexOf("view=grid") >= 0 || currentURL.indexOf("price_min") >= 0 || currentURL.indexOf("?q=") >= 0 || currentURL.indexOf("?page=") >= 0 || currentURL.indexOf("price_max") >= 0;
 
-    if ($("#homepage-filters").length > 0) {
-        if(!showListingList){
             $(".page-content").css("padding-bottom", 0);
-            $(".marketplace-lander").append(barkyoursDetails);
+            $(barkyoursDetails).insertBefore(".home-toolbar");
             $('.page-content').append(whatIsBarkYourSection);
         }
     }
