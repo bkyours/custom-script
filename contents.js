@@ -35,25 +35,25 @@ var featuredCategories = [
     },
 ];
 
-var spotLightLabel = "BARKYOURS' SPOTLIGHT";
+var spotLightLabel = "BARKYOURS' MOTHER'S DAY SPOTLIGHT";
 
 var spotLights = [
     {   "type": "listing",
-        "title": "T-Shirt - I Like My Dog More",
-        "image": "https://user-assets.sharetribe.com/images/listing_images/images/1648772/medium/the_more_people_i_meet_the_more_i_like_my_dog_womens_alstyle_navy.jpeg?1533656811",
-        "url": "https://www.barkyours.com/en/listings/614304-the-more-people-i-meet-the-more-i-like-my-dog-womens-tee",
-        "price": "$24.95",
-        "seller_name": "THATisMYpet",
-        "seller_profile_url": "https://www.barkyours.com/en/thatismypet",
+        "title": "Dog Mom Bracelet",
+        "image": "https://user-assets.sharetribe.com/images/listing_images/images/1711568/medium/dog_mom_bracelet.jpg?1536843400",
+        "url": "https://www.barkyours.com/en/listings/633039-dog-mom-cuff-bracelet-hand-stamped",
+        "price": "$16.95",
+        "seller_name": "Like Mother Like Daughter",
+        "seller_profile_url": "https://www.barkyours.com/en/motherdaughterjewel",
         "grid_label": "FEATURED ITEM"
     },
     {   "type": "listing",
-        "title": "3D Pop Art",
-        "image": "https://user-assets.sharetribe.com/images/listing_images/images/1854753/medium/dach_03.jpg?1541776959",
-        "url": "https://www.barkyours.com/en/listings/668695-dachshund-3d-pop-art",
-        "price": "$80.00",
-        "seller_name": "PopsicArt",
-        "seller_profile_url": "https://www.barkyours.com/en/popsicart",
+        "title": "Dog Mom Sign",
+        "image": "https://user-assets.sharetribe.com/images/listing_images/images/1731538/medium/dog_mom_-_black.jpg?1537806365",
+        "url": "https://www.barkyours.com/en/listings/638737-dog-mom-black",
+        "price": "$22.99",
+        "seller_name": "Precision Metal Art",
+        "seller_profile_url": "https://www.barkyours.com/en/sierrapma",
         "grid_label": "FEATURED ITEM"
     },
     {   "type": "listing",
@@ -240,7 +240,7 @@ var categories = [
     var whatIsBarkYourSectionContent2 = "On BarkYours you can find the best assortment of dog-inspired items and gifts. Check back often as our sellers are always adding new listings.";
 
     var whatIsBarkYourSectionTitle3 = "Support Creative Entrepreneurs";
-    var whatIsBarkYourSectionContent3 = "Buy directly from hundreds of independent sellers. BarkYours.com makes it easy and safe to buy from sellers, but your artists come directly from the artists themselves.";
+    var whatIsBarkYourSectionContent3 = "Buy directly from hundreds of independent sellers. BarkYours.com makes it easy and safe to buy from sellers, and your items come directly from the artists themselves.";
 
     var whatIsBarkYourSectionTitle4 = "It’s Easy and Secure";
     var whatIsBarkYourSectionContent4 = "At BarkYours, we’re committed to making it easy to buy (and sell) items. We use industry leading technology and payment processors to make it happen.";
