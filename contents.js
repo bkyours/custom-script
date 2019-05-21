@@ -35,31 +35,31 @@ var featuredCategories = [
     },
 ];
 
-var spotLightLabel = "BARKYOURS' MOTHER'S DAY SPOTLIGHT";
+var spotLightLabel = "BARKYOURS' FATHER'S DAY SPOTLIGHT";
 
 var spotLights = [
     {   "type": "listing",
-        "title": "Dog Mom Bracelet",
-        "image": "https://user-assets.sharetribe.com/images/listing_images/images/1711568/medium/dog_mom_bracelet.jpg?1536843400",
-        "url": "https://www.barkyours.com/en/listings/633039-dog-mom-cuff-bracelet-hand-stamped",
-        "price": "$16.95",
-        "seller_name": "Like Mother Like Daughter",
-        "seller_profile_url": "https://www.barkyours.com/en/motherdaughterjewel",
+        "title": "Dog Dad T-Shirt",
+        "image": "https://user-assets.sharetribe.com/images/listing_images/images/1782858/medium/dog_dad.jpg?1539036119",
+        "url": "https://www.barkyours.com/en/listings/649460-dog-dad-im-just-the-man-at-the-end-of-the-leash-tshirt",
+        "price": "$21.99",
+        "seller_name": "DOGZ DOGZ Ts & More",
+        "seller_profile_url": "https://www.barkyours.com/en/core1",
         "grid_label": "FEATURED ITEM"
     },
     {   "type": "listing",
-        "title": "Dog Mom Sign",
-        "image": "https://user-assets.sharetribe.com/images/listing_images/images/1731538/medium/dog_mom_-_black.jpg?1537806365",
-        "url": "https://www.barkyours.com/en/listings/638737-dog-mom-black",
-        "price": "$22.99",
-        "seller_name": "Precision Metal Art",
-        "seller_profile_url": "https://www.barkyours.com/en/sierrapma",
+        "title": "Custom Dog Dad Mug",
+        "image": "https://user-assets.sharetribe.com/images/listing_images/images/2026581/medium/mug_dog_dad.jpg?1550769378",
+        "url": "https://www.barkyours.com/en/listings/716769-stay-at-home-dog-dad",
+        "price": "$15.00",
+        "seller_name": "Art by Keri",
+        "seller_profile_url": "https://www.barkyours.com/en/keris",
         "grid_label": "FEATURED ITEM"
     },
     {   "type": "listing",
-        "title": "Dog Mom Baseball Hat",
-        "image": "https://user-assets.sharetribe.com/images/listing_images/images/1799404/medium/dogmomhatbrown.jpg?1539611555",
-        "url": "https://www.barkyours.com/en/listings/653675-dog-mom-baseball-hat",
+        "title": "Happy Together Baseball Hat",
+        "image": "https://user-assets.sharetribe.com/images/listing_images/images/2119912/medium/hat_happy.jpg?1555507103",
+        "url": "https://www.barkyours.com/en/listings/653679-happy-together-baseball-hat",
         "price": "$20.00",
         "seller_name": "DOGZ DOGZ Ts & More",
         "seller_profile_url": "https://www.barkyours.com/en/core1",
