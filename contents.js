@@ -58,7 +58,7 @@ var spotLights = [
     },
     {   "type": "listing",
         "title": "Happy Together Baseball Hat",
-        "image": "https://user-assets.sharetribe.com/images/listing_images/images/2119912/medium/hat_happy.jpg?1555507103",
+        "image": "https://user-assets.sharetribe.com/images/listing_images/images/2182882/medium/happy_together_hat_new.jpg?1558541475",
         "url": "https://www.barkyours.com/en/listings/653679-happy-together-baseball-hat",
         "price": "$20.00",
         "seller_name": "DOGZ DOGZ Ts & More",
