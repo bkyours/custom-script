@@ -17,7 +17,7 @@ $(document).ready(function () {
     
     function addCheckoutText(){
        if($('.checkout-with-paypal-button').length){
-          $(".preauthorize-section .row:last-of-type").text("Note: Because you are purchasing directly from the seller, you can only buy from one listing at a time.  Please complete this purchase and then proceed to view and purchase other listings.").show();
+          $(".preauthorize-section .row:last-of-type").text("<b>Note:</b> Because you are purchasing directly from the seller, you can only buy from one listing at a time.  Please complete this purchase and then proceed to view and purchase other listings.").show();
        }
     }
 
