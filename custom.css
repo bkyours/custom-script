@@ -610,11 +610,14 @@ footer .icon-part{
 .padding-5-15{ padding: 5px 15px;}
 .signup-form #person_username1,
 .signup-form label[for="person_username"],
-.preauthorize-section .row:last-of-type,
 .home-toolbar-button-group a:last-of-type
   {
     display: none !important;
   }
+
+.preauthorize-section .row:last-of-type{
+    display: none;
+}
 
 .home-toolbar-button-group a:nth-of-type(2){
     -moz-border-radius-topright: 0.375em;
