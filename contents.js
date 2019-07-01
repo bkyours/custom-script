@@ -39,7 +39,7 @@ var spotLightLabel = "BARKYOURS' SUMMER SPOTLIGHT";
 
 var spotLights = [
     {   "type": "listing",
-        "title": "With Dog at Beach T-Shirt",
+        "title": "Beach T-Shirt",
         "image": "https://user-assets.sharetribe.com/images/listing_images/images/1771893/medium/beach_round_nect.jpg?1538715444",
         "url": "https://www.barkyours.com/en/listings/647061-hanging-with-my-dog-at-the-beach-tshirt",
         "price": "$21.99",
