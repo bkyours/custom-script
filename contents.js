@@ -75,7 +75,7 @@ var spotLights = [
     {
         "type": "seller",
         "seller_name": "Charity Spotlight",
-        "image": "https://blog.barkyours.com/wp-content/uploads/2019/07/by-charity-spotlight3.jpg",
+        "image": "https://blog.barkyours.com/wp-content/uploads/2019/07/by-charity-spotlight4.jpg",
         "seller_profile_url": "https://blog.barkyours.com/barkyours/biting-back-art-for-a-good-paws/",
         "grid_label": "FEATURED CHARITY "
     },
