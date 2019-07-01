@@ -35,41 +35,41 @@ var featuredCategories = [
     },
 ];
 
-var spotLightLabel = "BARKYOURS' FATHER'S DAY SPOTLIGHT";
+var spotLightLabel = "BARKYOURS' SUMMER SPOTLIGHT";
 
 var spotLights = [
     {   "type": "listing",
-        "title": "Dog Dad T-Shirt",
-        "image": "https://user-assets.sharetribe.com/images/listing_images/images/1782858/medium/dog_dad.jpg?1539036119",
-        "url": "https://www.barkyours.com/en/listings/649460-dog-dad-im-just-the-man-at-the-end-of-the-leash-tshirt",
+        "title": "With Dog at Beach T-Shirt",
+        "image": "https://user-assets.sharetribe.com/images/listing_images/images/1771893/medium/beach_round_nect.jpg?1538715444",
+        "url": "https://www.barkyours.com/en/listings/647061-hanging-with-my-dog-at-the-beach-tshirt",
         "price": "$21.99",
         "seller_name": "DOGZ DOGZ Ts & More",
         "seller_profile_url": "https://www.barkyours.com/en/core1",
         "grid_label": "FEATURED ITEM"
     },
     {   "type": "listing",
-        "title": "Custom Dog Dad Mug",
-        "image": "https://user-assets.sharetribe.com/images/listing_images/images/2026581/medium/mug_dog_dad.jpg?1550769378",
-        "url": "https://www.barkyours.com/en/listings/716769-stay-at-home-dog-dad",
-        "price": "$15.00",
-        "seller_name": "Art by Keri",
-        "seller_profile_url": "https://www.barkyours.com/en/keris",
+        "title": "Celebrate US Tote Bag",
+        "image": "https://user-assets.sharetribe.com/images/listing_images/images/2219926/medium/4th_of_july_bag.jpg?1560459362",
+        "url": "https://www.barkyours.com/en/listings/771148-4th-of-july-tote-bag-barkyours-for-a-cause",
+        "price": "$20.00",
+        "seller_name": "BarkYours",
+        "seller_profile_url": "https://www.barkyours.com/en/coreya",
         "grid_label": "FEATURED ITEM"
     },
     {   "type": "listing",
-        "title": "Happy Together Baseball Hat",
-        "image": "https://user-assets.sharetribe.com/images/listing_images/images/2182882/medium/happy_together_hat_new.jpg?1558541475",
-        "url": "https://www.barkyours.com/en/listings/653679-happy-together-baseball-hat",
-        "price": "$20.00",
-        "seller_name": "DOGZ DOGZ Ts & More",
-        "seller_profile_url": "https://www.barkyours.com/en/core1",
+        "title": "Customized Key Chain",
+        "image": "https://user-assets.sharetribe.com/images/listing_images/images/2204303/medium/img_3920.jpeg?1559699898",
+        "url": "https://www.barkyours.com/en/listings/766860-dog-love-with-paw-print-acrylic-keychain",
+        "price": "$15.00",
+        "seller_name": "The Dancing Daisy",
+        "seller_profile_url": "https://www.barkyours.com/en/staciab",
         "grid_label": "FEATURED ITEM"
     },
     {
         "type": "seller",
-        "seller_name": "Like Mother Like Daughter",
-        "image": "https://user-assets.sharetribe.com/images/people/images/50sFY1UJznGAAUcSh-4Ypw/medium/photo_of_me.jpg?1536843087",
-        "seller_profile_url": "https://www.barkyours.com/en/motherdaughterjewel",
+        "seller_name": "Pucci Pet Apparel",
+        "image": "https://user-assets.sharetribe.com/images/people/images/1zBXEUFYToeJCWMwMjfYbQ/medium/isla_500x500.33808322_piml32gm.jpg?1558033950",
+        "seller_profile_url": "https://www.barkyours.com/en/puccipeta",
         "grid_label": "FEATURED SELLER "
     },
     {
