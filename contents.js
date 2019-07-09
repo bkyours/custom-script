@@ -48,7 +48,7 @@ var spotLights = [
         "grid_label": "FEATURED ITEM"
     },
     {   "type": "listing",
-        "title": "Celebrate US Tote Bag",
+        "title": "American Dogs Tote Bag",
         "image": "https://user-assets.sharetribe.com/images/listing_images/images/2219926/medium/4th_of_july_bag.jpg?1560459362",
         "url": "https://www.barkyours.com/en/listings/771148-4th-of-july-tote-bag-barkyours-for-a-cause",
         "price": "$20.00",
