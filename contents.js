@@ -39,9 +39,9 @@ var spotLightLabel = "BARKYOURS' SUMMER SPOTLIGHT";
 
 var spotLights = [
     {   "type": "listing",
-        "title": "Beach T-Shirt",
-        "image": "https://user-assets.sharetribe.com/images/listing_images/images/1771893/medium/beach_round_nect.jpg?1538715444",
-        "url": "https://www.barkyours.com/en/listings/647061-hanging-with-my-dog-at-the-beach-tshirt",
+        "title": "Dog T-Shirt",
+        "image": "https://user-assets.sharetribe.com/images/listing_images/images/1782934/medium/to_the_world.jpg?1539037862",
+        "url": "https://www.barkyours.com/en/listings/649477-to-the-world-you-are-one-person-t-shirt",
         "price": "$21.99",
         "seller_name": "DOGZ DOGZ Ts & More",
         "seller_profile_url": "https://www.barkyours.com/en/core1",
