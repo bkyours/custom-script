@@ -336,6 +336,8 @@ $(document).ready(function () {
                 '</div></a>' +
                 '</div></div>')
         });
+        
+        $(".home-fluid-thumbnail-grid").append('<div class="full-width text-center" style="margin-top: 20px; height: 45px;"> <a class="view-all-listing-link-btn" href="https://www.barkyours.com/?view=grid"> VIEW ALL LISTINGS</a></div>');
         $(".home-fluid-thumbnail-grid").append("<div class='row' style='border-bottom: 1px solid #c3c3c3; width: 97%'> <h3>" + spotLightLabel + "</h3></div><hr>");
         $.map(spotLights, function (item, index) {
             if (item.type == "seller") {
