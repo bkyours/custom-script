@@ -1,3 +1,4 @@
+// SubcategoryID: categoryID
 var categorySubcategory = {
   306230: "306225"
   306235: "306225"
