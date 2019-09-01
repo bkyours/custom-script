@@ -424,14 +424,18 @@ $(document).ready(function () {
 
             $(".listing-details-container .checkbox-group").each(function () {
                 if ($(this).parent().find("b").text() == "Size:") {
-                    $(this).parent().parent().hide();
+                    if($("#listing-message-links").length > 0){
+                       $(this).parent().parent().hide();
+                    }
                     $(this).find(".checkbox-option.selected").each(function () {
                         sizeFilterOptions.push($(this).find("span").last().text().replace(/(\r\n\t|\n|\r\t)/gm, ""));
                     });
 
                 }
                 else if ($(this).parent().find("b").text() == "Colors:") {
-                    $(this).parent().parent().hide();
+                    if($("#listing-message-links").length > 0){
+                       $(this).parent().parent().hide();
+                    }
                     $(this).find(".checkbox-option.selected").each(function () {
                         colorFilterOptions.push($(this).find("span").last().text().replace(/(\r\n\t|\n|\r\t)/gm, ""));
                     });
