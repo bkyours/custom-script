@@ -424,7 +424,7 @@ $(document).ready(function () {
 
             $(".listing-details-container .checkbox-group").each(function () {
                 if ($(this).parent().find("b").text() == "Size:") {
-                    if($("#listing-message-links").length > 0){
+                    if($("aside form").length > 0){
                        $(this).parent().parent().hide();
                     }
                     $(this).find(".checkbox-option.selected").each(function () {
@@ -433,7 +433,7 @@ $(document).ready(function () {
 
                 }
                 else if ($(this).parent().find("b").text() == "Colors:") {
-                    if($("#listing-message-links").length > 0){
+                    if($("aside form").length > 0){
                        $(this).parent().parent().hide();
                     }
                     $(this).find(".checkbox-option.selected").each(function () {
