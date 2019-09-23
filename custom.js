@@ -459,6 +459,7 @@ $(document).ready(function () {
                     });
 
                     s.appendTo($('.filter-dropdowns #sizeFilterWrapper'));
+                    $("<span class='buyer-size-price-change-info'>Prices may vary with size selection.</span>").prependTo($('.filter-dropdowns #sizeFilterWrapper'));
                     sizePresent = true;
                 }
 
