@@ -134,12 +134,16 @@ $(document).ready(function(){
     var sizeArray = ['XS', 'S', 'M', 'L', 'XL', '2XL', '3XL', '2T', '3T', '4T', '5T'];
     var mappedSizeArray = ['XS:', 'S:', 'M:', 'L:', 'XL:', '2XL:', '3XL:', '2T:', '3T:', '4T:', '5T:'];
 
-    $(".listing-details-container b").each(function () {
-        var size = $(this).html();
-        if (mappedSizeArray.indexOf(size) >= 0 ) {
-            listingSizeUrl[sizeArray[mappedSizeArray.indexOf(size)]] = $(this).siblings()[0].getAttribute("href");
-        }
-    });
+    setTimeout(function(){
+        $(".listing-details-container b").each(function () {
+            var size = $(this).html();
+            if (mappedSizeArray.indexOf(size) >= 0 ) {
+                $(this).parent().parent().hide();
+                listingSizeUrl[sizeArray[mappedSizeArray.indexOf(size)]] = $(this).siblings()[0].getAttribute("href");
+            }
+        });
+    }, 500);
+
 
     $("#sizeFilter").change(function(){
         var selectedSize = $(this).val();
