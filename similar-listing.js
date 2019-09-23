@@ -137,7 +137,6 @@ $(document).ready(function(){
     $(".listing-details-container b").each(function () {
         var size = $(this).html();
         if (mappedSizeArray.indexOf(size) >= 0 ) {
-            debugger;
             $(this).parent().parent().hide();
             listingSizeUrl[sizeArray[mappedSizeArray.indexOf(size)]] = $(this).siblings()[0].getAttribute("href");
         }
