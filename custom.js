@@ -448,7 +448,7 @@ $(document).ready(function () {
 
                 sizePresent = false;
                 colorPresent = false;
-
+                var selectedSize = getUrlParameter("selectedSize");
                 if(sizeFilterOptions.length){
                     var s = $('<select id="sizeFilter"/>');
 
@@ -459,6 +459,7 @@ $(document).ready(function () {
                     });
 
                     s.appendTo($('.filter-dropdowns #sizeFilterWrapper'));
+                    $("#sizeFilter option:contains(" + selectedSize + ")").attr('selected', 'selected');
                     $("<span class='buyer-size-price-change-info'>Prices may vary with size selection.</span>").prependTo($('.filter-dropdowns #sizeFilterWrapper'));
                     sizePresent = true;
                 }
