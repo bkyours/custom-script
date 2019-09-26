@@ -157,9 +157,14 @@ $(document).ready(function(){
 
     $("#sizeFilter").change(function(){
         var selectedSize = $(this).val();
+        var selectedText = $(this).text();
         currentUrl = location.href;
         destinationUrl = listingSizeUrl[selectedSize];
         if(destinationUrl != undefined && currentUrl !== destinationUrl)
-            location.href = destinationUrl; // redirect only if the current URL is same
+        {
+            location.href = destinationUrl + "?selectedSize=" + selectedText; // redirect only if the current URL is same
+            
+        }
+
     })
 });
