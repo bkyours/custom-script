@@ -118,7 +118,7 @@ $(document).ready(function(){
     var timer = setInterval(showingSizeFilter, 1000);
     
     function showSizeURLFieldsTimer(){
-        if($("#listing_title").length > 0)){
+        if($("#listing_title").length > 0){
             if(sizeFieldPresent()){
                 showLabel();
                 showHideUrlFieldOnDefault();
