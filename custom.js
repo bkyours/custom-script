@@ -1,11 +1,6 @@
 infiniteScrollToPagination();
 
 $(document).ready(function () {
-    $.expr[':'].textEquals = $.expr.createPseudo(function(arg) {
-        return function(elem ) {
-            return $(elem).text() == arg;
-        };
-    });
     addFooter();
     initializeFAQPopUp();
     displayLandingPageOrHomepage();
@@ -463,7 +458,7 @@ $(document).ready(function () {
                     });
 
                     s.appendTo($('.filter-dropdowns #sizeFilterWrapper'));
-                    $("#sizeFilter option:textEquals(" + selectedSize + ")").attr('selected', 'selected');
+                    $("#sizeFilter option").filter(function(index) { return $(this).text() === selectedSize; }).attr('selected', 'selected');
                     $("<span class='buyer-size-price-change-info'>Prices may vary with size selection.</span>").prependTo($('.filter-dropdowns #sizeFilterWrapper'));
                     sizePresent = true;
                 }
