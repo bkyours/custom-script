@@ -115,16 +115,27 @@ $(document).ready(function(){
         showHideDifferentPriceLabel();
     }
 
-    if(sizeFieldPresent()){
-        showLabel();
-        showHideUrlFieldOnDefault();
-        // If size checkbox presents, add a new class size-checkbox
-        $("#" + sizeArrayId[0]).parents(".checkbox-group-container").find("input").addClass("size-checkbox");
+    var timer = setInterval(showingSizeFilter, 1000);
+    
+    function showSizeURLFieldsTimer(){
+        if($("#listing_title").length > 0)){
+            if(sizeFieldPresent()){
+                showLabel();
+                showHideUrlFieldOnDefault();
+                // If size checkbox presents, add a new class size-checkbox
+                $("#" + sizeArrayId[0]).parents(".checkbox-group-container").find("input").addClass("size-checkbox");
+            }
+            
+            $(".size-checkbox").change(function () {
+              handleCheckboxChange($(this));
+            });
+            clearTimer();
+        }
     }
-
-    $(".size-checkbox").change(function () {
-        handleCheckboxChange($(this));
-    });
+    
+    function clearTimer(){
+        clearInterval(timer);
+    }
 
 });
 
