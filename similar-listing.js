@@ -157,7 +157,7 @@ $(document).ready(function(){
 
     $("#sizeFilter").change(function(){
         var selectedSize = $(this).val();
-        var selectedText = $(this).text();
+        var selectedText = $("#sizeFilter option:selected").text().replace(/(\r\n\t|\n|\r\t)/gm, "");
         currentUrl = location.href;
         destinationUrl = listingSizeUrl[selectedSize];
         if(destinationUrl != undefined && currentUrl !== destinationUrl)
