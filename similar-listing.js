@@ -115,7 +115,7 @@ $(document).ready(function(){
         showHideDifferentPriceLabel();
     }
 
-    var timer = setInterval(showingSizeFilter, 1000);
+    var timer = setInterval(showSizeURLFieldsTimer, 1000);
     
     function showSizeURLFieldsTimer(){
         if($("#listing_title").length > 0){
