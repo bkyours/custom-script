@@ -1,5 +1,12 @@
 infiniteScrollToPagination();
 
+$.expr[':'].textEquals = $.expr.createPseudo(function(arg) {
+        return function(elem ) {
+            return $(elem).text() == arg;
+        };
+    });
+
+
 $(document).ready(function () {
 
     addFooter();
@@ -459,7 +466,7 @@ $(document).ready(function () {
                     });
 
                     s.appendTo($('.filter-dropdowns #sizeFilterWrapper'));
-                    $("#sizeFilter option:contains(" + selectedSize + ")").attr('selected', 'selected');
+                    $("#sizeFilter option:textEquals(" + selectedSize + ")").attr('selected', 'selected');
                     $("<span class='buyer-size-price-change-info'>Prices may vary with size selection.</span>").prependTo($('.filter-dropdowns #sizeFilterWrapper'));
                     sizePresent = true;
                 }
