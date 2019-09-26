@@ -447,6 +447,7 @@ $(document).ready(function () {
 
                 sizePresent = false;
                 colorPresent = false;
+                debugger;
                 var selectedSize = getUrlParameter("selectedSize");
                 if(sizeFilterOptions.length){
                     var s = $('<select id="sizeFilter"/>');
