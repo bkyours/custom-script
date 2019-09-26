@@ -119,13 +119,14 @@ $(document).ready(function(){
     
     function showSizeURLFieldsTimer(){
         if($("#listing_title").length > 0){
+            debugger;
             if(sizeFieldPresent()){
                 showLabel();
                 showHideUrlFieldOnDefault();
                 // If size checkbox presents, add a new class size-checkbox
                 $("#" + sizeArrayId[0]).parents(".checkbox-group-container").find("input").addClass("size-checkbox");
             }
-            
+            debugger;
             $(".size-checkbox").change(function () {
               handleCheckboxChange($(this));
             });
