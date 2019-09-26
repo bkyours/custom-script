@@ -1,14 +1,11 @@
 infiniteScrollToPagination();
 
-$.expr[':'].textEquals = $.expr.createPseudo(function(arg) {
+$(document).ready(function () {
+    $.expr[':'].textEquals = $.expr.createPseudo(function(arg) {
         return function(elem ) {
             return $(elem).text() == arg;
         };
     });
-
-
-$(document).ready(function () {
-
     addFooter();
     initializeFAQPopUp();
     displayLandingPageOrHomepage();
