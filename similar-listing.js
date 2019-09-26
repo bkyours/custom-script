@@ -162,6 +162,7 @@ $(document).ready(function(){
         destinationUrl = listingSizeUrl[selectedSize];
         if(destinationUrl != undefined && currentUrl !== destinationUrl)
         {
+            debugger;
             location.href = destinationUrl + "?selectedSize=" + selectedText; // redirect only if the current URL is same
             
         }
