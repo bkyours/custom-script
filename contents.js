@@ -67,9 +67,9 @@ var spotLights = [
     },
     {
         "type": "seller",
-        "seller_name": "Pucci Pet Apparel",
+        "seller_name": "Art by Keri",
         "image": "https://user-assets.sharetribe.com/images/people/images/k0YsMtYBoAIj6lD-9-4VBQ/medium/open-uri20190221-178-1x4j1b7?1550767334",
-        "seller_profile_url": "https://www.barkyours.com/en/puccipeta",
+        "seller_profile_url": "https://www.barkyours.com/en/keris",
         "grid_label": "FEATURED SELLER "
     },
     {
