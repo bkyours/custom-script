@@ -68,7 +68,7 @@ var spotLights = [
     {
         "type": "seller",
         "seller_name": "Pucci Pet Apparel",
-        "image": "https://user-assets.sharetribe.com/images/people/images/2zWZvYzdEbQCPTz1wOXUpQ/medium/6B51E6A3-5880-49A3-B577-41201EDBFB44.jpeg?1569530102",
+        "image": "https://user-assets.sharetribe.com/images/people/images/CWh2VDxB0rflw6Lr1_kYNg/medium/9.png?1563905203",
         "seller_profile_url": "https://www.barkyours.com/en/puccipeta",
         "grid_label": "FEATURED SELLER "
     },
