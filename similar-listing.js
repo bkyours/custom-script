@@ -1,7 +1,7 @@
 // For New/Edit listing page
 $(document).ready(function(){
     
-    var sizeFieldsIDs = var sizeArrayId = [
+    var sizeFieldsIdsInDB = [
         289244,
         289245,
         289246,
@@ -15,7 +15,7 @@ $(document).ready(function(){
         405767
     ];
     
-    var sizeUrlFieldId = [
+    var sizeUrlFieldIdInDb = [
         116429,
         116430,
         116431,
@@ -30,12 +30,12 @@ $(document).ready(function(){
     ];
     
     var sizeArrayId = [];
-    $.each(sizeFieldsIDs, function( index, value ){
+    $.each(sizeFieldsIdsInDB, function( index, value ){
         sizeArrayId.push("custom_fields_76086_" + value);
     });
     
     var sizeUrlArrayId = [];
-    $.each(sizeUrlFieldId, function( index, value ){
+    $.each(sizeUrlFieldIdInDb, function( index, value ){
         var f = "custom_fields_" + value;
         $("label[for=" + f + "]").hide();
         $("#" + f).hide();
