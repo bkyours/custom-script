@@ -1,42 +1,57 @@
 // For New/Edit listing page
 $(document).ready(function(){
+    
+    var sizeFieldsIDs = var sizeArrayId = [
+        289244,
+        289245,
+        289246,
+        289247,
+        289248,
+        311974,
+        311975,
+        405764,
+        405765,
+        405766,
+        405767
+    ];
+    
+    
+    
+    var sizeUrlFieldId = [
+        116429,
+        116430,
+        116431,
+        116432,
+        116433,
+        116434,
+        116435,
+        116436,
+        116437,
+        116438,
+        116439
+    ];
 
+    
+    
+    var sizeArrayId = [];
+    $.each(sizeFieldsIDs, function( index, value ){
+        sizeArrayId.push("custom_fields_76086_" + value);
+    });
+    
+    var sizeUrlArrayId = [];
+    $.each(sizeUrlFieldId, function( index, value ){
+        sizeArrayId.push("custom_fields_" + value);
+    });
+    
+    
+    
+    
     $.expr[':'].textEquals = $.expr.createPseudo(function(arg) {
         return function(elem ) {
             return $(elem).text() == arg;
         };
     });
-
-    var sizeArrayId = [
-        'custom_fields_76086_289244',
-        'custom_fields_76086_289245',
-        'custom_fields_76086_289246',
-        'custom_fields_76086_289247',
-        'custom_fields_76086_289248',
-        'custom_fields_76086_311974',
-        'custom_fields_76086_311975',
-        'custom_fields_76086_405764',
-        'custom_fields_76086_405765',
-        'custom_fields_76086_405766',
-        'custom_fields_76086_405767'
-    ];
-
-
-    var sizeUrlArrayId = [
-        'custom_fields_116429',
-        'custom_fields_116430',
-        'custom_fields_116431',
-        'custom_fields_116432',
-        'custom_fields_116433',
-        'custom_fields_116434',
-        'custom_fields_116435',
-        'custom_fields_116436',
-        'custom_fields_116437',
-        'custom_fields_116438',
-        'custom_fields_116439'
-    ];
-
-
+    
     function sizeFieldPresent(){
         var visibility = false;
         $.each(sizeArrayId, function( index, value ){
