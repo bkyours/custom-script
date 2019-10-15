@@ -15,8 +15,6 @@ $(document).ready(function(){
         405767
     ];
     
-    
-    
     var sizeUrlFieldId = [
         116429,
         116430,
@@ -30,8 +28,6 @@ $(document).ready(function(){
         116438,
         116439
     ];
-
-    
     
     var sizeArrayId = [];
     $.each(sizeFieldsIDs, function( index, value ){
@@ -40,7 +36,10 @@ $(document).ready(function(){
     
     var sizeUrlArrayId = [];
     $.each(sizeUrlFieldId, function( index, value ){
-        sizeArrayId.push("custom_fields_" + value);
+        var f = "custom_fields_" + value;
+        $("label[for=" + f + "]").hide();
+        $("#" + f).hide();
+        sizeArrayId.push(f);
     });
     
     
