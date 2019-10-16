@@ -1,6 +1,6 @@
 // For New/Edit listing page
 $(document).ready(function(){
-    
+
     $.expr[':'].textEquals = $.expr.createPseudo(function(arg) {
         return function(elem ) {
             return $(elem).text() == arg;
@@ -9,19 +9,6 @@ $(document).ready(function(){
 
     var sizeArrayIdInDom = [];
     var sizeUrlArrayIdInDom = [];
-
-    $("input[name='custom_fields[76086][]'").each(function(index, elm){
-
-        var id = $(elm).attr('id');
-        sizeArrayIdInDom.push(id);
-
-        var labelText = $("label[for='" + id + "'").text()
-
-        var associatedURLFieldLabel = $($("label:textEquals('"+labelText+"')")[1]);
-        var associatedURLFieldInput = $("#" + associatedURLFieldLabel.attr("for"));
-        sizeUrlArrayIdInDom.push(associatedURLFieldInput);
-        
-    })
 
    function sizeFieldPresent(){
         // Checking if Size checkboxes are present in DOM
@@ -75,6 +62,7 @@ $(document).ready(function(){
 
     function showHideUrlFieldOnDefault(){
 
+        
         $.each(sizeUrlArrayIdInDom, function( index, domID ){
             $("#" + domID).hide();
         });
@@ -114,6 +102,21 @@ $(document).ready(function(){
 
     function showSizeURLFieldsTimer(){
         if($("#listing_title").length > 0){
+
+            $("input[name='custom_fields[76086][]'").each(function(index, elm){
+
+                var id = $(elm).attr('id');
+                sizeArrayIdInDom.push(id);
+
+                var labelText = $("label[for='" + id + "'").text()
+
+                var associatedURLFieldLabel = $($("label:textEquals('"+labelText+"')")[1]);
+                var associatedURLFieldInput = $("#" + associatedURLFieldLabel.attr("for"));
+                sizeUrlArrayIdInDom.push(associatedURLFieldInput);
+
+            })
+            
+            
             if(sizeFieldPresent()){
                 showLabel();
                 // hiding all url field at 
