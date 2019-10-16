@@ -46,7 +46,7 @@ $(document).ready(function(){
 
     function showLabel(){
         if(sizeUrlFieldPresent()){
-            text = "<div id='different-price-label' class='hide'>Optional: <b>If you charge a different price for your item based on size purchased</b>, copy and paste the URLs for the corresponding listings below.  Otherwise leave this field blank.</div>"
+            text = "<div id='different-price-label' class='hide'>" + differentPriceLabel + "</div>";
             $(text).insertBefore($('label[for="' + sizeUrlArrayIdInDom[0] + '"]'));
         }
 
@@ -143,11 +143,17 @@ $(document).ready(function(){
         mappedSizeArray.push(size + ':');
     });
 
+
     $(".listing-details-container b").each(function () {
         var size = $(this).html();
         if (mappedSizeArray.indexOf(size) >= 0 ) {
             $(this).parent().parent().hide();
-            listingSizeUrl[sizeArray[mappedSizeArray.indexOf(size)]] = $(this).siblings()[0].getAttribute("href");
+            var url =  $(this).siblings()[0].getAttribute("href");
+            if(url != undefined){
+                // Show the Price may vary label only if the seller has put the different url.
+                $(".buyer-size-price-change-info").css('display',  'block');
+            }
+            listingSizeUrl[sizeArray[mappedSizeArray.indexOf(size)]] = url;
         }
     });
 
