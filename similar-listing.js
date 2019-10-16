@@ -1,6 +1,6 @@
 // For New/Edit listing page
 $(document).ready(function(){
-    
+
     var sizeFieldsIdsInDB = [
         289244,
         289245,
@@ -14,7 +14,7 @@ $(document).ready(function(){
         405766,
         405767
     ];
-    
+
     var sizeUrlFieldIdInDb = [
         116429,
         116430,
@@ -28,32 +28,31 @@ $(document).ready(function(){
         116438,
         116439
     ];
-    
-    var sizeArrayId = [];
+
+    var sizeArrayIdInDom = [];
     $.each(sizeFieldsIdsInDB, function( index, value ){
-        sizeArrayId.push("custom_fields_76086_" + value);
+        sizeArrayIdInDom.push("custom_fields_76086_" + value);
     });
-    
-    var sizeUrlArrayId = [];
+
+    var sizeUrlArrayIdInDom = [];
     $.each(sizeUrlFieldIdInDb, function( index, value ){
         var f = "custom_fields_" + value;
-        $("label[for=" + f + "]").hide();
-        $("#" + f).hide();
-        sizeArrayId.push(f);
+        sizeUrlArrayIdInDom.push(f);
     });
-    
-    
-    
-    
+
+
+
+
     $.expr[':'].textEquals = $.expr.createPseudo(function(arg) {
         return function(elem ) {
             return $(elem).text() == arg;
         };
     });
-    
+
     function sizeFieldPresent(){
+        // Checking if Size checkboxes are present in DOM
         var visibility = false;
-        $.each(sizeArrayId, function( index, value ){
+        $.each(sizeArrayIdInDom, function( index, value ){
             if($("#" + value).length > 0){
                 visibility = true;
             }
@@ -62,8 +61,9 @@ $(document).ready(function(){
     }
 
     function sizeUrlFieldPresent(){
+        // Check if Size URL input fields are present in DOM
         var visibility = false;
-        $.each(sizeUrlArrayId, function( index, value ){
+        $.each(sizeUrlArrayIdInDom, function( index, value ){
             if($("#" + value).length > 0){
                 visibility = true;
                 return false;
@@ -72,8 +72,9 @@ $(document).ready(function(){
         return visibility;
     }
     function sizeUrlFieldShowing(){
+        // Check if Size URL input fields are SHOWING in DOM
         var visibility = false;
-        $.each(sizeUrlArrayId, function( index, value ){
+        $.each(sizeUrlArrayIdInDom, function( index, value ){
             if($("#" + value).css("display") !== "none"){
                 visibility = true;
                 return false;
@@ -85,7 +86,7 @@ $(document).ready(function(){
     function showLabel(){
         if(sizeUrlFieldPresent()){
             text = "<div id='different-price-label' class='hide'>Optional: <b>If you charge a different price for your item based on size purchased</b>, copy and paste the URLs for the corresponding listings below.  Otherwise leave this field blank.</div>"
-            $(text).insertBefore($('label[for="' + sizeUrlArrayId[0] + '"]'));
+            $(text).insertBefore($('label[for="' + sizeUrlArrayIdInDom[0] + '"]'));
         }
 
     }
@@ -99,7 +100,13 @@ $(document).ready(function(){
     }
 
     function showHideUrlFieldOnDefault(){
-        $.each(sizeArrayId, function( index, value ){
+
+        $.each(sizeUrlArrayIdInDom, function( index, domID ){
+            $("#" + domID).hide();
+        });
+        
+        // Add event on Size Checkboxes
+        $.each(sizeArrayIdInDom, function( index, value ){
             handleCheckboxChange($("#" + value));
         });
     }
@@ -130,24 +137,24 @@ $(document).ready(function(){
     }
 
     var timer = setInterval(showSizeURLFieldsTimer, 1000);
-    
+
     function showSizeURLFieldsTimer(){
         if($("#listing_title").length > 0){
-            debugger;
             if(sizeFieldPresent()){
                 showLabel();
+                // hiding all url field at 
                 showHideUrlFieldOnDefault();
                 // If size checkbox presents, add a new class size-checkbox
-                $("#" + sizeArrayId[0]).parents(".checkbox-group-container").find("input").addClass("size-checkbox");
+                $("#" + sizeArrayIdInDom[0]).parents(".checkbox-group-container").find("input").addClass("size-checkbox");
             }
             debugger;
             $(".size-checkbox").change(function () {
-              handleCheckboxChange($(this));
+                handleCheckboxChange($(this));
             });
             clearTimer();
         }
     }
-    
+
     function clearTimer(){
         clearInterval(timer);
     }
@@ -178,7 +185,7 @@ $(document).ready(function(){
         {
             debugger;
             location.href = destinationUrl + "?selectedSize=" + selectedText; // redirect only if the current URL is same
-            
+
         }
 
     })
