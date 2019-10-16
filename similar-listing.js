@@ -12,7 +12,8 @@ $(document).ready(function(){
         405764,
         405765,
         405766,
-        405767
+        405767,
+        431968
     ];
 
     var sizeUrlFieldIdInDb = [
@@ -26,7 +27,9 @@ $(document).ready(function(){
         116436,
         116437,
         116438,
-        116439
+        116439,
+        117438
+        
     ];
 
     var sizeArrayIdInDom = [];
