@@ -1,58 +1,29 @@
 // For New/Edit listing page
 $(document).ready(function(){
-
-    var sizeFieldsIdsInDB = [
-        289244,
-        289245,
-        289246,
-        289247,
-        289248,
-        311974,
-        311975,
-        405764,
-        405765,
-        405766,
-        405767,
-        431968
-    ];
-
-    var sizeUrlFieldIdInDb = [
-        116429,
-        116430,
-        116431,
-        116432,
-        116433,
-        116434,
-        116435,
-        116436,
-        116437,
-        116438,
-        116439,
-        117438
-        
-    ];
-
-    var sizeArrayIdInDom = [];
-    $.each(sizeFieldsIdsInDB, function( index, value ){
-        sizeArrayIdInDom.push("custom_fields_76086_" + value);
-    });
-
-    var sizeUrlArrayIdInDom = [];
-    $.each(sizeUrlFieldIdInDb, function( index, value ){
-        var f = "custom_fields_" + value;
-        sizeUrlArrayIdInDom.push(f);
-    });
-
-
-
-
+    
     $.expr[':'].textEquals = $.expr.createPseudo(function(arg) {
         return function(elem ) {
             return $(elem).text() == arg;
         };
     });
 
-    function sizeFieldPresent(){
+    var sizeArrayIdInDom = [];
+    var sizeUrlArrayIdInDom = [];
+
+    $("input[name='custom_fields[76086][]'").each(function(index, elm){
+
+        var id = $(elm).attr('id');
+        sizeArrayIdInDom.push(id);
+
+        var labelText = $("label[for='" + id + "'").text()
+
+        var associatedURLFieldLabel = $($("label:textEquals('"+labelText+"')")[1]);
+        var associatedURLFieldInput = $("#" + associatedURLFieldLabel.attr("for"));
+        sizeUrlArrayIdInDom.push(associatedURLFieldInput);
+        
+    })
+
+   function sizeFieldPresent(){
         // Checking if Size checkboxes are present in DOM
         var visibility = false;
         $.each(sizeArrayIdInDom, function( index, value ){
@@ -107,7 +78,7 @@ $(document).ready(function(){
         $.each(sizeUrlArrayIdInDom, function( index, domID ){
             $("#" + domID).hide();
         });
-        
+
         // Add event on Size Checkboxes
         $.each(sizeArrayIdInDom, function( index, value ){
             handleCheckboxChange($("#" + value));
