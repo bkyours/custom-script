@@ -246,4 +246,4 @@ var categories = [
     var whatIsBarkYourSectionContent4 = "At BarkYours, we’re committed to making it easy to buy (and sell) items. We use industry leading technology and payment processors to make it happen.";
 
     var sizeArray = ['XS', 'S', 'M', 'L', 'XL', '2XL', '3XL', '2T', '3T', '4T', '5T'];
-    
+    var differentPriceLabel = "<b>Optional</b>:<u>If you charge different prices for your items based on size</u>, you will need to create a listing for each size.  Once you post all of the listings, copy and paste the URLs for the corresponding listings below.  This will link the listings and allow a buyer to easily select their size and see the corresponding price.<u>If you charge a single price, leave these fields blank.</u>";
