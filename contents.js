@@ -35,7 +35,7 @@ var featuredCategories = [
     },
 ];
 
-var spotLightLabel = "BARKYOURS' SUMMER SPOTLIGHT";
+var spotLightLabel = "BARKYOURS' FALL SPOTLIGHT";
 
 var spotLights = [
     {   "type": "listing",
@@ -48,12 +48,12 @@ var spotLights = [
         "grid_label": "FEATURED ITEM"
     },
     {   "type": "listing",
-        "title": "Decorative Pillow",
-        "image": "https://user-assets.sharetribe.com/images/listing_images/images/2346748/medium/img_6113.jpeg?1566599697",
-        "url": "https://www.barkyours.com/en/listings/806510-halloween-dog-in-witch-costume-pillow-fall-decoration",
-        "price": "$65.00",
-        "seller_name": "CarryOn Designs",
-        "seller_profile_url": "https://www.barkyours.com/en/amy_9631",
+        "title": "Silver Key Chain",
+        "image": "https://user-assets.sharetribe.com/images/listing_images/images/2047646/medium/brelok_53aa_-_kopia.jpg?1551881377",
+        "url": "https://www.barkyours.com/en/listings/722717-keyring-labrador-star-925-sterling-silver",
+        "price": "$29.00",
+        "seller_name": "FRROdesign",
+        "seller_profile_url": "https://www.barkyours.com/en/frrodesign_88931",
         "grid_label": "FEATURED ITEM"
     },
     {   "type": "listing",
@@ -67,9 +67,9 @@ var spotLights = [
     },
     {
         "type": "seller",
-        "seller_name": "Art by Keri",
-        "image": "https://user-assets.sharetribe.com/images/people/images/k0YsMtYBoAIj6lD-9-4VBQ/medium/open-uri20190221-178-1x4j1b7?1550767334",
-        "seller_profile_url": "https://www.barkyours.com/en/keris",
+        "seller_name": "Dandy Randall",
+        "image": "https://user-assets.sharetribe.com/images/people/images/D2LgCUbSLEheqVo7b1jPFQ/medium/Dandy_Randall_HIM.jpg?1532613351",
+        "seller_profile_url": "https://www.barkyours.com/en/dandyrandall",
         "grid_label": "FEATURED SELLER "
     },
     {
