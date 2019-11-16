@@ -1,4 +1,6 @@
 $(document).ready(function(){
+    addCheckOutFilters();
+
     function addCheckOutFilters() {
         if ($(".listing-details-container").length) {
 
@@ -29,15 +31,15 @@ $(document).ready(function(){
                         colorFilterOptions.push($(this).find("span").last().text().replace(/(\r\n\t|\n|\r\t)/gm, ""));
                     });
                 }
-                else if ($(this).parent().find("b").text() == "Charities:") {
-                    if ($("aside form").length > 0) {
-                        $(this).parent().parent().hide();
-                        filtersContainerStr += "<div class='row' id='charityFilterWrapper'></div>";
-                    }
-                    $(this).find(".checkbox-option.selected").each(function () {
-                        charityFilterOptions.push($(this).find("span").last().text().replace(/(\r\n\t|\n|\r\t)/gm, ""));
-                    });
-                }
+                // else if ($(this).parent().find("b").text() == "Charities:") {
+                //     if ($("aside form").length > 0) {
+                //         $(this).parent().parent().hide();
+                //         filtersContainerStr += "<div class='row' id='charityFilterWrapper'></div>";
+                //     }
+                //     $(this).find(".checkbox-option.selected").each(function () {
+                //         charityFilterOptions.push($(this).find("span").last().text().replace(/(\r\n\t|\n|\r\t)/gm, ""));
+                //     });
+                // }
             });
 
             filtersContainerStr += "</div>";
@@ -49,7 +51,6 @@ $(document).ready(function(){
                 sizePresent = false;
                 colorPresent = false;
                 charityPresent = false;
-                debugger;
 
                 if (sizeFilterOptions.length) {
                     var s = $('<select id="sizeFilter"/>');
@@ -117,7 +118,7 @@ $(document).ready(function(){
                     color = color == "Color" ? null : color;
 
                     var charity = $("#charityFilter").val();
-                    charity = charity == "Charity" ? null : color;
+                    charity = charity == "Charity" ? null : charity;
 
 
 
@@ -207,14 +208,14 @@ $(document).ready(function(){
             }
 
             if (color && color.length && color !== "Color") {
-                text += "Color: " + color + "\n\n";
+                text += "Color: " + color + "\n";
             }
 
             if (charity && charity.length && charity !== "Charity") {
                 text += "Charity: " + charity + "\n\n";
             }
 
-            $("#message").text(text);
+            $("#message").focus().val(text);
 
         }
     }
