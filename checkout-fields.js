@@ -31,15 +31,15 @@ $(document).ready(function(){
                         colorFilterOptions.push($(this).find("span").last().text().replace(/(\r\n\t|\n|\r\t)/gm, ""));
                     });
                 }
-                // else if ($(this).parent().find("b").text() == "Charities:") {
-                //     if ($("aside form").length > 0) {
-                //         $(this).parent().parent().hide();
-                //         filtersContainerStr += "<div class='row' id='charityFilterWrapper'></div>";
-                //     }
-                //     $(this).find(".checkbox-option.selected").each(function () {
-                //         charityFilterOptions.push($(this).find("span").last().text().replace(/(\r\n\t|\n|\r\t)/gm, ""));
-                //     });
-                // }
+                else if ($(this).parent().find("b").text() == "Charities:") {
+                    if ($("aside form").length > 0) {
+                        $(this).parent().parent().hide();
+                        filtersContainerStr += "<div class='row' id='charityFilterWrapper'></div>";
+                    }
+                    $(this).find(".checkbox-option.selected").each(function () {
+                        charityFilterOptions.push($(this).find("span").last().text().replace(/(\r\n\t|\n|\r\t)/gm, ""));
+                    });
+                }
             });
 
             filtersContainerStr += "</div>";
