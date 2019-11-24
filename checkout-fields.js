@@ -36,9 +36,10 @@ $(document).ready(function(){
                         $(this).parent().parent().hide();
                         filtersContainerStr += "<div class='row' id='charityFilterWrapper'></div>";
                     }
-                    $(this).find(".checkbox-option.selected").each(function () {
-                        charityFilterOptions.push($(this).find("span").last().text().replace(/(\r\n\t|\n|\r\t)/gm, ""));
-                    });
+                    // Commenting these lines because we are going to show charity dropdown on next page.
+//                     $(this).find(".checkbox-option.selected").each(function () {
+//                         charityFilterOptions.push($(this).find("span").last().text().replace(/(\r\n\t|\n|\r\t)/gm, ""));
+//                     });
                 }
             });
 
