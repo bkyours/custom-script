@@ -4,26 +4,21 @@ $(document).ready(function(){
         var listingId = window.location.href.match("listings/(.*)/initiate")[1];
         var content = httpGet("https://www.barkyours.com/en/listings/"+ listingId);
         var selectedCharities = [];
-        var allCharities = [];
+        var allCharities = Object.keys(charities);
         var charitiesToDisplay = []
         $(content).find(".listing-details-container .checkbox-group").each(function () {
             if ($(this).parent().find("b").text() == "Charities:") {
-
-                $(this).find(".checkbox-option").each(function () {
-                    allCharities.push($(this).find("span").last().text().replace(/(\r\n\t|\n|\r\t)/gm, ""));
-                });
-                
                 $(this).find(".checkbox-option.selected").each(function () {
                     selectedCharities.push($(this).find("span").last().text().replace(/(\r\n\t|\n|\r\t)/gm, ""));
                 });
             }
         });
-        
+
         if(selectedCharities.length > 0)
-            charitiesToDisplay = selectedCharities
+            charitiesToDisplay = selectedCharities;
         else
-            charitiesToDisplay = allCharities;    
-        
+            charitiesToDisplay = allCharities;
+
         if(charitiesToDisplay.length > 0){
             var charitiesRadioButton = '<h3>Select the Charity(Optional)</h3><div class="info-text-container"><div class="info-text-icon"> <i class="ss-info"></i> </div> <div class="info-text-content"> <p>BarkYours donates a portion of every sale to charity.  Please select your preferred charity.</p> </div> </div>';
 
@@ -101,5 +96,7 @@ $(document).ready(function(){
         function stopInterval() {
             clearInterval(formLoadingTimer);
         }
+
+
     }
 });
