@@ -35,34 +35,34 @@ var featuredCategories = [
     },
 ];
 
-var spotLightLabel = "BARKYOURS' FALL SPOTLIGHT";
+var spotLightLabel = "BARKYOURS' WINTER SPOTLIGHT";
 
 var spotLights = [
     {   "type": "listing",
         "title": "Dog T-Shirt",
-        "image": "https://user-assets.sharetribe.com/images/listing_images/images/1775888/medium/football.jpg?1538786746",
-        "url": "https://www.barkyours.com/en/listings/647766-watching-football-while-hanging-out-with-my-dog-tshirt",
-        "price": "$21.99",
+        "image": "https://user-assets.sharetribe.com/images/listing_images/images/1775929/medium/dog_and_wine_2018.jpg?1538787760",
+        "url": "https://www.barkyours.com/en/listings/647771-dog-and-wine-makes-it-all-fine-v-neck-t-shirt",
+        "price": "$22.99",
         "seller_name": "DOGZ DOGZ Ts & More",
         "seller_profile_url": "https://www.barkyours.com/en/core1",
         "grid_label": "FEATURED ITEM"
     },
     {   "type": "listing",
-        "title": "Silver Key Chain",
-        "image": "https://user-assets.sharetribe.com/images/listing_images/images/2047646/medium/brelok_53aa_-_kopia.jpg?1551881377",
-        "url": "https://www.barkyours.com/en/listings/722717-keyring-labrador-star-925-sterling-silver",
-        "price": "$29.00",
-        "seller_name": "FRROdesign",
-        "seller_profile_url": "https://www.barkyours.com/en/frrodesign_88931",
+        "title": "Custom Ornament",
+        "image": "https://user-assets.sharetribe.com/images/listing_images/images/2351474/medium/d74b6ca3-6de7-4ced-90c7-045a1962e858.jpeg?1566925432",
+        "url": "https://www.barkyours.com/en/listings/675397-personalized-christmas-dog-portrait-ornaments-custom-orders",
+        "price": "$14.99",
+        "seller_name": "Country Roads Pyrography",
+        "seller_profile_url": "https://www.barkyours.com/en/jenball32",
         "grid_label": "FEATURED ITEM"
     },
     {   "type": "listing",
-        "title": "Custom Wine Stopper",
-        "image": "https://user-assets.sharetribe.com/images/listing_images/images/2409582/medium/2629e216-baad-4fe8-87b9-b48cc829db8f.jpeg?1569511480",
-        "url": "https://www.barkyours.com/en/listings/827458-custom-dog-wine-stopper",
-        "price": "$50.00",
-        "seller_name": "Wolfs Folk Art",
-        "seller_profile_url": "https://www.barkyours.com/en/lisa___7851",
+        "title": "Dog-Themed Keychain",
+        "image": "https://user-assets.sharetribe.com/images/listing_images/images/2204303/medium/img_3920.jpeg?1559699898",
+        "url": "https://www.barkyours.com/en/listings/766860-dog-love-with-paw-print-acrylic-keychain",
+        "price": "$15.00",
+        "seller_name": "Dancing Daisy Designs",
+        "seller_profile_url": "https://www.barkyours.com/en/staciab",
         "grid_label": "FEATURED ITEM"
     },
     {
@@ -230,8 +230,8 @@ var categories = [
     var topSectionTitle2 = "Buy from Independent Sellers ";
     var topSectionContent2 = "Buy directly from dog-inspired sellers and artists from all over the world";
 
-    var topSectionTitle3 = "Shop with Confidence ";
-    var topSectionContent3 = "Your privacy and security are always our top priority, and we’re here when you need us";
+    var topSectionTitle3 = "Give to Charities that Matter ";
+    var topSectionContent3 = "BarkYours donates a portion of every sale to charities that support the well-being of dogs";
 
     var whatIsBarkYourSectionTitle1 = "What is BarkYours All About?";
     var whatIsBarkYourSectionContent1 = "From dog lovers, to dog lovers. We are committed to bringing together talented creators of dog-inspired items with the dog loving community.";
@@ -255,6 +255,7 @@ var categories = [
         "Best Friends Pet Adoption Center": "https://ny.bestfriends.org",
         "The Animal Haven Shelter": "https://animalhaven.org",
         "Biting Back": "https://www.bitingbacknyc.com"
+        "Rock & Rawhide": "http://rockandrawhide.org"
     };
 
 
