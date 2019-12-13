@@ -254,7 +254,7 @@ var categories = [
         "The Good Dog Foundation": "http://thegooddogfoundation.org",
         "Best Friends Pet Adoption Center": "https://ny.bestfriends.org",
         "The Animal Haven Shelter": "https://animalhaven.org",
-        "Biting Back": "https://www.bitingbacknyc.com"
+        "Biting Back": "https://www.bitingbacknyc.com",
         "Rock & Rawhide": "http://rockandrawhide.org"
     };
 
