@@ -1,5 +1,5 @@
 var marketplace_slogan = "Gifts for People Who Love Their Dogs.";
-var marketplace_description = "Buy and sell the most unique and thoughtful dog-themed gifts";
+var marketplace_description = "Designed by Artists & Makers of Dog-Themed Clothing, Crafts & Artwork";
 
 var featuredCategoriesLabel = "SHOP BY CATEGORY";
 var featuredCategories = [
@@ -35,41 +35,41 @@ var featuredCategories = [
     },
 ];
 
-var spotLightLabel = "BARKYOURS' WINTER SPOTLIGHT";
+var spotLightLabel = "BARKYOURS' HEARTS SPOTLIGHT";
 
 var spotLights = [
     {   "type": "listing",
-        "title": "Dog T-Shirt",
-        "image": "https://user-assets.sharetribe.com/images/listing_images/images/1775929/medium/dog_and_wine_2018.jpg?1538787760",
-        "url": "https://www.barkyours.com/en/listings/647771-dog-and-wine-makes-it-all-fine-v-neck-t-shirt",
-        "price": "$22.99",
-        "seller_name": "DOGZ DOGZ Ts & More",
-        "seller_profile_url": "https://www.barkyours.com/en/core1",
+        "title": "I Heart My Dog Pillow",
+        "image": "https://user-assets.sharetribe.com/images/listing_images/images/1708878/medium/i_heart_my_dog_pillow.png?1536699901",
+        "url": "https://www.barkyours.com/en/listings/632330-i-heart-my-dog-statement-pillow",
+        "price": "$35.00",
+        "seller_name": "ART4PETZ",
+        "seller_profile_url": "https://www.barkyours.com/en/slre1951",
         "grid_label": "FEATURED ITEM"
     },
     {   "type": "listing",
-        "title": "Custom Ornament",
-        "image": "https://user-assets.sharetribe.com/images/listing_images/images/2351474/medium/d74b6ca3-6de7-4ced-90c7-045a1962e858.jpeg?1566925432",
-        "url": "https://www.barkyours.com/en/listings/675397-personalized-christmas-dog-portrait-ornaments-custom-orders",
-        "price": "$14.99",
-        "seller_name": "Country Roads Pyrography",
-        "seller_profile_url": "https://www.barkyours.com/en/jenball32",
+        "title": "Love My Dog Mugs",
+        "image": "https://user-assets.sharetribe.com/images/listing_images/images/1646116/medium/westieheart2.jpg?1533489033",
+        "url": "https://www.barkyours.com/en/listings/613455-west-highland-white-terrier-mug-with-3-westies-in-a-heart",
+        "price": "$10.99",
+        "seller_name": "prancinghound",
+        "seller_profile_url": "https://www.barkyours.com/en/prancinghound",
         "grid_label": "FEATURED ITEM"
     },
     {   "type": "listing",
-        "title": "Dog-Themed Keychain",
-        "image": "https://user-assets.sharetribe.com/images/listing_images/images/2204303/medium/img_3920.jpeg?1559699898",
-        "url": "https://www.barkyours.com/en/listings/766860-dog-love-with-paw-print-acrylic-keychain",
+        "title": "Hearts Dog Bandana",
+        "image": "https://user-assets.sharetribe.com/images/listing_images/images/2625871/medium/1578514648446732.jpg?1579834626",
+        "url": "https://www.barkyours.com/en/listings/894835-hearts-pet-bandana",
         "price": "$15.00",
-        "seller_name": "Dancing Daisy Designs",
-        "seller_profile_url": "https://www.barkyours.com/en/staciab",
+        "seller_name": "Captain Wiggles Co",
+        "seller_profile_url": "https://www.barkyours.com/en/michelev",
         "grid_label": "FEATURED ITEM"
     },
     {
         "type": "seller",
-        "seller_name": "Dandy Randall",
-        "image": "https://user-assets.sharetribe.com/images/people/images/D2LgCUbSLEheqVo7b1jPFQ/medium/Dandy_Randall_HIM.jpg?1532613351",
-        "seller_profile_url": "https://www.barkyours.com/en/dandyrandall",
+        "seller_name": "Hippie Living Creative",
+        "image": "https://user-assets.sharetribe.com/images/people/images/LFhav8GGvxnNfFAiYK_DBQ/medium/Untitled-1.png?1578586609",
+        "seller_profile_url": "https://www.barkyours.com/en/hippielivingcreative",
         "grid_label": "FEATURED SELLER "
     },
     {
