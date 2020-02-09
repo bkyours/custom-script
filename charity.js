@@ -22,14 +22,12 @@ $(document).ready(function(){
 
         if(charitiesToDisplay.length > 0){
             var charitiesRadioButton = '<h3>Select a Charity</h3><div class="info-text-container"><div class="info-text-icon"></div> <div class="info-text-content1"> <p>BarkYours is proud to donate a portion of every sale to charity. Please select your preferred charity.</p> </div> </div>';
-
+            var count = 0;
             $(charitiesToDisplay).each(function () {
                 var charityLink = charities[this];
-                if(charityLink){
-                    charitiesRadioButton += '<input type="radio" class="charity-radio-btn" name="charity" value="'+ this +'"> <a href= "'+ charityLink +'"target="_blank" >'+this+'</a><br>';
-                }else{
-                    charitiesRadioButton += '<input type="radio" class="charity-radio-btn" name="charity" id="letBarkyoursDecide" value="'+ this +'">  <label class="inline" for="letBarkyoursDecide">' + this + '</label><br>';
-                }
+                var charityId = "charity-" + count;
+                charitiesRadioButton += '<input type="radio" class="charity-radio-btn" name="charity"  id="'  + charityId + '" value="'+ this +'"> <label class="inline" style="font-weight: 100;" for="' + charityId + '">' + this + '</label> <br>';
+                count += 1;
             });
             $("#transaction-form .preauthorize-section").prepend(charitiesRadioButton + '<br>');
 
@@ -91,7 +89,7 @@ $(document).ready(function(){
 
                 if($("[name='custom_fields[121088][]']").length){
                     // checking if there is charity checkboxes are present
-                    $("label[for='custom_fields_121088']").text("Charities(Optional)");
+                    $("label[for='custom_fields_121088']").text("Charities (Optional)");
                     $('<div class="info-text-container"> <div class="info-text-icon"> <i class="ss-info"></i> </div> <div class="info-text-content"> <p>BarkYours is proud to donate a portion BarkYours\' proceeds from every sale to charity.  Buyers are given the choice of which charity to donate to.  Select the charities you want your buyers to choose from here, or skip this step to allow them to pick any charity on the list.  If you would like to see your preferred charity added, email <a href="mailto:info@barkyours.com">info@barkyours.com</a>.</p> </div></div>').insertAfter("label[for='custom_fields_121088']")
 
                     $.each($("[name='custom_fields[121088][]']"), function(index, item){
