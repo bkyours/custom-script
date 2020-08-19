@@ -5,9 +5,9 @@ $(document).ready(function(){
         var content = httpGet("https://www.barkyours.com/en/listings/"+ listingId);
         var selectedCharities = [];
         var allCharities = Object.keys(charities);
-        var charitiesToDisplay = []
+        var charitiesToDisplay = [];
         $(content).find(".listing-details-container .checkbox-group").each(function () {
-            if ($(this).parent().find("b").text() == "Charities (Optional):") {
+            if ($(this).parent().find("b").text() == "Charities :") {
                 $(this).find(".checkbox-option.selected").each(function () {
                     selectedCharities.push($(this).find("span").last().text().replace(/(\r\n\t|\n|\r\t)/gm, ""));
                 });
@@ -107,5 +107,9 @@ $(document).ready(function(){
         }
 
 
+    }
+    
+    if($('.listing-details-container').length && $(".row.checkbox-group").last().parent().find("b").text() == "Charities :"){
+        $(".row.checkbox-group").last().find(".col-4").removeClass("col-4").addClass("col-12");
     }
 });
