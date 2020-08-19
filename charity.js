@@ -110,6 +110,6 @@ $(document).ready(function(){
     }
     
     if($('.listing-details-container').length && $(".row.checkbox-group").last().parent().find("b").text() == "Charities :"){
-        $(".row.checkbox-group").last().find(".col-4").removeClass("col-4").addClass("col-12");
+        $(".row.checkbox-group").last().find(".col-4").removeClass("col-4").addClass("col-12 padding-0");
     }
 });
