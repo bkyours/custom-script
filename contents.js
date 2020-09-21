@@ -19,9 +19,9 @@ var featuredCategories = [
         "url": "https://www.barkyours.com/?category=home-and-living"
     },
     {
-        "title": "Greeting Cards & Stationary",
+        "title": "Books, Cards & Stationary",
         "image": "https://blog.barkyours.com/wp-content/uploads/2019/01/stationary.jpg",
-        "url": "https://www.barkyours.com/?category=greeting-cards-and-stationary"
+        "url": "https://www.barkyours.com/?category=books-cards-and-stationary"
     },
     {
         "title": "Arts & Collectibles",
