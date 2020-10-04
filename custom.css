@@ -660,8 +660,34 @@ border-radius: 4px;}
     color: #ff6961 !important;
 }
 
+.home-fluid-thumbnail-grid-author{
+    padding-bottom: 10px;
+}
 @media (min-width: 20em) {
     .home-fluid-thumbnail-grid-item, .people-fluid-thumbnail-grid-container .people-fluid-thumbnail-grid-item {
         width: 50% !important;
     }
+    .cover-image-btn{
+        margin-top: 2em !important;
+    }
+}
+
+@media (min-width: 63em) {
+    .home-fluid-thumbnail-grid-item, .people-fluid-thumbnail-grid-container .people-fluid-thumbnail-grid-item {
+        width: 33.33% !important;
+    }
+    .cover-image-btn{
+        margin-top: 0.75em !important;
+    }
+}
+
+.round-btn-blue {
+    padding: 10px 50px;
+    font-size: 18px;
+    height: 44px;
+    border-radius: 20px;
+}
+
+.spotlight-seller .home-fluid-thumbnail-grid-author {
+    margin-bottom: 25px;
 }
