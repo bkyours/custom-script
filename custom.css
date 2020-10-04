@@ -659,3 +659,18 @@ border-radius: 4px;}
 .wishlist-remove-btn{
     color: #ff6961 !important;
 }
+
+.home-fluid-thumbnail-grid-author{
+    overflow: hidden;
+}
+@media (min-width: 20em) {
+    .home-fluid-thumbnail-grid-item, .people-fluid-thumbnail-grid-container .people-fluid-thumbnail-grid-item {
+        width: 50% !important;
+    }
+}
+
+@media (min-width: 63em) {
+    .home-fluid-thumbnail-grid-item, .people-fluid-thumbnail-grid-container .people-fluid-thumbnail-grid-item {
+        width: 25% !important;
+    }
+}
