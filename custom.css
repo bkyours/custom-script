@@ -668,9 +668,3 @@ border-radius: 4px;}
         width: 50% !important;
     }
 }
-
-@media (min-width: 63em) {
-    .home-fluid-thumbnail-grid-item, .people-fluid-thumbnail-grid-container .people-fluid-thumbnail-grid-item {
-        width: 25% !important;
-    }
-}
