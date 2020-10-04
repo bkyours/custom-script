@@ -259,4 +259,6 @@ var categories = [
     };
 
 
-
+    var btnBackgroundColor = "#4CC0FA";
+    var btnTextColor = "#ffffff";
+    
