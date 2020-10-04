@@ -10,6 +10,7 @@ $(document).ready(function () {
     removeOptionalTextFromFilters();
     addAboutTheSellerLink();
     addCheckoutItemInLoginPage();
+    addBtnsOverCoverImage();
     
     addCheckoutText();
     
@@ -490,6 +491,12 @@ $(document).ready(function () {
                 });
             });
         });
+    }
+    
+    function addBtnsOverCoverImage(){
+        $('<p class="cover-image-btn"><a class="round-btn-blue" style="background-color: ' + btnBackgroundColor +';color: ' + btnTextColor + '" href="/s"><span>View All Listings</span><span><i class="icon-angle-right"></i></span></a></p>' +
+        '<p class="cover-image-btn"><a class="round-btn-blue" style="background-color: ' + btnBackgroundColor +';color: ' + btnTextColor + '" href="/listings/new"><span>' + $(".AddNewListingButton_mobile").first().text() +'</span></a></p>').insertAfter(".marketplace-lander-content-description");
+
     }
 
 });
