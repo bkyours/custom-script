@@ -29,9 +29,9 @@ var featuredCategories = [
         "url": "https://www.barkyours.com/?category=arts-and-collectibles"
     },
     {
-        "title": "Crafts for Dogs",
+        "title": "The Dog Shop",
         "image": "https://blog.barkyours.com/wp-content/uploads/2019/01/crafts-for-dogs.jpg",
-        "url": "https://www.barkyours.com/?category=crafts-for-dogs"
+        "url": "https://www.barkyours.com/?category=the-dog-shop"
     },
 ];
 
