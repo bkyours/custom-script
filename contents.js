@@ -217,8 +217,8 @@ var categories = [
         url: "/?category=arts-and-collectibles"
     },
     {
-        title: "Crafts for Dogs",
-        url: "/?category=crafts-for-dogs"
+        title: "The Dog Shop",
+        url: "/?category=the-dog-shop"
     }
 ];
 
