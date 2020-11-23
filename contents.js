@@ -35,34 +35,34 @@ var featuredCategories = [
     },
 ];
 
-var spotLightLabel = "BARKYOURS' HEARTS SPOTLIGHT";
+var spotLightLabel = "BARKYOURS' HOLIDAY SPOTLIGHT";
 
 var spotLights = [
     {   "type": "listing",
-        "title": "I Heart My Dog Pillow",
-        "image": "https://user-assets.sharetribe.com/images/listing_images/images/1708878/medium/i_heart_my_dog_pillow.png?1536699901",
-        "url": "https://www.barkyours.com/en/listings/632330-i-heart-my-dog-statement-pillow",
-        "price": "$35.00",
-        "seller_name": "ART4PETZ",
-        "seller_profile_url": "https://www.barkyours.com/en/slre1951",
+        "title": "Dog-Themed Holiday Cards",
+        "image": "https://user-assets.sharetribe.com/images/listing_images/images/1655736/medium/dsc_8515brightergrass_copy_9merrychristmas_copy.jpg?1534007380",
+        "url": "https://www.barkyours.com/en/listings/616289-labrador-christmas-card",
+        "price": "$5.00",
+        "seller_name": "Over the Fence Art",
+        "seller_profile_url": "https://www.barkyours.com/en/amyw",
         "grid_label": "FEATURED ITEM"
     },
     {   "type": "listing",
-        "title": "Love My Dog Mugs",
-        "image": "https://user-assets.sharetribe.com/images/listing_images/images/1646116/medium/westieheart2.jpg?1533489033",
-        "url": "https://www.barkyours.com/en/listings/613455-west-highland-white-terrier-mug-with-3-westies-in-a-heart",
-        "price": "$10.99",
-        "seller_name": "prancinghound",
-        "seller_profile_url": "https://www.barkyours.com/en/prancinghound",
-        "grid_label": "FEATURED ITEM"
-    },
-    {   "type": "listing",
-        "title": "Hearts Dog Bandana",
-        "image": "https://user-assets.sharetribe.com/images/listing_images/images/2625871/medium/1578514648446732.jpg?1579834626",
-        "url": "https://www.barkyours.com/en/listings/894835-hearts-pet-bandana",
+        "title": "Dog Christmas Ornaments",
+        "image": "https://user-assets.sharetribe.com/images/listing_images/images/2026611/medium/ornaments_dog.jpg?1550770199",
+        "url": "https://www.barkyours.com/en/listings/716783-dog-christmas-ornaments",
         "price": "$15.00",
-        "seller_name": "Captain Wiggles Co",
-        "seller_profile_url": "https://www.barkyours.com/en/michelev",
+        "seller_name": "Art by Keri",
+        "seller_profile_url": "https://www.barkyours.com/en/keris",
+        "grid_label": "FEATURED ITEM"
+    },
+    {   "type": "listing",
+        "title": "Dog and Wine T-Shirt",
+        "image": "https://user-assets.sharetribe.com/images/listing_images/images/1775929/medium/dog_and_wine_2018.jpg?1538787760",
+        "url": "https://www.barkyours.com/en/listings/647771-dog-and-wine-makes-it-all-fine-v-neck-t-shirt",
+        "price": "$22.99",
+        "seller_name": "Dogz Dogz Ts and More",
+        "seller_profile_url": "https://www.barkyours.com/en/core1",
         "grid_label": "FEATURED ITEM"
     },
     {
