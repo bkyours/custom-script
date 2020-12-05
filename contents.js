@@ -75,14 +75,14 @@ var spotLights = [
     {
         "type": "seller",
         "seller_name": "Charity Spotlight",
-        "image": "https://blog.barkyours.com/wp-content/uploads/2020/12/Charity-S-box.jpg",
+        "image": "https://blog.barkyours.com/wp-content/uploads/2020/12/Charity-box-Git-BarkYours.jpg",
         "seller_profile_url": "https://blog.barkyours.com/barkyours/biting-back-art-for-a-good-paws/",
         "grid_label": "FEATURED CHARITY "
     },
     {
         "type": "seller",
         "seller_name": "BarkYours Spotlight",
-        "image": "https://blog.barkyours.com/wp-content/uploads/2020/12/BarkYours-Spotlight-Git-Logo-Box.jpg",
+        "image": "https://blog.barkyours.com/wp-content/uploads/2020/12/BarkYours-Spotlight-GIT-box-Blog.jpg",
         "seller_profile_url": "https://blog.barkyours.com/",
         "grid_label": "FEATURED BLOG "
     }
