@@ -58,7 +58,7 @@ var spotLights = [
     },
     {   "type": "listing",
         "title": "Dog and Wine T-Shirt",
-        "image": "https://user-assets.sharetribe.com/images/listing_images/images/1775929/medium/dog_and_wine_2018.jpg?1538787760",
+        "image": "https://user-assets.sharetribe.com/images/listing_images/images/3407799/medium/womens_t-shirt_v-neck_dogs_wine_makes_it_fine_purple.jpg?1607010331",
         "url": "https://www.barkyours.com/en/listings/647771-dog-and-wine-makes-it-all-fine-v-neck-t-shirt",
         "price": "$22.99",
         "seller_name": "Dogz Dogz Ts and More",
