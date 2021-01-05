@@ -35,25 +35,25 @@ var featuredCategories = [
     },
 ];
 
-var spotLightLabel = "BARKYOURS' HOLIDAY SPOTLIGHT";
+var spotLightLabel = "BARKYOURS' SPOTLIGHT";
 
 var spotLights = [
     {   "type": "listing",
-        "title": "Dog-Themed Holiday Cards",
-        "image": "https://user-assets.sharetribe.com/images/listing_images/images/1655736/medium/dsc_8515brightergrass_copy_9merrychristmas_copy.jpg?1534007380",
-        "url": "https://www.barkyours.com/en/listings/616289-labrador-christmas-card",
-        "price": "$5.00",
-        "seller_name": "Over the Fence Art",
-        "seller_profile_url": "https://www.barkyours.com/en/amyw",
+        "title": "Dog Dad Hoodie",
+        "image": "https://user-assets.sharetribe.com/images/listing_images/images/3343446/medium/hoodie_-_dog_dad_colorful_font_maroon.jpg?1605060735",
+        "url": "https://www.barkyours.com/en/listings/1121967-best-dog-dad-ever-hoodie",
+        "price": "$42.00",
+        "seller_name": "Dandy Randall Wear",
+        "seller_profile_url": "https://www.barkyours.com/en/dandyrandall",
         "grid_label": "FEATURED ITEM"
     },
     {   "type": "listing",
-        "title": "Dog Christmas Ornaments",
-        "image": "https://user-assets.sharetribe.com/images/listing_images/images/2026611/medium/ornaments_dog.jpg?1550770199",
-        "url": "https://www.barkyours.com/en/listings/716783-dog-christmas-ornaments",
-        "price": "$15.00",
-        "seller_name": "Art by Keri",
-        "seller_profile_url": "https://www.barkyours.com/en/keris",
+        "title": "Dog-Themed Face Mask",
+        "image": "https://user-assets.sharetribe.com/images/listing_images/images/3379181/medium/ada_2_blue_mask.jpeg?1606047960",
+        "url": "https://www.barkyours.com/en/listings/1090174-face-mask-pit-bull-kiss",
+        "price": "$12.00",
+        "seller_name": "Ada Nieves for Pets",
+        "seller_profile_url": "https://www.barkyours.com/en/adan",
         "grid_label": "FEATURED ITEM"
     },
     {   "type": "listing",
