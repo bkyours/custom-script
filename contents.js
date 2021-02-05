@@ -228,7 +228,7 @@ var categories = [
     var topSectionContent1 = "Items on BarkYours are all dog-themed and many can be customized in your favorite breeds";
 
     var topSectionTitle2 = "Buy from Independent Sellers ";
-    var topSectionContent2 = "You're buying directly from the dog-inspired artists selling something they created.";
+    var topSectionContent2 = "You're buying directly from artists inspired by their dogs selling something they created.";
 
     var topSectionTitle3 = "Give to Charities that Matter ";
     var topSectionContent3 = "BarkYours donates a portion of every sale to charities that support the well-being of dogs";
