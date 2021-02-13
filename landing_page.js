@@ -11,13 +11,18 @@ $(document).ready(function(){
         if (showListingList) {
             displayListingPage();
         } else {
-            addBannerForNotLoggedIn();
-            addViewAllListingLink();
-            displayCategoryAndFeatured();
+            displayLandingPage();
         }
     }
 
     function displayLandingPage(){
+        displayBarkYoursContent();
+        addBannerForNotLoggedIn();
+        addViewAllListingLink();
+        displayCategoryAndFeatured();
+    }
+    
+    function displayBarkYoursContent(){
         var barkyoursDetails = "<div class='col-12 text-center' style='padding: 30px;'>" +
     
         "<div class='col-4'><div class='row'><img style='width: 32px;' src='https://blog.barkyours.com/wp-content/uploads/2019/04/paw.png'/></div>" +
