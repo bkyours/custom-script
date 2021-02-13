@@ -19,7 +19,7 @@ $(document).ready(function(){
         displayBarkYoursContent();
         addBannerForNotLoggedIn();
         addViewAllListingLink();
-        displayCategoryAndFeatured();
+        //displayCategoryAndFeatured();
     }
     
     function displayBarkYoursContent(){
