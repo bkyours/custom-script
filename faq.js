@@ -109,6 +109,7 @@ $(document).ready(function(){
     }
 
     setInterval(function () {
+        $('a[href="https://barkyours.sharetribe.com/#faq-popup"]').attr("href", "#faq-popup");
         $('a[href="https://barkyours.com/#faq-popup"]').attr("href", "#faq-popup");
         $(".message-mood-neutral a").attr("target", "_blank");
         $('a[href="https://blog.barkyours.com"]').attr("target", "_blank");
