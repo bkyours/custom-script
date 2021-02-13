@@ -18,11 +18,17 @@ $(document).ready(function(){
     function displayLandingPage(){
         displayBarkYoursContent();
         addBannerForNotLoggedIn();
-        //addViewAllListingLink();
+        // addViewAllListingLink();
         //displayCategoryAndFeatured();
         displayListingPage();
+        removeCategoryFilter();
     }
-    
+    function removeCategoryFilter(){
+            // TODO we may need remove this
+            $('.home-categories-main').removeAttr('href')
+            $('.home-categories-sub').removeAttr('href')
+    }
+
     function displayBarkYoursContent(){
         var barkyoursDetails = "<div class='col-12 text-center' style='padding: 30px;'>" +
     
