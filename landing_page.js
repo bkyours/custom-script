@@ -18,7 +18,7 @@ $(document).ready(function(){
     function displayLandingPage(){
         displayBarkYoursContent();
         addBannerForNotLoggedIn();
-        addViewAllListingLink();
+        //addViewAllListingLink();
         //displayCategoryAndFeatured();
         displayListingPage();
     }
