@@ -215,9 +215,13 @@ $(document).ready(function () {
     }
     
     function addBtnsOverCoverImage(){
-        $('<p class="cover-image-btn"><a class="round-btn-blue" style="background-color: ' + btnBackgroundColor +';color: ' + btnTextColor + '" href="/?view=grid"><span>View All Listings</span><span><i class="icon-angle-right"></i></span></a></p>' +
-        '<p class="cover-image-btn"><a class="round-btn-blue" style="background-color: ' + btnBackgroundColor +';color: ' + btnTextColor + '" href="/listings/new"><span>' + $(".AddNewListingButton_mobile").first().text() +'</span></a></p>').insertAfter(".marketplace-lander-content-description");
+        $('<div class="cover-image-btn-wrapper"><p class="cover-image-btn"><a class="round-btn-blue" style="padding: 10px 52px; background-color: ' + btnBackgroundColor +';color: ' + btnTextColor + '" href="/?view=grid"><span>View all Listings</span><span><i class="icon-angle-right"></i></span></a></p>' +
+        '<p class="cover-image-btn"><a class="round-btn-blue" style="padding: 10px 40px;background-color: ' + btnBackgroundColor +';color: ' + btnTextColor + '" href="/listings/new"><span>' + $(".AddNewListingButton_mobile").first().text() +'</span></a></p></div>').insertAfter(".marketplace-lander-content-description");
 
+
+        if((window.location.href.indexOf("?view=grid") > 1 || window.location.href.indexOf("?view=list") > 1) && $(".Avatar").length == 0){
+            $(".coverimage").hide();
+        }
     }
 
 });
