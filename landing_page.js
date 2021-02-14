@@ -21,7 +21,7 @@ $(document).ready(function(){
         // addViewAllListingLink();
         //displayCategoryAndFeatured();
         displayListingPage();
-        removeCategoryFilter();
+        //removeCategoryFilter();
     }
     function removeCategoryFilter(){
             // TODO we may need remove this
