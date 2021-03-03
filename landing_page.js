@@ -21,16 +21,10 @@ $(document).ready(function(){
 
         addBtnsOverCoverImage();
         // addViewAllListingLink();
-        //displayCategoryAndFeatured();
-        displayListingPage();
-        //removeCategoryFilter();
+        displayCategoryAndFeatured();
+        //displayListingPage();
     }
-    function removeCategoryFilter(){
-            // TODO we may need remove this
-            $('.home-categories-main').removeAttr('href')
-            $('.home-categories-sub').removeAttr('href')
-    }
-
+    
     function displayBarkYoursContent(){
         var barkyoursDetails = "<div class='col-12 text-center' style='padding: 30px;'>" +
     
