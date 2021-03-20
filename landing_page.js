@@ -123,21 +123,6 @@ $(document).ready(function(){
         $(".home-fluid-thumbnail-grid").css("visibility", "visible");
         $(".home-toolbar-button-group-button").removeClass("selected");
         $(".home-fluid-thumbnail-grid").append("<div class='row' style='border-bottom: 1px solid #c3c3c3; width: 97%'> <h3>" + featuredCategoriesLabel + "</h3></div><hr>");
-        $.map(featuredCategories, function (value, index) {
-            $(".home-fluid-thumbnail-grid").append('<div class="home-fluid-thumbnail-grid-item featured-categories">' +
-                '<div>' +
-                '<a class=" fluid-thumbnail-grid-image-item-link" href="' + value.url + '">' +
-                '<div class="fluid-thumbnail-grid-image-image-container">' +
-                '<img alt="' + value.title + '" class=" fluid-thumbnail-grid-image-image" src="' + value.image + '">' +
-                '<div class="home-fluid-thumbnail-grid-author">' +
-                '<div class="fluid-thumbnail-grid-image-title">' + value.title + '</div>' +
-                '</div>' +
-                '</div></a>' +
-                '</div></div>')
-        });
-        
-        $(".home-fluid-thumbnail-grid").append('<div class="col-12 full-width text-center pull-left" style="margin-top: 20px; height: 45px;"> <a class="view-all-listing-link-btn" href="https://www.barkyours.com/?view=grid"> VIEW ALL LISTINGS</a></div>');
-        $(".home-fluid-thumbnail-grid").append("<div class='row' style='border-bottom: 1px solid #c3c3c3; width: 97%;overflow:hidden;'> <h3>" + spotLightLabel + "</h3></div><hr>");
         $.map(spotLights, function (item, index) {
             if (item.type == "seller") {
                 $(".home-fluid-thumbnail-grid").append('<div class="home-fluid-thumbnail-grid-item spotlight-grid spotlight-seller">' +
@@ -180,6 +165,22 @@ $(document).ready(function(){
                 elem.addClass("customized");
             }
         });
+        
+        $.map(featuredCategories, function (value, index) {
+            $(".home-fluid-thumbnail-grid").append('<div class="home-fluid-thumbnail-grid-item featured-categories">' +
+                '<div>' +
+                '<a class=" fluid-thumbnail-grid-image-item-link" href="' + value.url + '">' +
+                '<div class="fluid-thumbnail-grid-image-image-container">' +
+                '<img alt="' + value.title + '" class=" fluid-thumbnail-grid-image-image" src="' + value.image + '">' +
+                '<div class="home-fluid-thumbnail-grid-author">' +
+                '<div class="fluid-thumbnail-grid-image-title">' + value.title + '</div>' +
+                '</div>' +
+                '</div></a>' +
+                '</div></div>')
+        });
+        
+        $(".home-fluid-thumbnail-grid").append('<div class="col-12 full-width text-center pull-left" style="margin-top: 20px; height: 45px;"> <a class="view-all-listing-link-btn" href="https://www.barkyours.com/?view=grid"> VIEW ALL LISTINGS</a></div>');
+        $(".home-fluid-thumbnail-grid").append("<div class='row' style='border-bottom: 1px solid #c3c3c3; width: 97%;overflow:hidden;'> <h3>" + spotLightLabel + "</h3></div><hr>");
     
     
     }
