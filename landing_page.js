@@ -167,7 +167,7 @@ $(document).ready(function(){
             }
         });
         
-        $(".home-fluid-thumbnail-grid").append("<div class='row' style='border-bottom: 1px solid #c3c3c3; width: 97%'> <h3>" + featuredCategoriesLabel + "</h3></div><hr>");
+        $(".home-fluid-thumbnail-grid").append("<div class='row' style='border-bottom: 1px solid #c3c3c3; width: 97% overflow:hidden;'> <h3>" + featuredCategoriesLabel + "</h3></div><hr>");
         
         $.map(featuredCategories, function (value, index) {
             $(".home-fluid-thumbnail-grid").append('<div class="home-fluid-thumbnail-grid-item featured-categories">' +
