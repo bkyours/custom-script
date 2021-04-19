@@ -57,10 +57,10 @@ var spotLights = [
         "grid_label": "BEST SELLER"
     },
     {   "type": "listing",
-        "title": "Dog and Wine T-Shirt",
-        "image": "https://user-assets.sharetribe.com/images/listing_images/images/3407799/medium/womens_t-shirt_v-neck_dogs_wine_makes_it_fine_purple.jpg?1607010331",
-        "url": "https://www.barkyours.com/en/listings/647771-dog-and-wine-makes-it-all-fine-v-neck-t-shirt",
-        "price": "$22.99",
+        "title": "Living The Dream T-Shirt",
+        "image": "https://blog.barkyours.com/wp-content/uploads/2021/04/landing-page-living-dream-green-660-440-.jpg",
+        "url": "https://www.barkyours.com/en/listings/1139999-living-the-dream-v-neck-t-shirt",
+        "price": "$24.00",
         "seller_name": "Dogz Dogz Ts and More",
         "seller_profile_url": "https://www.barkyours.com/en/core1",
         "grid_label": "BEST SELLER"
