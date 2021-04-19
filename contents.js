@@ -40,7 +40,7 @@ var spotLightLabel = "BARKYOURS' SPOTLIGHT";
 var spotLights = [
     {   "type": "listing",
         "title": "Dog Mom T-Shirt",
-        "image": "https://blog.barkyours.com/wp-content/uploads/2021/04/landing-page-image-dog-mom-walk-more-.jpg",
+        "image": "https://blog.barkyours.com/wp-content/uploads/2021/04/landing-page-NEW-660-440-image-dog-mom-walk-more-.jpg",
         "url": "https://www.barkyours.com/en/listings/1439560-dog-moms-walk-more-t-shirt-for-moms-who-love-their-dogs",
         "price": "$25.00",
         "seller_name": "Dandy Randall Wear",
