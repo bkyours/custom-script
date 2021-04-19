@@ -44,7 +44,7 @@ var spotLights = [
         "url": "https://www.barkyours.com/en/listings/1121967-best-dog-dad-ever-hoodie",
         "price": "$42.00",
         "seller_name": "Dandy Randall Wear",
-        "seller_profile_url": "https://www.barkyours.com/en/dandyrandall",
+        "seller_profile_url": "https://blog.barkyours.com/wp-admin/upload.php?item=1091",
         "grid_label": "BEST SELLER"
     },
     {   "type": "listing",
