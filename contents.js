@@ -45,7 +45,7 @@ var spotLights = [
         "price": "$42.00",
         "seller_name": "Dandy Randall Wear",
         "seller_profile_url": "https://www.barkyours.com/en/dandyrandall",
-        "grid_label": "BEST SELLERS"
+        "grid_label": "BEST SELLER"
     },
     {   "type": "listing",
         "title": "Face Mask with Dog Theme",
@@ -54,7 +54,7 @@ var spotLights = [
         "price": "$12.00",
         "seller_name": "Ada Nieves for Pets",
         "seller_profile_url": "https://www.barkyours.com/en/adan",
-        "grid_label": "BEST SELLERS"
+        "grid_label": "BEST SELLER"
     },
     {   "type": "listing",
         "title": "Dog and Wine T-Shirt",
@@ -63,7 +63,7 @@ var spotLights = [
         "price": "$22.99",
         "seller_name": "Dogz Dogz Ts and More",
         "seller_profile_url": "https://www.barkyours.com/en/core1",
-        "grid_label": "BEST SELLERS"
+        "grid_label": "BEST SELLER"
     },
     {
         "type": "seller",
