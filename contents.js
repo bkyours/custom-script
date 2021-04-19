@@ -40,7 +40,7 @@ var spotLightLabel = "BARKYOURS' SPOTLIGHT";
 var spotLights = [
     {   "type": "listing",
         "title": "Dog Dad Hoodie",
-        "image": "https://user-assets.sharetribe.com/images/listing_images/images/3343446/medium/hoodie_-_dog_dad_colorful_font_maroon.jpg?1605060735",
+        "image": "https://blog.barkyours.com/wp-admin/upload.php?item=1091",
         "url": "https://www.barkyours.com/en/listings/1121967-best-dog-dad-ever-hoodie",
         "price": "$42.00",
         "seller_name": "Dandy Randall Wear",
