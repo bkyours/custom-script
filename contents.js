@@ -39,10 +39,10 @@ var spotLightLabel = "BARKYOURS' SPOTLIGHT";
 
 var spotLights = [
     {   "type": "listing",
-        "title": "Dog Dad Hoodie",
-        "image": "https://user-assets.sharetribe.com/images/listing_images/images/3343446/medium/hoodie_-_dog_dad_colorful_font_maroon.jpg?1605060735",
-        "url": "https://www.barkyours.com/en/listings/1121967-best-dog-dad-ever-hoodie",
-        "price": "$42.00",
+        "title": "Dog Mom T-Shirt",
+        "image": "https://blog.barkyours.com/wp-content/uploads/2021/04/landing-page-image-dog-mom-walk-more-.jpg",
+        "url": "https://www.barkyours.com/en/listings/1439560-dog-moms-walk-more-t-shirt-for-moms-who-love-their-dogs",
+        "price": "$25.00",
         "seller_name": "Dandy Randall Wear",
         "seller_profile_url": "https://www.barkyours.com/en/dandyrandall",
         "grid_label": "BEST SELLER"
