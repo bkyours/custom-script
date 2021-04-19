@@ -40,11 +40,11 @@ var spotLightLabel = "BARKYOURS' SPOTLIGHT";
 var spotLights = [
     {   "type": "listing",
         "title": "Dog Dad Hoodie",
-        "image": "https://blog.barkyours.com/wp-admin/upload.php?item=1091",
+        "image": "https://www.barkyours.com/en/listings/1121967-best-dog-dad-ever-hoodie",
         "url": "https://www.barkyours.com/en/listings/1121967-best-dog-dad-ever-hoodie",
         "price": "$42.00",
         "seller_name": "Dandy Randall Wear",
-        "seller_profile_url": "https://blog.barkyours.com/wp-admin/upload.php?item=1091",
+        "seller_profile_url": "https://www.barkyours.com/en/dandyrandall",
         "grid_label": "BEST SELLER"
     },
     {   "type": "listing",
