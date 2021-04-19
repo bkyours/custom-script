@@ -49,7 +49,7 @@ var spotLights = [
     },
     {   "type": "listing",
         "title": "Face Mask with Dog Theme",
-        "image": "https://user-assets.sharetribe.com/images/listing_images/images/3379181/medium/ada_2_blue_mask.jpeg?1606047960",
+        "image": "https://blog.barkyours.com/wp-content/uploads/2021/04/landing-NEW-page-pit-bull-face-mask-660-440.jpg",
         "url": "https://www.barkyours.com/en/listings/1090174-face-mask-pit-bull-kiss",
         "price": "$12.00",
         "seller_name": "Ada Nieves for Pets",
