@@ -76,14 +76,14 @@ var spotLights = [
         "type": "seller",
         "seller_name": "Dandy Randall Wear",
         "image": "https://blog.barkyours.com/wp-content/uploads/2021/04/Landing-Page-NEW-TENNIS-200-200.jpg",
-        "seller_profile_url": "https://www.barkyours.com/en/dandyrandall",
+        "seller_profile_url": "https://www.barkyours.com/en/listings/1384010-tennis-kiss-my-ace-t-shirt-for-dog-lovers",
         "grid_label": "FEATURED PRODUCT "
     },
     {
         "type": "seller",
         "seller_name": "Captain Wiggles Co",
         "image": "https://blog.barkyours.com/wp-content/uploads/2021/04/landing-page-summer-bandana.jpg",
-        "seller_profile_url": "https://www.barkyours.com/en/michelev",
+        "seller_profile_url": "https://www.barkyours.com/en/listings/1431921-popcicle-fun-pet-bandana",
         "grid_label": "FEATURED PRODUCT "
     }
 ];
