@@ -74,8 +74,8 @@ var spotLights = [
     },
     {
         "type": "seller",
-        "seller_name": "DANDY RANDALL WEAR",
-        "image": "https://blog.barkyours.com/wp-content/uploads/2021/04/LAnding-page-NEW-TENNIS-600-440-.jpg",
+        "seller_name": "Dandy Randall Wear",
+        "image": "https://blog.barkyours.com/wp-content/uploads/2021/04/Landing-PAGE-NEW-TENNIS-280-280-.jpg",
         "seller_profile_url": "https://www.barkyours.com/en/listings/1384010-tennis-kiss-my-ace-t-shirt-for-dog-lovers",
         "grid_label": "FEATURED PRODUCT "
     },
