@@ -1,7 +1,7 @@
 var marketplace_slogan = "Gifts for People Who Love Their Dogs.";
 var marketplace_description = "Designed by Artists & Makers of Dog-Themed Clothing, Crafts & Art for both People & Dogs";
 
-var featuredCategoriesLabel = "SHOP BY CATEGORY";
+var featuredCategoriesLabel = "Shop By Category";
 var featuredCategories = [
     {
         "title": "Clothing",
@@ -35,7 +35,7 @@ var featuredCategories = [
     },
 ];
 
-var spotLightLabel = "BARKYOURS' SPOTLIGHT";
+var spotLightLabel = "BarkYours Spotlight";
 
 var spotLights = [
     {   "type": "listing",
