@@ -70,7 +70,7 @@ var spotLights = [
         "seller_name": "Hippie Living Creative",
         "image": "https://user-assets.sharetribe.com/images/people/images/LFhav8GGvxnNfFAiYK_DBQ/medium/Untitled-1.png?1578586609",
         "seller_profile_url": "https://www.barkyours.com/en/hippielivingcreative",
-        "grid_label": "FEATURED SELLER "
+        "grid_label": "FEATURED ARTIST "
     },
     {
         "type": "seller",
