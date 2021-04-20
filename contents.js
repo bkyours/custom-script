@@ -1,5 +1,5 @@
 var marketplace_slogan = "Gifts for People Who Love Their Dogs.";
-var marketplace_description = "Designed by Artists & Makers of Dog-Themed Clothing, Crafts & Artwork";
+var marketplace_description = "Designed by Artists & Makers of Dog-Themed Clothing, Crafts & Art for both People & Dogs";
 
 var featuredCategoriesLabel = "SHOP BY CATEGORY";
 var featuredCategories = [
