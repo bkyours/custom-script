@@ -67,10 +67,10 @@ var spotLights = [
     },
     {
         "type": "seller",
-        "seller_name": "Hippie Living Creative",
-        "image": "https://user-assets.sharetribe.com/images/people/images/LFhav8GGvxnNfFAiYK_DBQ/medium/Untitled-1.png?1578586609",
-        "seller_profile_url": "https://www.barkyours.com/en/hippielivingcreative",
-        "grid_label": "FEATURED ARTIST "
+        "seller_name": "Giddyup Pups",
+        "image": "https://blog.barkyours.com/wp-content/uploads/2021/04/landing-NEW-page-wood-french-280-280.jpg",
+        "seller_profile_url": "https://www.barkyours.com/en/listings/1091333-french-bulldog-boston-terrier-wood-dog-wall-art",
+        "grid_label": "FEATURED PRODUCT "
     },
     {
         "type": "seller",
