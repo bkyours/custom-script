@@ -35,7 +35,7 @@ var featuredCategories = [
     },
 ];
 
-var spotLightLabel = "BarkYours Spotlight";
+var spotLightLabel = "Trending on BarkYours";
 
 var spotLights = [
     {   "type": "listing",
