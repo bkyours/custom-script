@@ -68,7 +68,7 @@ var spotLights = [
     {
         "type": "seller",
         "seller_name": "Giddyup Pups",
-        "image": "https://blog.barkyours.com/wp-content/uploads/2021/04/LANDING-NEW-NEW-COPY-226x151-1.jpg",
+        "image": "https://blog.barkyours.com/wp-content/uploads/2021/04/landing-page-THIS-ONE-wood-french-bull-dog-NEWER-280-280.jpg",
         "seller_profile_url": "https://www.barkyours.com/en/listings/1091333-french-bulldog-boston-terrier-wood-dog-wall-art",
         "grid_label": "FEATURED PRODUCT "
     },
