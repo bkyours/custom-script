@@ -162,7 +162,7 @@ $(document).ready(function(){
                 var title = elem.find(".fluid-thumbnail-grid-image-title");
                 var authorContainer = elem.find(".home-fluid-thumbnail-grid-author");
                 var availableWidth = authorContainer.width() - elem.find(".price-container").width();
-                elem.find(".info-container").css("width", (availableWidth - 3) + "px");
+                elem.find(".info-container").css("width", (availableWidth - 5) + "px");
                 elem.addClass("customized");
             }
         });
