@@ -82,7 +82,7 @@ var spotLights = [
     {
         "type": "seller",
         "seller_name": "Captain Wiggles Co",
-        "image": "https://blog.barkyours.com/wp-content/uploads/2021/04/LANDING-NEW-ONE-THIS-ONE-BANDANA-FRUIT-280-280.jpg",
+        "image": "https://blog.barkyours.com/wp-content/uploads/2021/06/landing-page-summer-fun-660-trending.png",
         "seller_profile_url": "https://www.barkyours.com/en/listings/1431921-popcicle-fun-pet-bandana",
         "grid_label": "FEATURED PRODUCT "
     }
