@@ -39,9 +39,9 @@ var spotLightLabel = "Trending on BarkYours";
 
 var spotLights = [
     {   "type": "listing",
-        "title": "Dog Mom T-Shirt",
-        "image": "https://blog.barkyours.com/wp-content/uploads/2021/04/landing-page-NEW-660-440-image-dog-mom-walk-more-.jpg",
-        "url": "https://www.barkyours.com/en/listings/1439560-dog-moms-walk-more-t-shirt-for-moms-who-love-their-dogs",
+        "title": "What Office",
+        "image": "https://blog.barkyours.com/wp-content/uploads/2021/06/landing-page-NEW-work-from-home-NEW-660-440.jpg",
+        "url": "https://www.barkyours.com/en/listings/1398860-what-office-i-work-from-home-now-t-shirt",
         "price": "$25.00",
         "seller_name": "Dandy Randall Wear",
         "seller_profile_url": "https://www.barkyours.com/en/dandyrandall",
