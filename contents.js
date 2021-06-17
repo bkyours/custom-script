@@ -68,22 +68,22 @@ var spotLights = [
     {
         "type": "seller",
         "seller_name": "Giddyup Pups",
-        "image": "https://blog.barkyours.com/wp-content/uploads/2021/04/landing-page-THIS-ONE-wood-french-bull-dog-NEWER-280-280.jpg",
-        "seller_profile_url": "https://www.barkyours.com/en/listings/1091333-french-bulldog-boston-terrier-wood-dog-wall-art",
+        "image": "https://blog.barkyours.com/wp-content/uploads/2021/06/landing-page-rustic-lab-660-440-trending.jpg",
+        "seller_profile_url": "https://www.barkyours.com/en/listings/1089835-rustic-sitting-lab-reclaimed-wood-dog-wall-art",
         "grid_label": "FEATURED PRODUCT "
     },
     {
         "type": "seller",
-        "seller_name": "Dandy Randall Wear",
-        "image": "https://blog.barkyours.com/wp-content/uploads/2021/04/landing-THIS-TENNIS-NEW-ONE-280-280.jpg",
-        "seller_profile_url": "https://www.barkyours.com/en/listings/1384010-tennis-kiss-my-ace-t-shirt-for-dog-lovers",
+        "seller_name": "Fur Every Home",
+        "image": "https://blog.barkyours.com/wp-content/uploads/2021/06/landing-page-candle-trending-660-440-new.jpg",
+        "seller_profile_url": "https://www.barkyours.com/en/listings/1498324-calming-honey-chamomile-paw-balm-pet-candle",
         "grid_label": "FEATURED PRODUCT "
     },
     {
         "type": "seller",
         "seller_name": "Captain Wiggles Co",
-        "image": "https://blog.barkyours.com/wp-content/uploads/2021/06/landing-page-summer-fun-660-trending.png",
-        "seller_profile_url": "https://www.barkyours.com/en/listings/1431921-popcicle-fun-pet-bandana",
+        "image": "https://blog.barkyours.com/wp-content/uploads/2021/06/landing-page-NEW-summer-fun-660-trending.jpg",
+        "seller_profile_url": "https://www.barkyours.com/en/listings/1431916-beach-day-pet-bandana",
         "grid_label": "FEATURED PRODUCT "
     }
 ];
