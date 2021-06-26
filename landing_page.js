@@ -108,7 +108,7 @@ $(document).ready(function(){
     function addViewAllListingLink() {
     
         if ($(".home-fluid-thumbnail-grid").length > 0) {
-            $("<div class='full-width text-center' style='margin-top: 20px'> <a class='view-all-listing-link-btn' href='https://www.barkyours.com/?view=grid'> VIEW ALL LISTINGS</a></div>").insertAfter($(".home-fluid-thumbnail-grid"));
+            $("<div class='full-width text-center' style='margin-top: 20px'> <a class='view-all-listing-link-btn' href='https://www.barkyours.com/?view=grid'> VIEW ALL PRODUCTS</a></div>").insertAfter($(".home-fluid-thumbnail-grid"));
         }
     }
     
@@ -165,7 +165,7 @@ $(document).ready(function(){
                 elem.addClass("customized");
             }
         });
-        $(".home-fluid-thumbnail-grid").append('<div class="col-12 full-width text-center pull-left" style="margin-top: 20px; height: 45px;"> <a class="view-all-listing-link-btn" href="https://www.barkyours.com/?view=grid"> VIEW ALL LISTINGS</a></div>');
+        $(".home-fluid-thumbnail-grid").append('<div class="col-12 full-width text-center pull-left" style="margin-top: 20px; height: 45px;"> <a class="view-all-listing-link-btn" href="https://www.barkyours.com/?view=grid"> VIEW ALL PRODUCTS</a></div>');
     
         $(".home-fluid-thumbnail-grid").append("<div class='row' style='border-bottom: 1px solid #c3c3c3; width: 97%; overflow:hidden;'> <h3>" + featuredCategoriesLabel + "</h3></div><hr>");
         
@@ -182,7 +182,7 @@ $(document).ready(function(){
                 '</div></div>')
         });
         
-        $(".home-fluid-thumbnail-grid").append('<div class="col-12 full-width text-center pull-left" style="margin-top: 20px; height: 45px;"> <a class="view-all-listing-link-btn" href="https://www.barkyours.com/?view=grid"> VIEW ALL LISTINGS</a></div>');
+        $(".home-fluid-thumbnail-grid").append('<div class="col-12 full-width text-center pull-left" style="margin-top: 20px; height: 45px;"> <a class="view-all-listing-link-btn" href="https://www.barkyours.com/?view=grid"> VIEW ALL PRODUCTS</a></div>');
     
     
     }
