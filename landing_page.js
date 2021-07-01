@@ -108,7 +108,7 @@ $(document).ready(function(){
     function addViewAllListingLink() {
     
         if ($(".home-fluid-thumbnail-grid").length > 0) {
-            $("<div class='full-width text-center' style='margin-top: 20px'> <a class='view-all-listing-link-btn' href='https://www.barkyours.com/?view=grid'> VIEW ALL PRODUCTS</a></div>").insertAfter($(".home-fluid-thumbnail-grid"));
+            $("<div class='full-width text-center' style='margin-top: 20px'> <a class='view-all-listing-link-btn' href='https://www.barkyours.com/?view=grid'> Shop All Products</a></div>").insertAfter($(".home-fluid-thumbnail-grid"));
         }
     }
     
