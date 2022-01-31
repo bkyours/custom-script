@@ -57,7 +57,7 @@ var spotLights = [
         "grid_label": "BEST SELLER "
     },
     {   "type": "listing",
-        "title": "Sign Created using Slate-Badass Dog on Duty",
+        "title": "Slate Dog Sign",
         "image": "https://blog.barkyours.com/wp-content/uploads/2022/01/landing-page-BADASS-.jpg",
         "url": "https://www.barkyours.com/en/listings/1680759-bad-ass-dog-on-duty-hanging-slate-sign",
         "price": "$32.95",
