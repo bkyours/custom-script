@@ -50,7 +50,7 @@ var spotLights = [
     {   "type": "listing",
         "title": "Living The Dream T-Shirt",
         "image": "https://blog.barkyours.com/wp-content/uploads/2021/04/landing-page-living-dream-green-660-440-.jpg",
-        "url": ""https://www.barkyours.com/en/listings/1139999-living-the-dream-v-neck-t-shirt",
+        "url": "https://www.barkyours.com/en/listings/1139999-living-the-dream-v-neck-t-shirt",
         "price": "$24.00",
         "seller_name": "Dogz Dogz Ts and More",
         "seller_profile_url": "https://www.barkyours.com/en/core1",
