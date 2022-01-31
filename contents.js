@@ -48,22 +48,22 @@ var spotLights = [
         "grid_label": "BEST SELLER"
     },
     {   "type": "listing",
-        "title": "Face Mask with Dog Theme",
-        "image": "https://blog.barkyours.com/wp-content/uploads/2021/04/landing-NEW-page-pit-bull-face-mask-660-440.jpg",
-        "url": "https://www.barkyours.com/en/listings/1090174-face-mask-pit-bull-kiss",
-        "price": "$12.00",
-        "seller_name": "Ada Nieves for Pets",
-        "seller_profile_url": "https://www.barkyours.com/en/adan",
-        "grid_label": "BEST SELLER"
-    },
-    {   "type": "listing",
         "title": "Living The Dream T-Shirt",
         "image": "https://blog.barkyours.com/wp-content/uploads/2021/04/landing-page-living-dream-green-660-440-.jpg",
-        "url": "https://www.barkyours.com/en/listings/1139999-living-the-dream-v-neck-t-shirt",
+        "url": ""https://www.barkyours.com/en/listings/1139999-living-the-dream-v-neck-t-shirt",
         "price": "$24.00",
         "seller_name": "Dogz Dogz Ts and More",
         "seller_profile_url": "https://www.barkyours.com/en/core1",
         "grid_label": "BEST SELLER"
+    },
+    {   "type": "listing",
+        "title": "Living The Dream T-Shirt",
+        "image": "https://blog.barkyours.com/wp-content/uploads/2022/01/landing-page-BADASS-.jpg",
+        "url": "https://www.barkyours.com/en/listings/1680759-bad-ass-dog-on-duty-hanging-slate-sign",
+        "price": "$32.95",
+        "seller_name": "Solid Rock Memorials and Gifts",
+        "seller_profile_url": "https://www.barkyours.com/en/howardcarolynb",
+        "grid_label": "New Seller"
     },
     {
         "type": "seller",
