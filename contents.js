@@ -63,7 +63,7 @@ var spotLights = [
         "price": "$32.95",
         "seller_name": "Solid Rock Memorials and Gifts",
         "seller_profile_url": "https://www.barkyours.com/en/howardcarolynb",
-        "grid_label": "New Seller"
+        "grid_label": "NEW SELLER"
     },
     {
         "type": "seller",
