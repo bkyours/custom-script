@@ -45,7 +45,7 @@ var spotLights = [
         "price": "$25.00",
         "seller_name": "Dandy Randall Wear",
         "seller_profile_url": "https://www.barkyours.com/en/dandyrandall",
-        "grid_label": "BEST SELLER"
+        "grid_label": "BEST SELLER "
     },
     {   "type": "listing",
         "title": "Living The Dream T-Shirt",
@@ -54,7 +54,7 @@ var spotLights = [
         "price": "$24.00",
         "seller_name": "Dogz Dogz Ts and More",
         "seller_profile_url": "https://www.barkyours.com/en/core1",
-        "grid_label": "BEST SELLER"
+        "grid_label": "BEST SELLER "
     },
     {   "type": "listing",
         "title": "Living The Dream T-Shirt",
@@ -63,7 +63,7 @@ var spotLights = [
         "price": "$32.95",
         "seller_name": "Solid Rock Memorials and Gifts",
         "seller_profile_url": "https://www.barkyours.com/en/howardcarolynb",
-        "grid_label": "NEW SELLER"
+        "grid_label": "NEW SELLER "
     },
     {
         "type": "seller",
