@@ -25,7 +25,7 @@ $(document).ready(function(){
             '<div class="col-xs-12"><a class="icon-with-text-container" href="https://www.twitter.com/barkyours"><i class="fa fa-twitter icon-part"></i> <div class="text-part">Twitter</div></a></div>' +
             '<div class="col-xs-12"><a class="icon-with-text-container" href="https://www.pinterest.com/barkyours/"><i class="fa fa-pinterest icon-part"></i> <div class="text-part">Pinterest</div></a></div>' +
             '</div></div></div>' +
-            '<div class="row footer-link text-center" style="font-size: 14px;color: #959494;">All rights reserved ©2021 BarkYours</div></div></footer>');
+            '<div class="row footer-link text-center" style="font-size: 14px;color: #959494;">All rights reserved ©2023 BarkYours</div></div></footer>');
             $('.footer-links a').attr("target", '_blank')
     }
 
